@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Algorithms/TokenSCADAGeneric.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/Algorithms/</a> TokenSCADAGeneric.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>104/104</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.24% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>30/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>19/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>105/105</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">122×</span>
+<span class="cline-any cline-yes">122×</span>
+<span class="cline-any cline-yes">122×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">122×</span>
+<span class="cline-any cline-yes">119×</span>
+<span class="cline-any cline-yes">119×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">119×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">129×</span>
+<span class="cline-any cline-yes">128×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-yes">108×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+&nbsp;
+ * @name        Token Stake Calculation And Distribution Algorithm Generic Interface
+ * @package     BlockBitsIO
+ * @author      Micky Socaci &lt;micky@nowlive.ro&gt;
+&nbsp;
+    this interface allows the funding asset to enforce the requirement of hard and soft caps on funding phases.
+    as some token SCADA's require them, and some require them to not be present.
+*/
+&nbsp;
+pragma solidity 0.4.17;
+&nbsp;
+import "./../Entity/Funding.sol";
+import "./../Entity/Token.sol";
+import "./../Entity/FundingVault.sol";
+&nbsp;
+contract TokenSCADAGeneric {
+&nbsp;
+    uint256 tokenSupply;
+    Funding FundingEntity;
+    Token TokenEntity;
+    address FundingManagerAddress;
+&nbsp;
+    bool public SCADA_requires_hard_cap = true;
+&nbsp;
+    function TokenSCADAGeneric(address _tokenContract, address _fundingContract ) public {
+        TokenEntity = Token(_tokenContract);
+        FundingEntity = Funding(_fundingContract);
+&nbsp;
+        // these never change once initialized!
+        tokenSupply = TokenEntity.totalSupply();
+&nbsp;
+        // save FundingManagerAddress for modifier usage
+        FundingManagerAddress = FundingEntity.getApplicationAssetAddressByName('FundingManager');
+    }
+&nbsp;
+    function requiresHardCap() public view returns (bool) {
+        return SCADA_requires_hard_cap;
+    }
+&nbsp;
+&nbsp;
+    function getBoughtTokens( address _vaultAddress, bool _direct ) public view returns (uint256) {
+        // second stage
+        uint256 myIcoTokens = getMyTokensInSecondStage( _vaultAddress, _direct );
+        // first stage
+        uint256 myPRETokens = getMyTokensInFirstStage( _vaultAddress, _direct );
+&nbsp;
+        if(UnsoldTokenAmountCacheValue == 0) {
+            return myPRETokens + myIcoTokens;
+        } else {
+            // also distribute unsold token share based on how many this vault bought
+            uint256 myUnsoldTokenShare = getUnsoldTokenFraction(
+                UnsoldTokenAmountCacheValue, (myPRETokens + myIcoTokens)
+            );
+            return myPRETokens + myIcoTokens + myUnsoldTokenShare;
+        }
+    }
+&nbsp;
+    function getMyTokensInFirstStage(address _vaultAddress, bool _direct) public view returns(uint256) {
+        FundingVault vault = FundingVault(_vaultAddress);
+        uint8 PREpercentInStage = FundingEntity.getStageTokenSharePercentage(1);
+        uint256 PREraisedAmount = FundingEntity.getStageAmountRaised(1);
+        // make sure we're not dividing by 0
+        if(PREraisedAmount &gt; 0) {
+            uint256 amount = vault.stageAmounts(1);
+            if(_direct) {
+                amount = vault.stageAmountsDirect(1);
+            }
+&nbsp;
+            return getTokenFraction( PREpercentInStage, PREraisedAmount, amount );
+        } else {
+            // pre ico raised 0 eth, so we distribute tokens based on stake in ICO
+            return getPRETokensBasedOnStakeInICO(_vaultAddress);
+        }
+    }
+&nbsp;
+    function getMyTokensInSecondStage(address _vaultAddress, bool _direct) public view returns(uint256) {
+        FundingVault vault = FundingVault(_vaultAddress);
+        uint256 amount = vault.stageAmounts(2);
+        if(_direct) {
+            amount = vault.stageAmountsDirect(2);
+        }
+        if(UnsoldTokenAmountCacheValue == 0) {
+            // all tokens got sold, no need to redistribute, we use fraction here
+            uint8 percentInStage = FundingEntity.getStageTokenSharePercentage(2);
+            uint256 raisedAmount = FundingEntity.getStageAmountRaised(2);
+            if(raisedAmount &gt; 0) {
+                return getTokenFraction( percentInStage, raisedAmount, amount );
+            } else {
+                // ico raised 0 eth, so we distribute tokens based on stake in PRE
+                return getICOTokensBasedOnStakeInPRE(_vaultAddress);
+            }
+        }
+        else {
+            // ico has unsold tokens, we use parity
+            return amount * stageTwoParityCacheValue;
+        }
+    }
+&nbsp;
+    function getPRETokensBasedOnStakeInICO(address _vaultAddress) view internal returns(uint256) {
+        uint256 myIcoTokens = getMyTokensInSecondStage( _vaultAddress, false );
+        uint8 PREpercentInStage = FundingEntity.getStageTokenSharePercentage(1);
+        uint8 ICOpercentInStage = FundingEntity.getStageTokenSharePercentage(2);
+        uint256 ICOtokensInStage = tokenSupply * ICOpercentInStage / 100;
+        uint256 precision = 18;
+        uint256 preIcoUnsoldSupply = tokenSupply * PREpercentInStage / 100;
+        uint256 myFraction = getFraction(myIcoTokens, ICOtokensInStage, precision);
+        return (preIcoUnsoldSupply * myFraction) / ( 10 ** precision );
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+    function getICOTokensBasedOnStakeInPRE(address _vaultAddress) view internal returns(uint256) {
+        uint8 PREpercentInStage = FundingEntity.getStageTokenSharePercentage(1);
+        uint8 ICOpercentInStage = FundingEntity.getStageTokenSharePercentage(2);
+        uint256 myPreTokens = getMyTokensInFirstStage( _vaultAddress, false );
+        uint256 PREtokensInStage = tokenSupply * PREpercentInStage / 100;
+        uint256 precision = 18;
+        uint256 IcoUnsoldSupply = tokenSupply * ICOpercentInStage / 100;
+        uint256 myFraction = getFraction(myPreTokens, PREtokensInStage, precision);
+        return (IcoUnsoldSupply * myFraction) / ( 10 ** precision );
+    }
+&nbsp;
+    function getStageTwoParity() public view returns(uint256) {
+        uint256 parityPRE = TokenParityCacheValue[1];
+        uint256 parityICO = TokenParityCacheValue[2];
+        if(parityPRE &gt; 0 &amp;&amp; parityPRE &lt; parityICO) {
+            return parityPRE;
+        } else {
+            return parityICO;
+        }
+    }
+&nbsp;
+    function getTokenFraction(uint8 _percentInStage, uint256 _raisedAmount, uint256 _my_ether_amount )
+        public view returns(uint256)
+    {
+        // make sure we're not dividing by 0
+        if(_raisedAmount &gt; 0) {
+            return ((tokenSupply * _percentInStage / 100) * _my_ether_amount) / _raisedAmount;
+        } else {
+            return 0;
+        }
+    }
+&nbsp;
+    function getUnsoldTokenFraction(uint256 _unsold_supply, uint256 my_amount ) public view returns(uint256) {
+        uint256 precision = 18;
+        // make sure we're not dividing by 0
+        if(my_amount &gt; 0) {
+            uint256 fraction = getFraction(my_amount, getSoldTokenAmount(), precision);
+            return (_unsold_supply * fraction) / ( 10 ** precision );
+        } else {
+            return 0;
+        }
+    }
+&nbsp;
+    function getFraction(uint256 numerator, uint256 denominator, uint256 precision) public pure returns(uint256) {
+        // caution, check safe-to-multiply here
+        uint _numerator  = numerator * 10 ** (precision+1);
+        // with rounding of last digit
+        uint _quotient =  ((_numerator / denominator) + 5) / 10;
+        return _quotient;
+    }
+&nbsp;
+    function getSoldTokenAmount() public view returns(uint256) {
+        uint8 TokenSellPercentage = FundingEntity.TokenSellPercentage();
+        uint256 TokensForSale = tokenSupply * TokenSellPercentage / 100;
+        return TokensForSale - UnsoldTokenAmountCacheValue;
+    }
+&nbsp;
+    function getUnsoldTokenAmount() public view returns(uint256) {
+        uint256 parity = stageTwoParityCacheValue;
+        uint256 parityPRE = TokenParityCacheValue[1];
+        if(parity == parityPRE) {
+            // case 1, we receive a lot in pre, we need to sell ico tokens at partiy + added price,
+            // and redistribute the ones left
+            uint8 percentInStage = FundingEntity.getStageTokenSharePercentage(2);
+            uint256 raisedAmount = FundingEntity.getStageAmountRaised(2);
+            uint256 tokensInStage = tokenSupply * percentInStage / 100;
+            uint256 tokensSold = raisedAmount * parity;
+            return tokensInStage - tokensSold ;
+        } else {
+            // case 2, pre ico sold some tokens but did not reach 10% parity fraction of total,
+            // this means pre ico 1 distribution is OK and has a pretty large discount
+            // also that ICO sold all remaining tokens allocated to it... this means we should have 0 unsold tokens
+            // parity = parityICO;
+            return 0;
+        }
+    }
+&nbsp;
+    function getTokenParity(uint8 stageId) public view returns (uint256) {
+        uint8 percentInStage = FundingEntity.getStageTokenSharePercentage(stageId);
+        uint256 raisedAmount = FundingEntity.getStageAmountRaised(stageId);
+        // make sure we're not dividing by 0
+        if(raisedAmount &gt; 0) {
+            uint256 tokensInStage = tokenSupply * percentInStage / 100;
+            uint256 parity = tokensInStage / raisedAmount;
+            if(stageId == 1) {
+                uint8 priceAdd = FundingEntity.getStagePriceAdd(2);
+                <span class="missing-if-branch" title="else path not taken" >E</span>if(priceAdd &gt; 0) {
+                    parity = parity - ( parity * priceAdd / 100 );
+                }
+            }
+            return parity;
+        } else {
+            return 0;
+        }
+    }
+&nbsp;
+    function initCacheForVariables() public onlyFundingManager returns(bool) {
+&nbsp;
+        // remove bounty supply from total for easier calculations
+        uint256 bountyPercent = FundingEntity.getAppBylawUint256("token_bounty_percentage");
+        uint256 bountyValue = tokenSupply * bountyPercent / 100;
+        tokenSupply = tokenSupply - bountyValue;
+&nbsp;
+        setTokenParityInCache(1);
+        setTokenParityInCache(2);
+        setStageTwoParityInCache();
+        setUnsoldTokenAmountInCache();
+        return true;
+    }
+    /*
+        Caching reused variables in order to decrease gas usage in vault processing.
+        resulting in a drop of about 70%
+    */
+    mapping ( uint8 =&gt; bool ) TokenParityCacheState;
+    mapping ( uint8 =&gt; uint256 ) TokenParityCacheValue;
+    function setTokenParityInCache(uint8 stageId) internal {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(TokenParityCacheState[stageId] == false) {
+            TokenParityCacheValue[stageId] = getTokenParity(stageId);
+            TokenParityCacheState[stageId] = true;
+        }
+    }
+&nbsp;
+    bool public stageTwoParityCachedState = false;
+    uint256 public stageTwoParityCacheValue;
+    function setStageTwoParityInCache() internal {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(stageTwoParityCachedState == false) {
+            stageTwoParityCacheValue = getStageTwoParity();
+            stageTwoParityCachedState = true;
+        }
+    }
+&nbsp;
+    bool public UnsoldTokenAmountCachedState = false;
+    uint256 public UnsoldTokenAmountCacheValue;
+    function setUnsoldTokenAmountInCache() internal {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(UnsoldTokenAmountCachedState == false) {
+            UnsoldTokenAmountCacheValue = getUnsoldTokenAmount();
+            UnsoldTokenAmountCachedState = true;
+        }
+    }
+&nbsp;
+    modifier onlyFundingManager() {
+        require(msg.sender == address(FundingManagerAddress));
+        _;
+    }
+&nbsp;
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 16 2017 10:22:19 GMT+0200 (EET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

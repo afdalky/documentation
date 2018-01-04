@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Entity/FundingVault.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/Entity/</a> FundingVault.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">99.06% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>105/106</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.66% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>52/58</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">99.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>119/120</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">237×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">147×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">340×</span>
+<span class="cline-any cline-yes">340×</span>
+<span class="cline-any cline-yes">340×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">193×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">192×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">224×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">217×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">206×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">199×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">232×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">226×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">109×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">219×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">228×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">211×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">208×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">199×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">435×</span>
+<span class="cline-any cline-yes">434×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">674×</span>
+<span class="cline-any cline-yes">673×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">222×</span>
+<span class="cline-any cline-yes">221×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+&nbsp;
+ * @name        Funding Vault
+ * @package     BlockBitsIO
+ * @author      Micky Socaci &lt;micky@nowlive.ro&gt;
+&nbsp;
+    each purchase creates a separate funding vault contract
+*/
+&nbsp;
+// add Token / Ether Black Hole prevention
+&nbsp;
+// add Emergency Fund
+&nbsp;
+// think about team's locked tokens
+&nbsp;
+&nbsp;
+pragma solidity ^0.4.17;
+&nbsp;
+import "./Token.sol";
+import "./Funding.sol";
+import "./Milestones.sol";
+import "./TokenManager.sol";
+import "./../Algorithms/TokenSCADAGeneric.sol";
+&nbsp;
+import "./../ApplicationEntityABI.sol";
+&nbsp;
+contract FundingVault {
+&nbsp;
+    /* Asset initialised or not */
+    bool public _initialized = false;
+&nbsp;
+    /*
+        Addresses:
+        vaultOwner - the address of the wallet that stores purchases in this vault ( investor address )
+        outputAddress - address where funds go upon successful funding or successful milestone release
+        managerAddress - address of the "FundingManager"
+    */
+    address public vaultOwner ;
+    address public outputAddress;
+    address public managerAddress;
+&nbsp;
+    /*
+        Lock and BlackHole settings
+    */
+&nbsp;
+    bool public allFundingProcessed = false;
+    bool public DirectFundingProcessed = false;
+&nbsp;
+    /*
+        Assets
+    */
+    // ApplicationEntityABI public ApplicationEntity;
+    Funding FundingEntity;
+    FundingManager FundingManagerEntity;
+    Milestones MilestonesEntity;
+    Proposals ProposalsEntity;
+    // TokenManager TokenManagerEntity;
+    TokenSCADAGeneric TokenSCADAEntity;
+    // address TokenSCADAAddress;
+    Token TokenEntity ;
+&nbsp;
+    /*
+        Globals
+    */
+    uint256 public amount_direct = 0;
+    uint256 public amount_milestone = 0;
+&nbsp;
+    // bylaws
+    bool public emergencyFundReleased = false;
+    uint8 emergencyFundPercentage = 0;
+    uint256 BylawsCashBackOwnerMiaDuration;
+    uint256 BylawsCashBackVoteRejectedDuration;
+    uint256 BylawsProposalVotingDuration;
+&nbsp;
+    struct PurchaseStruct {
+        uint256 unix_time;
+        uint8 payment_method;
+        uint256 amount;
+        uint8 funding_stage;
+        uint16 index;
+    }
+&nbsp;
+    mapping(uint16 =&gt; PurchaseStruct) public purchaseRecords;
+    uint16 public purchaseRecordsNum;
+&nbsp;
+    event EventPaymentReceived(uint8 indexed _payment_method, uint256 indexed _amount, uint16 indexed _index );
+    event VaultInitialized(address indexed _owner);
+&nbsp;
+    function initialize(
+        address _owner,
+        address _output,
+        address _fundingAddress,
+        address _milestoneAddress,
+        address _proposalsAddress
+    )
+        public
+        requireNotInitialised
+        returns(bool)
+    {
+        VaultInitialized(_owner);
+&nbsp;
+        outputAddress = _output;
+        vaultOwner = _owner;
+&nbsp;
+        // whomever creates this contract is the manager.
+        managerAddress = msg.sender;
+&nbsp;
+        // assets
+        FundingEntity = Funding(_fundingAddress);
+        FundingManagerEntity = FundingManager(managerAddress);
+        MilestonesEntity = Milestones(_milestoneAddress);
+        ProposalsEntity = Proposals(_proposalsAddress);
+&nbsp;
+        address TokenManagerAddress = FundingEntity.getApplicationAssetAddressByName("TokenManager");
+        TokenManager TokenManagerEntity = TokenManager(TokenManagerAddress);
+&nbsp;
+        address TokenAddress = TokenManagerEntity.TokenEntity();
+        TokenEntity = Token(TokenAddress);
+&nbsp;
+        address TokenSCADAAddress = TokenManagerEntity.TokenSCADAEntity();
+        TokenSCADAEntity = TokenSCADAGeneric(TokenSCADAAddress);
+&nbsp;
+        // set Emergency Fund Percentage if available.
+        address ApplicationEntityAddress = TokenManagerEntity.owner();
+        ApplicationEntityABI ApplicationEntity = ApplicationEntityABI(ApplicationEntityAddress);
+&nbsp;
+        // get Application Bylaws
+        emergencyFundPercentage             = uint8( ApplicationEntity.getBylawUint256("emergency_fund_percentage") );
+        BylawsCashBackOwnerMiaDuration      = ApplicationEntity.getBylawUint256("cashback_owner_mia_dur") ;
+        BylawsCashBackVoteRejectedDuration  = ApplicationEntity.getBylawUint256("cashback_investor_no") ;
+        BylawsProposalVotingDuration        = ApplicationEntity.getBylawUint256("proposal_voting_duration") ;
+&nbsp;
+        // init
+        _initialized = true;
+        return true;
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+    /*
+        The funding contract decides if a vault should receive payments or not, since it's the one that creates them,
+        no point in creating one if you can't accept payments.
+    */
+&nbsp;
+    mapping (uint8 =&gt; uint256) public stageAmounts;
+    mapping (uint8 =&gt; uint256) public stageAmountsDirect;
+&nbsp;
+    function addPayment(
+        uint8 _payment_method,
+        uint8 _funding_stage
+    )
+        public
+        payable
+        requireInitialised
+        onlyManager
+        returns (bool)
+    {
+        if(msg.value &gt; 0 &amp;&amp; FundingEntity.allowedPaymentMethod(_payment_method)) {
+&nbsp;
+            // store payment
+            PurchaseStruct storage purchase = purchaseRecords[++purchaseRecordsNum];
+                purchase.unix_time = now;
+                purchase.payment_method = _payment_method;
+                purchase.amount = msg.value;
+                purchase.funding_stage = _funding_stage;
+                purchase.index = purchaseRecordsNum;
+&nbsp;
+            // assign payment to direct or milestone
+            if(_payment_method == 1) {
+                amount_direct+= purchase.amount;
+                stageAmountsDirect[_funding_stage]+=purchase.amount;
+            }
+&nbsp;
+            if(_payment_method == 2) {
+                amount_milestone+= purchase.amount;
+            }
+&nbsp;
+            // in order to not iterate through purchase records, we just increase funding stage amount.
+            // issue with iterating over them, while processing vaults, would be that someone could create a large
+            // number of payments, which would result in an "out of gas" / stack overflow issue, that would lock
+            // our contract, so we don't really want to do that.
+            // doing it this way also saves some gas
+            stageAmounts[_funding_stage]+=purchase.amount;
+&nbsp;
+            EventPaymentReceived( purchase.payment_method, purchase.amount, purchase.index );
+            return true;
+        } else {
+            revert();
+        }
+    }
+&nbsp;
+&nbsp;
+    function getBoughtTokens() public view returns (uint256) {
+        return TokenSCADAEntity.getBoughtTokens( address(this), false );
+    }
+&nbsp;
+    function getDirectBoughtTokens() public view returns (uint256) {
+        return TokenSCADAEntity.getBoughtTokens( address(this), true );
+    }
+&nbsp;
+    mapping (uint8 =&gt; uint256) public etherBalances;
+    mapping (uint8 =&gt; uint256) public tokenBalances;
+    uint8 public BalanceNum = 0;
+&nbsp;
+    bool public BalancesInitialised = false;
+    function initMilestoneTokenAndEtherBalances() internal
+    {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(BalancesInitialised == false) {
+&nbsp;
+            uint256 milestoneTokenBalance = TokenEntity.balanceOf(address(this));
+            uint256 milestoneEtherBalance = this.balance;
+&nbsp;
+            // no need to worry about fractions because at the last milestone, we send everything that's left.
+&nbsp;
+            // emergency fund takes it's percentage from initial balances.
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(emergencyFundPercentage &gt; 0) {
+                tokenBalances[0] = milestoneTokenBalance / 100 * emergencyFundPercentage;
+                etherBalances[0] = milestoneEtherBalance / 100 * emergencyFundPercentage;
+&nbsp;
+                milestoneTokenBalance-=tokenBalances[0];
+                milestoneEtherBalance-=etherBalances[0];
+            }
+&nbsp;
+            // milestones percentages are then taken from what's left.
+            for(uint8 i = 1; i &lt;= MilestonesEntity.RecordNum(); i++) {
+&nbsp;
+                uint8 perc = MilestonesEntity.getMilestoneFundingPercentage(i);
+                tokenBalances[i] = milestoneTokenBalance / 100 * perc;
+                etherBalances[i] = milestoneEtherBalance / 100 * perc;
+            }
+&nbsp;
+            BalanceNum = i;
+            BalancesInitialised = true;
+        }
+    }
+&nbsp;
+    function ReleaseFundsAndTokens()
+        public
+        requireInitialised
+        onlyManager
+        returns (bool)
+    {
+        // first make sure cashback is not possible, and that we've not processed everything in this vault
+        if(!canCashBack() &amp;&amp; allFundingProcessed == false) {
+&nbsp;
+            if(FundingManagerEntity.CurrentEntityState() == FundingManagerEntity.getEntityState("FUNDING_SUCCESSFUL_PROGRESS")) {
+&nbsp;
+                // case 1, direct funding only
+                if(amount_direct &gt; 0 &amp;&amp; amount_milestone == 0) {
+&nbsp;
+                    // if we have direct funding and no milestone balance, transfer everything and lock vault
+                    // to save gas in future processing runs.
+&nbsp;
+                    // transfer tokens to the investor
+                    TokenEntity.transfer(vaultOwner, TokenEntity.balanceOf( address(this) ) );
+&nbsp;
+                    // transfer ether to the owner's wallet
+                    outputAddress.transfer(this.balance);
+&nbsp;
+                    // lock vault.. and enable black hole methods
+                    allFundingProcessed = true;
+&nbsp;
+                } else {
+                // case 2 and 3, direct funding only
+&nbsp;
+                    if(amount_direct &gt; 0 &amp;&amp; DirectFundingProcessed == false ) {
+                        TokenEntity.transfer(vaultOwner, getDirectBoughtTokens() );
+                        // transfer "direct funding" ether to the owner's wallet
+                        outputAddress.transfer(amount_direct);
+                        DirectFundingProcessed = true;
+                    }
+&nbsp;
+                    // process and initialize milestone balances, emergency fund, etc, once
+                    initMilestoneTokenAndEtherBalances();
+                }
+                return true;
+&nbsp;
+            } else <span class="missing-if-branch" title="else path not taken" >E</span>if(FundingManagerEntity.CurrentEntityState() == FundingManagerEntity.getEntityState("MILESTONE_PROCESS_PROGRESS")) {
+&nbsp;
+                // get current milestone so we know which one we need to release funds for.
+                uint8 milestoneId = MilestonesEntity.currentRecord();
+&nbsp;
+                uint256 transferTokens = tokenBalances[milestoneId];
+                uint256 transferEther = etherBalances[milestoneId];
+&nbsp;
+                if(milestoneId == BalanceNum - 1) {
+                    // we're processing the last milestone and balance, this means we're transferring everything left.
+                    // this is done to make sure we've transferred everything, even "ether that got mistakenly sent to this address"
+                    // as well as the emergency fund if it has not been used.
+                    transferTokens = TokenEntity.balanceOf(address(this));
+                    transferEther = this.balance;
+                }
+&nbsp;
+                // set balances to 0 so we can't transfer multiple times.
+                // tokenBalances[milestoneId] = 0;
+                // etherBalances[milestoneId] = 0;
+&nbsp;
+                // transfer tokens to the investor
+                TokenEntity.transfer(vaultOwner, transferTokens );
+&nbsp;
+                // transfer ether to the owner's wallet
+                outputAddress.transfer(transferEther);
+&nbsp;
+                if(milestoneId == BalanceNum - 1) {
+                    // lock vault.. and enable black hole methods
+                    allFundingProcessed = true;
+                }
+&nbsp;
+                return true;
+            }
+        }
+&nbsp;
+        return false;
+    }
+&nbsp;
+&nbsp;
+    function releaseTokensAndEtherForEmergencyFund()
+        public
+        requireInitialised
+        onlyManager
+        returns (bool)
+    {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if( emergencyFundReleased == false &amp;&amp; emergencyFundPercentage &gt; 0) {
+&nbsp;
+            // transfer tokens to the investor
+            TokenEntity.transfer(vaultOwner, tokenBalances[0] );
+&nbsp;
+            // transfer ether to the owner's wallet
+            outputAddress.transfer(etherBalances[0]);
+&nbsp;
+            emergencyFundReleased = true;
+            return true;
+        }
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+&nbsp;
+    function ReleaseFundsToInvestor()
+        public
+        requireInitialised
+        isOwner
+    {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(canCashBack()) {
+&nbsp;
+            // IF we're doing a cashback
+            // transfer vault tokens back to owner address
+            // send all ether to wallet owner
+&nbsp;
+            // get token balance
+            uint256 myBalance = TokenEntity.balanceOf(address(this));
+            // transfer all vault tokens to owner
+            if(myBalance &gt; 0) {
+                TokenEntity.transfer(outputAddress, myBalance );
+            }
+&nbsp;
+            // now transfer all remaining ether back to investor address
+            vaultOwner.transfer(this.balance);
+&nbsp;
+            // update FundingManager Locked Token Amount, so we don't break voting
+            FundingManagerEntity.VaultRequestedUpdateForLockedVotingTokens( vaultOwner );
+&nbsp;
+            // disallow further processing, so we don't break Funding Manager.
+            // this method can still be called to collect future black hole ether to this vault.
+            allFundingProcessed = true;
+        }
+    }
+&nbsp;
+    /*
+        1 - if the funding of the project Failed, allows investors to claim their locked ether back.
+        2 - if the Investor votes NO to a Development Milestone Completion Proposal, where the majority
+            also votes NO allows investors to claim their locked ether back.
+        3 - project owner misses to set the time for a Development Milestone Completion Meeting allows investors
+        to claim their locked ether back.
+    */
+    function canCashBack() public view requireInitialised returns (bool) {
+&nbsp;
+        // case 1
+        if(checkFundingStateFailed()) {
+            return true;
+        }
+        // case 2
+        if(checkMilestoneStateInvestorVotedNoVotingEndedNo()) {
+            return true;
+        }
+        // case 3
+        if(checkOwnerFailedToSetTimeOnMeeting()) {
+            return true;
+        }
+&nbsp;
+        return false;
+    }
+&nbsp;
+    function checkFundingStateFailed() public view returns (bool) {
+        if(FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("FAILED_FINAL") ) {
+            return true;
+        }
+&nbsp;
+        // also check if funding period ended, and 7 days have passed and no processing was done.
+        if( FundingEntity.getTimestamp() &gt;= FundingEntity.Funding_Setting_cashback_time_start() ) {
+&nbsp;
+            // should only be possible if funding entity has been stuck in processing for more than 7 days.
+            if(
+                FundingEntity.CurrentEntityState() != FundingEntity.getEntityState("FAILED_FINAL") &amp;&amp;
+                FundingEntity.CurrentEntityState() != FundingEntity.getEntityState("SUCCESSFUL_FINAL")
+            ) {
+                return true;
+            }
+        }
+&nbsp;
+        return false;
+    }
+&nbsp;
+    function checkMilestoneStateInvestorVotedNoVotingEndedNo() public view returns (bool) {
+        if(MilestonesEntity.CurrentEntityState() == MilestonesEntity.getEntityState("VOTING_ENDED_NO") ) {
+            // first we need to make sure we actually voted.
+            if( ProposalsEntity.getHasVoteForCurrentMilestoneRelease(vaultOwner) == true) {
+                // now make sure we voted NO, and if so return true
+                <span class="missing-if-branch" title="else path not taken" >E</span>if( ProposalsEntity.getMyVoteForCurrentMilestoneRelease( vaultOwner ) == false) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+&nbsp;
+    function checkOwnerFailedToSetTimeOnMeeting() public view returns (bool) {
+        // Looks like the project owner is missing in action
+        // they only have to do 1 thing, which is set the meeting time 7 days before the end of the milestone so that
+        // investors know when they need to show up for a progress report meeting
+&nbsp;
+        // as they did not, we consider them missing in action and allow investors to retrieve their locked ether back
+        if( MilestonesEntity.CurrentEntityState() == MilestonesEntity.getEntityState("DEADLINE_MEETING_TIME_FAILED") ) {
+            return true;
+        }
+        return false;
+    }
+&nbsp;
+&nbsp;
+    modifier isOwner() {
+        require(msg.sender == vaultOwner);
+        _;
+    }
+&nbsp;
+    modifier onlyManager() {
+        require(msg.sender == managerAddress);
+        _;
+    }
+&nbsp;
+    modifier requireInitialised() {
+        require(_initialized == true);
+        _;
+    }
+&nbsp;
+    modifier requireNotInitialised() {
+        require(_initialized == false);
+        _;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 16 2017 10:22:19 GMT+0200 (EET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

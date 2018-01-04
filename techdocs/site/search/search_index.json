@@ -1,0 +1,1084 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "1. Offering Whitepaper\n\n\nClick here to view Offering Whitepaper\n\n\n2. Technical Documentation\n\n\nClick here to view Technical Documentation\n\n\n3. Functional and Flow Diagrams\n\n\nClick here to view Functional and Flow Diagrams\n\n\n4. Smart Contracts\n\n\nCoverage\n\n\nClick here to view Smart Contract Coverage\n\n\nCoverage Report Log\n\n\nClick here to view Smart Contract Coverage Report Log\n\n\nTest Report Log\n\n\nClick here to view Smart Contract Test Report Log\n\n\nSource Code Repository\n\n\nClick here to view Smart Contract Source Code Repository\n\n\n5. Documentation Repository\n\n\nClick here to view Documentation Repository\n\n\nDisclaimer\n\n\nThe project is a work in progress and the docs might not reflect latest changes.", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#1-offering-whitepaper", 
+            "text": "Click here to view Offering Whitepaper", 
+            "title": "1. Offering Whitepaper"
+        }, 
+        {
+            "location": "/#2-technical-documentation", 
+            "text": "Click here to view Technical Documentation", 
+            "title": "2. Technical Documentation"
+        }, 
+        {
+            "location": "/#3-functional-and-flow-diagrams", 
+            "text": "Click here to view Functional and Flow Diagrams", 
+            "title": "3. Functional and Flow Diagrams"
+        }, 
+        {
+            "location": "/#4-smart-contracts", 
+            "text": "", 
+            "title": "4. Smart Contracts"
+        }, 
+        {
+            "location": "/#coverage", 
+            "text": "Click here to view Smart Contract Coverage", 
+            "title": "Coverage"
+        }, 
+        {
+            "location": "/#coverage-report-log", 
+            "text": "Click here to view Smart Contract Coverage Report Log", 
+            "title": "Coverage Report Log"
+        }, 
+        {
+            "location": "/#test-report-log", 
+            "text": "Click here to view Smart Contract Test Report Log", 
+            "title": "Test Report Log"
+        }, 
+        {
+            "location": "/#source-code-repository", 
+            "text": "Click here to view Smart Contract Source Code Repository", 
+            "title": "Source Code Repository"
+        }, 
+        {
+            "location": "/#5-documentation-repository", 
+            "text": "Click here to view Documentation Repository", 
+            "title": "5. Documentation Repository"
+        }, 
+        {
+            "location": "/#disclaimer", 
+            "text": "The project is a work in progress and the docs might not reflect latest changes.", 
+            "title": "Disclaimer"
+        }, 
+        {
+            "location": "/bbt_intro/", 
+            "text": "Welcome to the BlockBits Technical Documentation.\n\n\nIntroduction\n\n\nBlockBits is a decentralized open-source investing platform. Its most innovative feature is that it eliminates blind trust requirements (i.e., it is trustless), thus providing a significantly safer investing experience. This is achieved via built-in features that allow it to become fully maintained and governed by its token holders. \n\n\nStructure\n\n\nThe sections prepended by \"Project - \" contain base specifications for both the BlockBits Platform and all Child Projects launched through it. Any changes pertaining to BlockBits will be available in the sections prepended by \"BlockBits - \"\n\n\nLicense\n\n\nEvery asset we provide is licensed under the MIT License.", 
+            "title": "Technical Documentation Home"
+        }, 
+        {
+            "location": "/bbt_intro/#introduction", 
+            "text": "BlockBits is a decentralized open-source investing platform. Its most innovative feature is that it eliminates blind trust requirements (i.e., it is trustless), thus providing a significantly safer investing experience. This is achieved via built-in features that allow it to become fully maintained and governed by its token holders.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/bbt_intro/#structure", 
+            "text": "The sections prepended by \"Project - \" contain base specifications for both the BlockBits Platform and all Child Projects launched through it. Any changes pertaining to BlockBits will be available in the sections prepended by \"BlockBits - \"", 
+            "title": "Structure"
+        }, 
+        {
+            "location": "/bbt_intro/#license", 
+            "text": "Every asset we provide is licensed under the MIT License.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/bbt_useful_links/", 
+            "text": "Smart Contracts\n\n\nAvailable on GitHub at \nhttps://github.com/blockbitsio/smart-contracts\n\n\nBuilt using Solidity and uses testrpc and truffle 3.X.\n\n\nRepository includes unit and integration tests.\n\n\nDocumentation Links\n\n\n\n\nSource for the documentation is available on GitHub at \nhttps://github.com/blockbitsio/documentation/techdocs\n\n\nBuilt Project hosted at \nhttp://docs.blockbits.io\n\n\n\n\nFunctional and Flow Diagrams\n\n\nAvailable on GitHub at \nhttps://github.com/blockbitsio/documentation/diagrams\n\n\nPlatform domain names\n\n\n\n\nTLD domains:\n\n\nblockbits.io\n\n\nblockbeats.io\n\n\n\n\n\n\nENS / BZZ domains:\n\n\nblockbits.eth\n\n\nblockbeats.eth\n\n\n\n\n\n\n\n\nTesting Environments\n\n\n@TODO: Added once development milestones start\n\n\n\n\ncurrent.sandbox.blockbits.io\n\n\nbeta.sandbox.blockbits.io", 
+            "title": "BlockBits - Useful Links"
+        }, 
+        {
+            "location": "/bbt_useful_links/#smart-contracts", 
+            "text": "Available on GitHub at  https://github.com/blockbitsio/smart-contracts  Built using Solidity and uses testrpc and truffle 3.X.  Repository includes unit and integration tests.", 
+            "title": "Smart Contracts"
+        }, 
+        {
+            "location": "/bbt_useful_links/#documentation-links", 
+            "text": "Source for the documentation is available on GitHub at  https://github.com/blockbitsio/documentation/techdocs  Built Project hosted at  http://docs.blockbits.io", 
+            "title": "Documentation Links"
+        }, 
+        {
+            "location": "/bbt_useful_links/#functional-and-flow-diagrams", 
+            "text": "Available on GitHub at  https://github.com/blockbitsio/documentation/diagrams", 
+            "title": "Functional and Flow Diagrams"
+        }, 
+        {
+            "location": "/bbt_useful_links/#platform-domain-names", 
+            "text": "TLD domains:  blockbits.io  blockbeats.io    ENS / BZZ domains:  blockbits.eth  blockbeats.eth", 
+            "title": "Platform domain names"
+        }, 
+        {
+            "location": "/bbt_useful_links/#testing-environments", 
+            "text": "@TODO: Added once development milestones start   current.sandbox.blockbits.io  beta.sandbox.blockbits.io", 
+            "title": "Testing Environments"
+        }, 
+        {
+            "location": "/bbt_roadmap/", 
+            "text": "Phase 1 - Proof of Concept\n\n\nDate: June 2017 - January 2018\n \n\n\n\n\nTechnical Documentation, \n\n\nFunctional Diagrams, \n\n\nDeployment Strategy and Flows\n\n\nBounty Portal and Bounty Program Tools\n\n\nAndroid and iOS Mobile Notification Application\n\n\nBackend Application MVP \n\n\nOn the Ethereum BlockChain \n\n\n300+ Unit and Integration Tests\n\n\n\n\n\n\nTestnet deployments in different stages\n\n\nPlatform identity - Logo and Design\n\n\nCampaign Ofering Whitepaper\n\n\nCampaign Landing Page\n\n\n\n\nPhase 2 - Funding\n\n\nDate: January 2018 - March 2018\n \n\n\n\n\nCampaign Landing Page Launch\n\n\nAnnouncement\n\n\nAsk Me Anything ( AMA ) interviews and press releases\n\n\nPRE ICO - January 2017 - February 2018 \n\n\nICO - February 2018 - March 2018 \n\n\nToken Allocation - Date: 18th of March 2018 - 20th of March 2018 \n\n\n\n\nPhase 3 - Development\n\n\nDevelopment Start: 25th of March 2018\n \n\n\n3.1 - Minimalistic Platform\n\n\nEstimated Duration: 90 days\n\n\n\n\nTeam expansion\n\n\nSwarm / IPFS Storage\n\n\nPlatform Payload\n\n\nCampaing Details and News feed\n\n\nCampaing Message Boards \n\n\n\n\n\n\nPlatform Web Application\n\n\nCampaing Page\n\n\nCampaign Status\n\n\nCampaign News Feed\n\n\nCampaign Management Tools\n\n\nProposal Viewing, commenting and voting\n\n\n\n\n\n\nCampaign CashBack\n\n\nChats and or Message Boards\n\n\n\n\n\n\nCampaing Listing and filtering\n\n\nMy Profile\n\n\nMy Statistics\n\n\nMy Contributions\n\n\nMy Required Actions ( Voting )\n\n\n\n\n\n\nMainNet / TestNet Testing environments\n\n\nDeployment Tools\n\n\nApplication State Processing Daemon\n\n\n\n\nNOTE: Minimum required functionality in order for token holders to be able to validate and vote on proposals.\n\n\n\n\n3.2 - 3rd Party Launch Functionality\n\n\nEstimated Duration: 180 days\n\n\n\n\nPlatform Web Application\n\n\nCampaing Page\n\n\nCampaign Status improvements \n\n\nCampaign Management Tools\n\n\nToken holder Voted Delisting proposals\n\n\n\n\n\n\n\n\n\n\nCampaing Listing and filtering improvements\n\n\nProject Creation Wizard - v1 \n\n\nPresents Basic choices already implemented\n\n\nBBX Token holder entry settings\n\n\nBBX Internal Funding Periods\n\n\n\n\n\n\nBlockChain Application Deployer\n\n\nWizard Choice Validator\n\n\nListing Linker\n\n\n\n\n\n\nPlatform - Revenue Stream Storage Contract\n\n\nMobile Application Update \n\n\nAdd News Items for Listed Projects.\n\n\n\n\n\n\n\n\nNice to have:\n- Basic Risk Indicators and Analysis\n\n\nNOTE: Minimum required functionality to allow 3rd party projects to launch through the platform and allow token holders to participate in funding events that include discount programs.\n\n\n\n\n3.3 - Code Upgrade Tools and Token Buyback\n\n\nEstimated Duration: 90 days\n\n\n\n\nCampaing Page\n\n\nCode Upgrade Tools with in platform code diff viewer\n\n\nToken Buyback functionality that uses funds in Revenue Stream Storage\n\n\n\n\n\n\n\n\nNOTE: Minimum required functionality to allow Code Upgrades to be processed in order to enable Token Buyback for the main platform and launched children projects.\n\n\n\n\n3.4 - Basic Risk indicators and Collaboration tools\n\n\nEstimated Duration: 90 days\n\n\n\n\nCampaing Page\n\n\nCampaing Risk indications and analysis\n\n\n\n\n\n\nCampaing listing and filtering based on risk indicators and scoring \n\n\nProject Creation Wizard - v2\n\n\nCollaboration Tools\n\n\nNew Discount programs, \n\n\nNew Funding algorithms\n\n\n\n\n\n\n\n\nNOTE: Basic Risk analysis and indicators for projects and Collaboration tools for the Creation Wizard.\n\n\n\n\n3.5 - Advanced functionality\n\n\nEstimated Duration: 90 days\n\n\n\n\nProject Creation Wizard - v3\n\n\nFunding Auction Bidding\n\n\n\n\n\n\nCampaing Page\n\n\nAdvanced Risk indications and analysis\n\n\n\n\n\n\n\n\nNOTE: Advanced functionality for project creation, risk analysis and indicators for project page details.\n\n\n\n\n3.6 - Token Holder Upgrades\n\n\nEstimated Duration: 90 days\n\n\n\n\nToken holder initiated Code Upgrades that get paid from the Revenue Stream Storage Contract\n\n\n\n\nNOTE: Allows token holders to propose upgrades and get paid for them.\n\n\n\n\n3.7 - Full Decentralization\n\n\nEstimated Duration: 90 days\n\n\nFull Decentralization Support\n - ENS Ownership ( ENS annual renewal payments )\n - Storage Ownership with renewal\n\n\nNOTE: Project gets prepared for completion, where no one owns it.\n\n\n\n\nPhase 4 - Development Completed\n\n\nFrom here on, project owner becomes a token holder, and any token holder can propose a code upgrade and vote for it.", 
+            "title": "BlockBits - Roadmap"
+        }, 
+        {
+            "location": "/bbt_roadmap/#phase-1-proof-of-concept", 
+            "text": "Date: June 2017 - January 2018     Technical Documentation,   Functional Diagrams,   Deployment Strategy and Flows  Bounty Portal and Bounty Program Tools  Android and iOS Mobile Notification Application  Backend Application MVP   On the Ethereum BlockChain   300+ Unit and Integration Tests    Testnet deployments in different stages  Platform identity - Logo and Design  Campaign Ofering Whitepaper  Campaign Landing Page", 
+            "title": "Phase 1 - Proof of Concept"
+        }, 
+        {
+            "location": "/bbt_roadmap/#phase-2-funding", 
+            "text": "Date: January 2018 - March 2018     Campaign Landing Page Launch  Announcement  Ask Me Anything ( AMA ) interviews and press releases  PRE ICO - January 2017 - February 2018   ICO - February 2018 - March 2018   Token Allocation - Date: 18th of March 2018 - 20th of March 2018", 
+            "title": "Phase 2 - Funding"
+        }, 
+        {
+            "location": "/bbt_roadmap/#phase-3-development", 
+            "text": "Development Start: 25th of March 2018", 
+            "title": "Phase 3 - Development"
+        }, 
+        {
+            "location": "/bbt_roadmap/#31-minimalistic-platform", 
+            "text": "Estimated Duration: 90 days   Team expansion  Swarm / IPFS Storage  Platform Payload  Campaing Details and News feed  Campaing Message Boards     Platform Web Application  Campaing Page  Campaign Status  Campaign News Feed  Campaign Management Tools  Proposal Viewing, commenting and voting    Campaign CashBack  Chats and or Message Boards    Campaing Listing and filtering  My Profile  My Statistics  My Contributions  My Required Actions ( Voting )    MainNet / TestNet Testing environments  Deployment Tools  Application State Processing Daemon   NOTE: Minimum required functionality in order for token holders to be able to validate and vote on proposals.", 
+            "title": "3.1 - Minimalistic Platform"
+        }, 
+        {
+            "location": "/bbt_roadmap/#32-3rd-party-launch-functionality", 
+            "text": "Estimated Duration: 180 days   Platform Web Application  Campaing Page  Campaign Status improvements   Campaign Management Tools  Token holder Voted Delisting proposals      Campaing Listing and filtering improvements  Project Creation Wizard - v1   Presents Basic choices already implemented  BBX Token holder entry settings  BBX Internal Funding Periods    BlockChain Application Deployer  Wizard Choice Validator  Listing Linker    Platform - Revenue Stream Storage Contract  Mobile Application Update   Add News Items for Listed Projects.     Nice to have:\n- Basic Risk Indicators and Analysis  NOTE: Minimum required functionality to allow 3rd party projects to launch through the platform and allow token holders to participate in funding events that include discount programs.", 
+            "title": "3.2 - 3rd Party Launch Functionality"
+        }, 
+        {
+            "location": "/bbt_roadmap/#33-code-upgrade-tools-and-token-buyback", 
+            "text": "Estimated Duration: 90 days   Campaing Page  Code Upgrade Tools with in platform code diff viewer  Token Buyback functionality that uses funds in Revenue Stream Storage     NOTE: Minimum required functionality to allow Code Upgrades to be processed in order to enable Token Buyback for the main platform and launched children projects.", 
+            "title": "3.3 - Code Upgrade Tools and Token Buyback"
+        }, 
+        {
+            "location": "/bbt_roadmap/#34-basic-risk-indicators-and-collaboration-tools", 
+            "text": "Estimated Duration: 90 days   Campaing Page  Campaing Risk indications and analysis    Campaing listing and filtering based on risk indicators and scoring   Project Creation Wizard - v2  Collaboration Tools  New Discount programs,   New Funding algorithms     NOTE: Basic Risk analysis and indicators for projects and Collaboration tools for the Creation Wizard.", 
+            "title": "3.4 - Basic Risk indicators and Collaboration tools"
+        }, 
+        {
+            "location": "/bbt_roadmap/#35-advanced-functionality", 
+            "text": "Estimated Duration: 90 days   Project Creation Wizard - v3  Funding Auction Bidding    Campaing Page  Advanced Risk indications and analysis     NOTE: Advanced functionality for project creation, risk analysis and indicators for project page details.", 
+            "title": "3.5 - Advanced functionality"
+        }, 
+        {
+            "location": "/bbt_roadmap/#36-token-holder-upgrades", 
+            "text": "Estimated Duration: 90 days   Token holder initiated Code Upgrades that get paid from the Revenue Stream Storage Contract   NOTE: Allows token holders to propose upgrades and get paid for them.", 
+            "title": "3.6 - Token Holder Upgrades"
+        }, 
+        {
+            "location": "/bbt_roadmap/#37-full-decentralization", 
+            "text": "Estimated Duration: 90 days  Full Decentralization Support\n - ENS Ownership ( ENS annual renewal payments )\n - Storage Ownership with renewal  NOTE: Project gets prepared for completion, where no one owns it.", 
+            "title": "3.7 - Full Decentralization"
+        }, 
+        {
+            "location": "/bbt_roadmap/#phase-4-development-completed", 
+            "text": "From here on, project owner becomes a token holder, and any token holder can propose a code upgrade and vote for it.", 
+            "title": "Phase 4 - Development Completed"
+        }, 
+        {
+            "location": "/bbt_development/", 
+            "text": "Public Testing Sandboxes\n\n\nTo be implemented\n\n\nIn order to facilitate easier testing and error reporting by our users we provide the following public testing environments.\n\n\nIf you need \nETH\n in the Sandbox, you can request some in the \"Project Launch Dashboard\".\nIf you want to copy your project from Live, to current.sandbox, use the \"Migrate from Live\" functionality.\n\n\nDeployed Contract Validation will be ignored on SandBoxes as Etherscan Contract Verification only works on MainNET at \nthe time of writing.\n\n\n@TODO: come back and check if validation can now be done on testnet blockchains\n\n\nCurrent Version BlockBits Platform Sandbox\n\n\nWill host a public test access copy of the current BlockBits Platform.\n\n\n\n\nURL: \ncurrent.sandbox.blockbits.io\n\n\n\n\nUseful when you don't have ETH, but would like to test things out with no consequences.\n\n\nBeta Version BlockBits Platform Sandbox\n\n\nWill host public test access to code upgrades to the BlockBits Platform and it's Smart Contracts.\n\n\n\n\nURL: \nbeta.sandbox.blockbits.io\n\n\n\n\nUseful when you want to test next release candidate.\n\n\nDeployment Strategy\n\n\nWhenever contract code upgrade is required we need to deploy a new version and migrate old contracts' libraries and \nmodules that hold data to the new one.\n\n\nIn order to facilitate this, we've implemented a Proxy GatewayInterface Contract that serves as a \nproxy\n to finding \nthe actual Application Entity contract to be used in the web3 application.\n\n\nThe gateway.blockbits.eth ENS name will point to this \"Proxy GatewayInterface Contract\".\n\n\nSince we are updating a decentralized application, and we want our token holders to agree upon each move we make, we \nneed their vote to proceed.\n\n\nCOMMENT: Let's say we have a new proposal initiated by shareholders and they want our Application to start buying BBT Tokens from the market and burn them instead of donating our profits to open source projects.\nSince this is a fundamental change of the Application Entity, we do the following:\n\n\n\n\nChapter 1 - Project internal\n\n\n\n\n1.1 - Implement new code changes that are required ( smart contract / application / api / etc )\n\n\n1.2 - Publish source code and invite BBT Token holders to participate in testing if they wish to\n\n\n1.3 - Test the functionality in house and on testnet, make sure it does what's required on public test website\n\n\n1.4 - Enlist 3rd Party to do a Code Audit\n\n\n1.5 - If audit returns bad things, go back to step 1\n\n\n1.6 - Generate change report\n\n\n\n\nChange report includes the following:\n \n\n\n- Proposed change\n- Previous voting results\n- New to old contract source code diff \n- New contract source code\n- New contract deployment address\n- EtherScan.io contract validation url\n- Automatic test results report\n- 3rd Party Audit Report\n\n\n\n\nChapter 2 - Deployment\n\n\n\n\n2.1 - Deploy contract to MainNET and add new assets and settings. ( new ApplicationEntity constructed with \"Maintenance mode\" active -\n only accepts transactions from GatewayInterface )  \n\n\n2.2 - Verify and link contract source code at etherscan.io\n\n\n2.3 - Announce a meeting using the News Contract\n\n\n2.4 - Link new Application, as a result a Proposal will be created and be available for voting.\n\n\n2.5 - Meeting: provide new contract verification link, show the changes that have been made and why they are required\n\n\n2.6 - After meeting end, a new voting cycle is started, and for the next \nProject Bylaws - Proposal Voting Duration\n ( 7 ) days Project Investors decide if the update will be implemented into the main Application Entity.\n\n\n2.7 - Based on outcome the application proceeds automatically with upgrading to the new contract ( Chapter 3 ) or just ignoring it.\n\n\n\n\nChapter 3 - Contract Migration\n\n\n\n\nCurrent Application Entity calls the gateway to accept the proposal.\n\n\nGateway Interface:\n\n\nasks current application entity to set the new contract address as an owner in all dependencies\n\n\nlocks current ( old ) application\n\n\nupdates itself to point to the new Application Entity.", 
+            "title": "BlockBits - Development"
+        }, 
+        {
+            "location": "/bbt_development/#public-testing-sandboxes", 
+            "text": "To be implemented  In order to facilitate easier testing and error reporting by our users we provide the following public testing environments.  If you need  ETH  in the Sandbox, you can request some in the \"Project Launch Dashboard\".\nIf you want to copy your project from Live, to current.sandbox, use the \"Migrate from Live\" functionality.  Deployed Contract Validation will be ignored on SandBoxes as Etherscan Contract Verification only works on MainNET at \nthe time of writing.  @TODO: come back and check if validation can now be done on testnet blockchains", 
+            "title": "Public Testing Sandboxes"
+        }, 
+        {
+            "location": "/bbt_development/#current-version-blockbits-platform-sandbox", 
+            "text": "Will host a public test access copy of the current BlockBits Platform.   URL:  current.sandbox.blockbits.io   Useful when you don't have ETH, but would like to test things out with no consequences.", 
+            "title": "Current Version BlockBits Platform Sandbox"
+        }, 
+        {
+            "location": "/bbt_development/#beta-version-blockbits-platform-sandbox", 
+            "text": "Will host public test access to code upgrades to the BlockBits Platform and it's Smart Contracts.   URL:  beta.sandbox.blockbits.io   Useful when you want to test next release candidate.", 
+            "title": "Beta Version BlockBits Platform Sandbox"
+        }, 
+        {
+            "location": "/bbt_development/#deployment-strategy", 
+            "text": "Whenever contract code upgrade is required we need to deploy a new version and migrate old contracts' libraries and \nmodules that hold data to the new one.  In order to facilitate this, we've implemented a Proxy GatewayInterface Contract that serves as a  proxy  to finding \nthe actual Application Entity contract to be used in the web3 application.  The gateway.blockbits.eth ENS name will point to this \"Proxy GatewayInterface Contract\".  Since we are updating a decentralized application, and we want our token holders to agree upon each move we make, we \nneed their vote to proceed.  COMMENT: Let's say we have a new proposal initiated by shareholders and they want our Application to start buying BBT Tokens from the market and burn them instead of donating our profits to open source projects.\nSince this is a fundamental change of the Application Entity, we do the following:", 
+            "title": "Deployment Strategy"
+        }, 
+        {
+            "location": "/bbt_development/#chapter-1-project-internal", 
+            "text": "1.1 - Implement new code changes that are required ( smart contract / application / api / etc )  1.2 - Publish source code and invite BBT Token holders to participate in testing if they wish to  1.3 - Test the functionality in house and on testnet, make sure it does what's required on public test website  1.4 - Enlist 3rd Party to do a Code Audit  1.5 - If audit returns bad things, go back to step 1  1.6 - Generate change report   Change report includes the following:    - Proposed change\n- Previous voting results\n- New to old contract source code diff \n- New contract source code\n- New contract deployment address\n- EtherScan.io contract validation url\n- Automatic test results report\n- 3rd Party Audit Report", 
+            "title": "Chapter 1 - Project internal"
+        }, 
+        {
+            "location": "/bbt_development/#chapter-2-deployment", 
+            "text": "2.1 - Deploy contract to MainNET and add new assets and settings. ( new ApplicationEntity constructed with \"Maintenance mode\" active -  only accepts transactions from GatewayInterface )    2.2 - Verify and link contract source code at etherscan.io  2.3 - Announce a meeting using the News Contract  2.4 - Link new Application, as a result a Proposal will be created and be available for voting.  2.5 - Meeting: provide new contract verification link, show the changes that have been made and why they are required  2.6 - After meeting end, a new voting cycle is started, and for the next  Project Bylaws - Proposal Voting Duration  ( 7 ) days Project Investors decide if the update will be implemented into the main Application Entity.  2.7 - Based on outcome the application proceeds automatically with upgrading to the new contract ( Chapter 3 ) or just ignoring it.", 
+            "title": "Chapter 2 - Deployment"
+        }, 
+        {
+            "location": "/bbt_development/#chapter-3-contract-migration", 
+            "text": "Current Application Entity calls the gateway to accept the proposal.  Gateway Interface:  asks current application entity to set the new contract address as an owner in all dependencies  locks current ( old ) application  updates itself to point to the new Application Entity.", 
+            "title": "Chapter 3 - Contract Migration"
+        }, 
+        {
+            "location": "/bbt_changes/", 
+            "text": "BlockBits Platform Specific Concepts and Changes \n\n\nPlatform Account\n\n\nYour account is your ethereum wallet address.\n\n\nBylaw Settings\n\n\nOverrides default \nProject - Bylaw Settings\n.\n\n\nKeeps all functionality and adds:\n\n\nBlockBits Listing Fee\n\n\n\n\nDescription: see \nPlatform - Listing Requirements\n\n\nDefaults to: \n1%\n\n\n\n\nBlockBits Standard Platform Base Fee\n\n\n\n\nDescription: see \nDynamic Platform Base Fee\n\n\nDefaults to: \n1%\n\n\n\n\nDynamic Platform Base Fee\n\n\nCharged to the Child Project if Funding is Successful\n\n\nIs represented by the \nAdjusted Platform Base Fee\n.\n\n\nStandard Platform Base Fee\n\n\n\n\nBlockBits Listing Fee\n is the Base Fee used in the \nAdjusted Platform Base Fee\n calculations.\n\n\n\n\nNo Platform Base Fee\n\n\n\n\nStandard Platform Base Fee\n Is set to zero.\n\n\nApplies only if the whole raised \nETH\n amount represents only Milestone Funding payments.\n\n\nIs still taken into account in \nAdjusted Platform Base Fee\n.\n\n\n\n\nAdjusted Platform Base Fee\n\n\n\n\nRepresents a cost to the Crowd Funded Project in raised ETH.\n\n\nIf 1 cost is higher than \nStandard Platform Base Fee\n, all individual costs are accumulated and represent the Adjusted Platform Base Fee. \n\n\nThis means, the more you give out, the more you get charged.\n\n\nWe do this in order to \ndiscourage reckless spending\n.\n\n\n\n\nAvailable Costs\n\n\n\n\nThere is no minimum or maximum setting enforcement but each one affects the Resulting Fee.\n\n\nThe share of each \"Cost\" can be set by the Project Owner.\n\n\n\n\nBounty Cost\n\n\n\n\nIf Bounties are enabled, they represent a Token Cost to the platform.\n\n\n\n\nExternal Services Cost\n\n\n\n\nIf External Services Cost are enabled, they represent an \nETH\n Cost to the platform.\n\n\n\n\nNOTE: Not implemented - under consideration\n\n\nListing Requirements\n\n\nChange requires a \nApplication Entity - Code Upgrade Proposal\n\n\n\n\n\n\nCan be disabled by setting to 0\n\n\n\n\n\n\nIn order to deter the launch of campaigns that are pointless and to insure that the Crowd Funded Project Creator is \nserious there is a \nBylaws Settings - Platform Listing Fee\n requirement.\n\n\n\n\n\n\nIf the \nBylaws Settings - Platform Listing Fee\n cost is present the represented \nETH\n is locked into the listing \ncontract until the successful completion of the funding of said project. \n\n\n\n\n\n\nIf project fails to get funded, or is delisted, said \nETH\n is transferred to the \nBlockBits Reserve Fund\n\n\n\n\n\n\nActivated after:\n \nBlockBits - Roadmap - 3.2 3rd Party Launch Functionality\n is complete.\n\n\nOutside Donations Contract\n\n\nChanges require a \nApplication Entity - Code Upgrade Proposal\n\n\n\n\nAny \nETH\n sent to this contract is forwarded to the following organizations:\n\n\nMetamask, EtherScan, MyEtherWallet.\n\n\n\n\n\n\nThis contract serves the purpose of retrieving lost founds in abandoned Child Projects.\n\n\nThe funds are donated because otherwise any involved party might take advantage in their favour.\n\n\nThe idea behind it, is that due to the nature of wallets, we do not want lost funds to be locked in the BlockChain \nforever. Instead they are donated to causes or projects that actually create value in the BlockChain.\n\n\n\n\nActivated after:\n \nBlockBits - Roadmap - 3.2 3rd Party Launch Functionality\n is complete.\n\n\nProposals\n\n\nOverrides default \nProject - Proposals\n.\n\n\nKeeps all functionality and adds:\n\n\nDelisting Proposal\n\n\n\n\n\n\nCan be created only once per Listing Contract Item ( Child Project ) by any \nToken Holder\n at any time, as long as said Child is has not started receiving funds.\n\n\n\n\n\n\nThis allows all Token Holders to vote on the proposal to delist said project from the BlockBits Platform Listing.\n\n\n\n\n\n\nIn special cases the delisting can be forced by using a Code Upgrade that is successfully accepted.\n\n\n\n\nRevenue Stream\n\n\nOverrides default \nRevenue Stream\n.\n\n\nChanges:\n\n- Revenue Stream is created by the fees applied to \nChild - Projects\n using the BlockBits Platform through the \n\nDynamic Platform Base Fee\n.\n\n\nActivated after:\n \nBlockBits - Roadmap - 3.2 3rd Party Launch Functionality\n is complete.\n\n\nVoting Power\n\n\nOverrides default \nVoting Power\n.\n\n\nChanges:\n\n\n\n\nIn the case of a \nDelisting Proposal\n Voting Power is determined by the amount of \nBBX Tokens\n owned at the END of the \nProposal - Voting Phase\n, ( includes both Vault and Investor wallet ).", 
+            "title": "BlockBits - Specifications"
+        }, 
+        {
+            "location": "/bbt_changes/#platform-account", 
+            "text": "Your account is your ethereum wallet address.", 
+            "title": "Platform Account"
+        }, 
+        {
+            "location": "/bbt_changes/#bylaw-settings", 
+            "text": "Overrides default  Project - Bylaw Settings .  Keeps all functionality and adds:", 
+            "title": "Bylaw Settings"
+        }, 
+        {
+            "location": "/bbt_changes/#blockbits-listing-fee", 
+            "text": "Description: see  Platform - Listing Requirements  Defaults to:  1%", 
+            "title": "BlockBits Listing Fee"
+        }, 
+        {
+            "location": "/bbt_changes/#blockbits-standard-platform-base-fee", 
+            "text": "Description: see  Dynamic Platform Base Fee  Defaults to:  1%", 
+            "title": "BlockBits Standard Platform Base Fee"
+        }, 
+        {
+            "location": "/bbt_changes/#dynamic-platform-base-fee", 
+            "text": "Charged to the Child Project if Funding is Successful  Is represented by the  Adjusted Platform Base Fee .", 
+            "title": "Dynamic Platform Base Fee"
+        }, 
+        {
+            "location": "/bbt_changes/#standard-platform-base-fee", 
+            "text": "BlockBits Listing Fee  is the Base Fee used in the  Adjusted Platform Base Fee  calculations.", 
+            "title": "Standard Platform Base Fee"
+        }, 
+        {
+            "location": "/bbt_changes/#no-platform-base-fee", 
+            "text": "Standard Platform Base Fee  Is set to zero.  Applies only if the whole raised  ETH  amount represents only Milestone Funding payments.  Is still taken into account in  Adjusted Platform Base Fee .", 
+            "title": "No Platform Base Fee"
+        }, 
+        {
+            "location": "/bbt_changes/#adjusted-platform-base-fee", 
+            "text": "Represents a cost to the Crowd Funded Project in raised ETH.  If 1 cost is higher than  Standard Platform Base Fee , all individual costs are accumulated and represent the Adjusted Platform Base Fee.   This means, the more you give out, the more you get charged.  We do this in order to  discourage reckless spending .", 
+            "title": "Adjusted Platform Base Fee"
+        }, 
+        {
+            "location": "/bbt_changes/#available-costs", 
+            "text": "There is no minimum or maximum setting enforcement but each one affects the Resulting Fee.  The share of each \"Cost\" can be set by the Project Owner.", 
+            "title": "Available Costs"
+        }, 
+        {
+            "location": "/bbt_changes/#bounty-cost", 
+            "text": "If Bounties are enabled, they represent a Token Cost to the platform.", 
+            "title": "Bounty Cost"
+        }, 
+        {
+            "location": "/bbt_changes/#external-services-cost", 
+            "text": "If External Services Cost are enabled, they represent an  ETH  Cost to the platform.   NOTE: Not implemented - under consideration", 
+            "title": "External Services Cost"
+        }, 
+        {
+            "location": "/bbt_changes/#listing-requirements", 
+            "text": "Change requires a  Application Entity - Code Upgrade Proposal    Can be disabled by setting to 0    In order to deter the launch of campaigns that are pointless and to insure that the Crowd Funded Project Creator is \nserious there is a  Bylaws Settings - Platform Listing Fee  requirement.    If the  Bylaws Settings - Platform Listing Fee  cost is present the represented  ETH  is locked into the listing \ncontract until the successful completion of the funding of said project.     If project fails to get funded, or is delisted, said  ETH  is transferred to the  BlockBits Reserve Fund    Activated after:   BlockBits - Roadmap - 3.2 3rd Party Launch Functionality  is complete.", 
+            "title": "Listing Requirements"
+        }, 
+        {
+            "location": "/bbt_changes/#outside-donations-contract", 
+            "text": "Changes require a  Application Entity - Code Upgrade Proposal   Any  ETH  sent to this contract is forwarded to the following organizations:  Metamask, EtherScan, MyEtherWallet.    This contract serves the purpose of retrieving lost founds in abandoned Child Projects.  The funds are donated because otherwise any involved party might take advantage in their favour.  The idea behind it, is that due to the nature of wallets, we do not want lost funds to be locked in the BlockChain \nforever. Instead they are donated to causes or projects that actually create value in the BlockChain.   Activated after:   BlockBits - Roadmap - 3.2 3rd Party Launch Functionality  is complete.", 
+            "title": "Outside Donations Contract"
+        }, 
+        {
+            "location": "/bbt_changes/#proposals", 
+            "text": "Overrides default  Project - Proposals .  Keeps all functionality and adds:", 
+            "title": "Proposals"
+        }, 
+        {
+            "location": "/bbt_changes/#delisting-proposal", 
+            "text": "Can be created only once per Listing Contract Item ( Child Project ) by any  Token Holder  at any time, as long as said Child is has not started receiving funds.    This allows all Token Holders to vote on the proposal to delist said project from the BlockBits Platform Listing.    In special cases the delisting can be forced by using a Code Upgrade that is successfully accepted.", 
+            "title": "Delisting Proposal"
+        }, 
+        {
+            "location": "/bbt_changes/#revenue-stream", 
+            "text": "Overrides default  Revenue Stream .  Changes: \n- Revenue Stream is created by the fees applied to  Child - Projects  using the BlockBits Platform through the  Dynamic Platform Base Fee .  Activated after:   BlockBits - Roadmap - 3.2 3rd Party Launch Functionality  is complete.", 
+            "title": "Revenue Stream"
+        }, 
+        {
+            "location": "/bbt_changes/#voting-power", 
+            "text": "Overrides default  Voting Power .  Changes:   In the case of a  Delisting Proposal  Voting Power is determined by the amount of  BBX Tokens  owned at the END of the  Proposal - Voting Phase , ( includes both Vault and Investor wallet ).", 
+            "title": "Voting Power"
+        }, 
+        {
+            "location": "/bbt_gateway/", 
+            "text": "GatewayInterface\n\n\nProvides a stable contract address used by the BlockBits Platform.\n\n\nStores the address to the current Application Entity in use.\n\n\nAn \nApplication Entity\n address can be changed only by a successfully voted Code Upgrade Proposal.\n\n\nIn the \nPhase 4 - Development Completed\n stage of the application, it will own the rights to the \nblockbits.eth\n and \nblockbeats.eth\n ENS Domain names, and will update them to point to the latest Application Entity address", 
+            "title": "BlockBits - GatewayInterface"
+        }, 
+        {
+            "location": "/bbt_gateway/#gatewayinterface", 
+            "text": "Provides a stable contract address used by the BlockBits Platform.  Stores the address to the current Application Entity in use.  An  Application Entity  address can be changed only by a successfully voted Code Upgrade Proposal.  In the  Phase 4 - Development Completed  stage of the application, it will own the rights to the  blockbits.eth  and  blockbeats.eth  ENS Domain names, and will update them to point to the latest Application Entity address", 
+            "title": "GatewayInterface"
+        }, 
+        {
+            "location": "/bbt_bounty/", 
+            "text": "Advertising Bounty Program\n\n\n\n\n1% of total Platform Tokens will be available to the Advertising Bounty Program.\n\n\nAnyone with an Ethereum wallet address can join the bounty program by visiting our Bounty Portal from the Landing Page and creating an account.\n\n\nThey need to sign up an account and link an Ethereum wallet address to it.\n\n\nIn order to participate and send urls for any bounty claim they need to be logged into the platform.\n\n\n\n\nBounty Program Entry\n\n\n\n\nRepresents a valid entry submitted by a \nBounty Portal Account\n as a bounty stake claim.\n\n\nOne Entry Stake equals the Item Score assigned for said \nBounty Entry Type\n.\n\n\n\n\nEntry Rules\n\n\n\n\nAny entry needs to be original.\n\n\nAdding an entry that already exists, will initiate a \"Validation Process\" to determine you are the rightful owner.\n\n\nTrolling and spamming will not be rewarded.\n\n\n\n\nBounty Program Entry Stake\n\n\n\n\nin short BPES\n\n\n1 BPES represents 100 divided by Total Bounty Program Entry Stakes in the system at the end of all Funding Phases.\n\n\n\n\nBounty Entry Type - Item Scores\n\n\nBitcoinTalk\n\n\n\n\nForum post 1 BPES\n\n\nOfficial signature 10 BPES\n\n\n\n\nOther relevant media\n\n\n\n\nFacebook like 1 BPES\n\n\nFacebook share 1 BPES\n\n\nFollow on twitter 1 BPES\n\n\nRetweet on twitter 1 BPES\n\n\nGeneric blog post 5 BPES\n\n\nSteem.it article 10 BPES\n\n\nVideo creation on youtube / vimeo / etc 10 BPES\n\n\n\n\nBounty Distribution Example:\n\n\nEntry Scoring:\n    POST = 1\n    SIGNATURE = 5\n    VIDEO = 10\n    BLOG = 5\n    FACEBOOK_LIKE = 1\n    FACEBOOK_SHARE = 2\n    TWITTER_FOLLOW = 1\n    TWITTER_REPOST = 1\n    STEEMIT_ARTICLE = 10\n\nEntries:\n    1 - address: 0x0001, url: 'http://bitcointalk.com', stake: 1, type: POST\n    2 - address: 0x0001, url: 'http://youtube.com', stake: 10, type: VIDEO\n    3 - address: 0x0002, url: 'http://bitcointalk.com', stake: 1, type: POST\n    4 - address: 0x0002, url: 'http://bitcointalk.com', stake: 5, type: SIGNATURE\n    5 - address: 0x0005, url: 'http://bitcointalk.com', stake: 1, type: POST\n    6 - address: 0x0005, url: 'http://youtube.com', stake: 10, type: VIDEO\n    7 - address: 0x0005, url: 'http://bitcointalk.com', stake: 5, type: SIGNATURE\n    8 - address: 0x0007, url: 'http://blabla.com', stake: 5, type: BLOG\n    9 - address: 0x0007, url: 'http://twitter.com/share', stake: 1, type: TWITTER_FOLLOW\n    10 - address: 0x0007, url: 'http://facebook.com/like', stake: 1, type: FACEBOOK_LIKE\n    11 - address: 0x0007, url: 'http://facebook.com/share', stake: 2, type: FACEBOOK_SHARE\n\nTotal entries = 11\nTotal stakes = 42\nTotal offered tokens = 1000\n\nCalculate 1 BPES ( 100 / total stakes ) = 2.3809523809524\n\n    1 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    2 - ES: 10, TPS: 23.809523809524, ET: 238.09523809524\n    3 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    4 - ES: 5, TPS: 11.904761904762, ET: 119.04761904762\n    5 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    6 - ES: 10, TPS: 23.809523809524, ET: 238.09523809524\n    7 - ES: 5, TPS: 11.904761904762, ET: 119.04761904762\n    8 - ES: 5, TPS: 11.904761904762, ET: 119.04761904762\n    9 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    10 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    11 - ES: 2, TPS: 4.7619047619048, ET: 47.619047619048\n\nES: entry stake\nTPS: token percentage stake\nET: earned tokens\n\nTest results:\nDistributed tokens: 1000\nDistributed percentage: 100", 
+            "title": "BlockBits - Bounty Programs"
+        }, 
+        {
+            "location": "/bbt_bounty/#advertising-bounty-program", 
+            "text": "1% of total Platform Tokens will be available to the Advertising Bounty Program.  Anyone with an Ethereum wallet address can join the bounty program by visiting our Bounty Portal from the Landing Page and creating an account.  They need to sign up an account and link an Ethereum wallet address to it.  In order to participate and send urls for any bounty claim they need to be logged into the platform.", 
+            "title": "Advertising Bounty Program"
+        }, 
+        {
+            "location": "/bbt_bounty/#bounty-program-entry", 
+            "text": "Represents a valid entry submitted by a  Bounty Portal Account  as a bounty stake claim.  One Entry Stake equals the Item Score assigned for said  Bounty Entry Type .", 
+            "title": "Bounty Program Entry"
+        }, 
+        {
+            "location": "/bbt_bounty/#entry-rules", 
+            "text": "Any entry needs to be original.  Adding an entry that already exists, will initiate a \"Validation Process\" to determine you are the rightful owner.  Trolling and spamming will not be rewarded.", 
+            "title": "Entry Rules"
+        }, 
+        {
+            "location": "/bbt_bounty/#bounty-program-entry-stake", 
+            "text": "in short BPES  1 BPES represents 100 divided by Total Bounty Program Entry Stakes in the system at the end of all Funding Phases.", 
+            "title": "Bounty Program Entry Stake"
+        }, 
+        {
+            "location": "/bbt_bounty/#bounty-entry-type-item-scores", 
+            "text": "", 
+            "title": "Bounty Entry Type - Item Scores"
+        }, 
+        {
+            "location": "/bbt_bounty/#bitcointalk", 
+            "text": "Forum post 1 BPES  Official signature 10 BPES", 
+            "title": "BitcoinTalk"
+        }, 
+        {
+            "location": "/bbt_bounty/#other-relevant-media", 
+            "text": "Facebook like 1 BPES  Facebook share 1 BPES  Follow on twitter 1 BPES  Retweet on twitter 1 BPES  Generic blog post 5 BPES  Steem.it article 10 BPES  Video creation on youtube / vimeo / etc 10 BPES", 
+            "title": "Other relevant media"
+        }, 
+        {
+            "location": "/bbt_bounty/#bounty-distribution-example", 
+            "text": "Entry Scoring:\n    POST = 1\n    SIGNATURE = 5\n    VIDEO = 10\n    BLOG = 5\n    FACEBOOK_LIKE = 1\n    FACEBOOK_SHARE = 2\n    TWITTER_FOLLOW = 1\n    TWITTER_REPOST = 1\n    STEEMIT_ARTICLE = 10\n\nEntries:\n    1 - address: 0x0001, url: 'http://bitcointalk.com', stake: 1, type: POST\n    2 - address: 0x0001, url: 'http://youtube.com', stake: 10, type: VIDEO\n    3 - address: 0x0002, url: 'http://bitcointalk.com', stake: 1, type: POST\n    4 - address: 0x0002, url: 'http://bitcointalk.com', stake: 5, type: SIGNATURE\n    5 - address: 0x0005, url: 'http://bitcointalk.com', stake: 1, type: POST\n    6 - address: 0x0005, url: 'http://youtube.com', stake: 10, type: VIDEO\n    7 - address: 0x0005, url: 'http://bitcointalk.com', stake: 5, type: SIGNATURE\n    8 - address: 0x0007, url: 'http://blabla.com', stake: 5, type: BLOG\n    9 - address: 0x0007, url: 'http://twitter.com/share', stake: 1, type: TWITTER_FOLLOW\n    10 - address: 0x0007, url: 'http://facebook.com/like', stake: 1, type: FACEBOOK_LIKE\n    11 - address: 0x0007, url: 'http://facebook.com/share', stake: 2, type: FACEBOOK_SHARE\n\nTotal entries = 11\nTotal stakes = 42\nTotal offered tokens = 1000\n\nCalculate 1 BPES ( 100 / total stakes ) = 2.3809523809524\n\n    1 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    2 - ES: 10, TPS: 23.809523809524, ET: 238.09523809524\n    3 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    4 - ES: 5, TPS: 11.904761904762, ET: 119.04761904762\n    5 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    6 - ES: 10, TPS: 23.809523809524, ET: 238.09523809524\n    7 - ES: 5, TPS: 11.904761904762, ET: 119.04761904762\n    8 - ES: 5, TPS: 11.904761904762, ET: 119.04761904762\n    9 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    10 - ES: 1, TPS: 2.3809523809524, ET: 23.809523809524\n    11 - ES: 2, TPS: 4.7619047619048, ET: 47.619047619048\n\nES: entry stake\nTPS: token percentage stake\nET: earned tokens\n\nTest results:\nDistributed tokens: 1000\nDistributed percentage: 100", 
+            "title": "Bounty Distribution Example:"
+        }, 
+        {
+            "location": "/bbt_revenuedistribution/", 
+            "text": "Type 1 - Token Buyback\n\n\nIn order to provide market liquidity, and a steady increase in Token value, the Application Entity bundles the following \nToken Buyback implementation\n.\n\n\nEach 30 days, 75% of the \nBlockBits Platform Revenue Stream\n is allocated into a new Contract that allows any token holder to send any amount of tokens they own, and wish to sell back to the platform.\n\n\n1 BBX Token is worth $X on the free market.\n75% of the Revenue Stream is Y ETH.\n\n\nFor 21 days ( or equivalent number of blocks ), anyone can set a \"sell order\" inside the Token BuyBack Contract by sending and locking said tokens. At the end of this period, the Token BuyBack Amount Y ETH is then divided by number of sold tokens, and then distributed to sell order initiators.\n\n\nIn this 21 days period, anyone can remove or update the amount they're willing to part with, but once the period expires the change is final, ETH share is distributed to all participants and received tokens are burned by sending to the 0x0 address.\n\n\nExample\n\n\n\n\n1 BBX Token is worth $1 on the free market ( system does not know this, participants should ).\n\n\n1 ETH Price = $500\n\n\nToken BuyBack Amount for this BuyBack Cycle is 100 ETH. \n\n\nTotal supply that can be bought at market price is 500 * 100 =\n 50000 Tokens.\n\n\n( this gives us a \nFree Market Parity\n of 0,002 ETH / Token )\n\n\n\n\nExplained:\n\n\nPart 1:\nThe contract receives the following token balances:\n- 50000 tokens from token holder A \n- 10000 tokens from token holder B\n\n\nThis results in a total of 60000 tokens that will be \"bought\" for 100 ETH. \nResulting Current Parity\n: 0,001666666666667.\n\n\nPart 2:\nAt this stage, any of the token holders that participate, can adjust the balance, in order to get a better price, let's say token holder A, just sells 20000 while token holder B sells 5000.\n\n\nThis results in a total of 25000 tokens that will be \"bought\" for 100 ETH. \nResulting Current Parity\n: 0,004 which is double the Free Market Parity.\n\n\nPart 3: \nIn the last day Token Holder C, gets in and puts up 30000. Again, price is a little below Market Parity. \n\n\nBy providing this mechanism, we allow the token holders to determine the fair market price that they will receive by betting on other participants' fear and greed.\n\n\nWe have considered the possibility of an ill intentioned actor reading unprocessed transactions and taking advantage of this, by getting in at the last block if let's say they were also mining the transactions. For the sake of simplicity we chose not to overly complicate things, but if the community really wants blind auctioning or better mechanisms we do have some ideas.\n\n\n\n\nWill be deployed in Development Milestone \n3.3 - Code Upgrade Tools and Token Buyback\n.\n\n\nType 2 - Enhanced Dividends Payment\n\n\n\n\nCreate a pool of revenue that is \"unlocked\" to be claimed by each token holder based on their token stake.\n\n\nUnclaimed funds will be redistributed after a period of 360 days\n\n\n\n\nFEATURE UNDER CONSIDERATION after DEVELOPMENT COMPLETE", 
+            "title": "BlockBits - Revenue Distribution"
+        }, 
+        {
+            "location": "/bbt_revenuedistribution/#type-1-token-buyback", 
+            "text": "In order to provide market liquidity, and a steady increase in Token value, the Application Entity bundles the following  Token Buyback implementation .  Each 30 days, 75% of the  BlockBits Platform Revenue Stream  is allocated into a new Contract that allows any token holder to send any amount of tokens they own, and wish to sell back to the platform.  1 BBX Token is worth $X on the free market.\n75% of the Revenue Stream is Y ETH.  For 21 days ( or equivalent number of blocks ), anyone can set a \"sell order\" inside the Token BuyBack Contract by sending and locking said tokens. At the end of this period, the Token BuyBack Amount Y ETH is then divided by number of sold tokens, and then distributed to sell order initiators.  In this 21 days period, anyone can remove or update the amount they're willing to part with, but once the period expires the change is final, ETH share is distributed to all participants and received tokens are burned by sending to the 0x0 address.", 
+            "title": "Type 1 - Token Buyback"
+        }, 
+        {
+            "location": "/bbt_revenuedistribution/#example", 
+            "text": "1 BBX Token is worth $1 on the free market ( system does not know this, participants should ).  1 ETH Price = $500  Token BuyBack Amount for this BuyBack Cycle is 100 ETH.   Total supply that can be bought at market price is 500 * 100 =  50000 Tokens.  ( this gives us a  Free Market Parity  of 0,002 ETH / Token )   Explained:  Part 1:\nThe contract receives the following token balances:\n- 50000 tokens from token holder A \n- 10000 tokens from token holder B  This results in a total of 60000 tokens that will be \"bought\" for 100 ETH.  Resulting Current Parity : 0,001666666666667.  Part 2:\nAt this stage, any of the token holders that participate, can adjust the balance, in order to get a better price, let's say token holder A, just sells 20000 while token holder B sells 5000.  This results in a total of 25000 tokens that will be \"bought\" for 100 ETH.  Resulting Current Parity : 0,004 which is double the Free Market Parity.  Part 3: \nIn the last day Token Holder C, gets in and puts up 30000. Again, price is a little below Market Parity.   By providing this mechanism, we allow the token holders to determine the fair market price that they will receive by betting on other participants' fear and greed.  We have considered the possibility of an ill intentioned actor reading unprocessed transactions and taking advantage of this, by getting in at the last block if let's say they were also mining the transactions. For the sake of simplicity we chose not to overly complicate things, but if the community really wants blind auctioning or better mechanisms we do have some ideas.  Will be deployed in Development Milestone  3.3 - Code Upgrade Tools and Token Buyback .", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/bbt_revenuedistribution/#type-2-enhanced-dividends-payment", 
+            "text": "Create a pool of revenue that is \"unlocked\" to be claimed by each token holder based on their token stake.  Unclaimed funds will be redistributed after a period of 360 days   FEATURE UNDER CONSIDERATION after DEVELOPMENT COMPLETE", 
+            "title": "Type 2 - Enhanced Dividends Payment"
+        }, 
+        {
+            "location": "/bbt_tokens/", 
+            "text": "Specifications\n\n\n\n\n\n\n\n\nKey\n\n\nValue\n\n\nNote\n\n\n\n\n\n\n\n\n\n\nType\n\n\nERC20\n\n\nToken contract can be found in GatewayInterface -\n ApplicationEntity -\n TokenManagerEntity -\n \nTokenEntity\n\n\n\n\n\n\nSymbol\n\n\nBBX\n\n\n\n\n\n\n\n\nDecimals\n\n\n18\n\n\n\n\n\n\n\n\nTotal Supply\n\n\n5000000\n\n\n\n\n\n\n\n\nICO Supply\n\n\n2475000\n\n\n\n\n\n\n\n\nICO Bounty Supply\n\n\n50000\n\n\n\n\n\n\n\n\nTotal Circulating Supply\n\n\n2525000\n\n\n\n\n\n\n\n\nProject Owner Supply\n\n\n2475000\n\n\nLocked until project reaches \nPhase 4 - Development Completed\n\n\n\n\n\n\nSupply is FIXED\n\n\nTRUE\n\n\nThis means no new tokens can ever be created\n\n\n\n\n\n\n\n\n@TODO: add token contract address to token.blockbits.eth resolver\n\n\nUtility\n\n\nLocked tokens are used for Voting Development Milestone Releases.\n\n\nCan be used as a pass in order to enter Internal PRE ICO funding phases of Projects Launched through the BlockBits Platform. Amount is set by Project Owner at any amount they deem necessary.\nHaving more than said amount of BBX Token does not grant you any additional privileges in Discount Programs.\n\n\nCan be sold back to the Token BuyBack mechanism.", 
+            "title": "BlockBits - Tokens"
+        }, 
+        {
+            "location": "/bbt_tokens/#specifications", 
+            "text": "Key  Value  Note      Type  ERC20  Token contract can be found in GatewayInterface -  ApplicationEntity -  TokenManagerEntity -   TokenEntity    Symbol  BBX     Decimals  18     Total Supply  5000000     ICO Supply  2475000     ICO Bounty Supply  50000     Total Circulating Supply  2525000     Project Owner Supply  2475000  Locked until project reaches  Phase 4 - Development Completed    Supply is FIXED  TRUE  This means no new tokens can ever be created     @TODO: add token contract address to token.blockbits.eth resolver", 
+            "title": "Specifications"
+        }, 
+        {
+            "location": "/bbt_tokens/#utility", 
+            "text": "Locked tokens are used for Voting Development Milestone Releases.  Can be used as a pass in order to enter Internal PRE ICO funding phases of Projects Launched through the BlockBits Platform. Amount is set by Project Owner at any amount they deem necessary.\nHaving more than said amount of BBX Token does not grant you any additional privileges in Discount Programs.  Can be sold back to the Token BuyBack mechanism.", 
+            "title": "Utility"
+        }, 
+        {
+            "location": "/bbt_notifications/", 
+            "text": "DAPP Website\n\n\nIf you're visiting the website using a web3 enabled web browser ( \nMist\n or \nBrave\n ), or use an ethereum wallet extension ( \nMetaMask\n ), the application will detect your account address and automatically display notifications about actions you need to consider taking.\n\n\nMobile Application\n\n\nThe BlockBits Mobile Notifications Application serves as the Platform's main notification channel.\n\n\nData for the BlockBits Platform is read from the ApplicationEntiy -\n NewsContract, while Child Projects will be iterated through the ListingContract and their own respective NewsContract Instance.\n\n\nEach News Item is linked to a parent, if said parent is setup to load notifications and news items, the respective items will be retrieved and displayed when necessary.\n\n\nCan be configured to filter / just display the main news items, or just system messages for the platform or just a child project for example.\n\n\nReads directly from the blockchain and swarm / ipfs.\n\n\nAvailable on the Apple Store and Google Play Store", 
+            "title": "BlockBits - Notifications"
+        }, 
+        {
+            "location": "/bbt_notifications/#dapp-website", 
+            "text": "If you're visiting the website using a web3 enabled web browser (  Mist  or  Brave  ), or use an ethereum wallet extension (  MetaMask  ), the application will detect your account address and automatically display notifications about actions you need to consider taking.", 
+            "title": "DAPP Website"
+        }, 
+        {
+            "location": "/bbt_notifications/#mobile-application", 
+            "text": "The BlockBits Mobile Notifications Application serves as the Platform's main notification channel.  Data for the BlockBits Platform is read from the ApplicationEntiy -  NewsContract, while Child Projects will be iterated through the ListingContract and their own respective NewsContract Instance.  Each News Item is linked to a parent, if said parent is setup to load notifications and news items, the respective items will be retrieved and displayed when necessary.  Can be configured to filter / just display the main news items, or just system messages for the platform or just a child project for example.  Reads directly from the blockchain and swarm / ipfs.  Available on the Apple Store and Google Play Store", 
+            "title": "Mobile Application"
+        }, 
+        {
+            "location": "/bbt_extras/", 
+            "text": "Chat System with Validated Sender\n\n\nProof of Concept Chat System with Ethereum Wallet Based Message Signing and Sender Validation.\n\n\n\n\nUses Socket.IO and depends on MetaMask\n\n\nCheck it out on GitHub\n\n\n\n\nTODO - implement a secondary encryption key that can be created by the user, stored in a blockchain, and then referenced by users that read his messages. This way you get to use a password ONCE in the session to authenticate your messages, and a key signed by this pair is saved in the reference record in the blockchain.\n\n\n\n\nUser Data Signing and Validation\n\n\nStage: Currently in discussion by the major players on the \nEIP GitHub Issue\n. \n\n\nOnce a \nStandard for signing Custom Data\n using the user's private keys \nis approved and adopted by the \nEthereum/EIPs\n we can start using the User's \nEthereum Wallet Private Keys to sign data in such a manner that there is no possible way of signing a valid Transaction\nrequest.\n\n\nThis opens up possibilities like User Login, Identity Validation, Message Sender Validation in Chat Groups, Private \nData Encryption.\n\n\nThis is a requirement for the \nFully Decentralized Platform\n.", 
+            "title": "BlockBits - Extras"
+        }, 
+        {
+            "location": "/bbt_extras/#chat-system-with-validated-sender", 
+            "text": "Proof of Concept Chat System with Ethereum Wallet Based Message Signing and Sender Validation.   Uses Socket.IO and depends on MetaMask  Check it out on GitHub   TODO - implement a secondary encryption key that can be created by the user, stored in a blockchain, and then referenced by users that read his messages. This way you get to use a password ONCE in the session to authenticate your messages, and a key signed by this pair is saved in the reference record in the blockchain.", 
+            "title": "Chat System with Validated Sender"
+        }, 
+        {
+            "location": "/bbt_extras/#user-data-signing-and-validation", 
+            "text": "Stage: Currently in discussion by the major players on the  EIP GitHub Issue .   Once a  Standard for signing Custom Data  using the user's private keys \nis approved and adopted by the  Ethereum/EIPs  we can start using the User's \nEthereum Wallet Private Keys to sign data in such a manner that there is no possible way of signing a valid Transaction\nrequest.  This opens up possibilities like User Login, Identity Validation, Message Sender Validation in Chat Groups, Private \nData Encryption.  This is a requirement for the  Fully Decentralized Platform .", 
+            "title": "User Data Signing and Validation"
+        }, 
+        {
+            "location": "/child_changes/", 
+            "text": "Crowd Funded Project Specifics\n\n\nThe following details apply to projects Launched and Managed using the BlockBits Platform\n\n\nCreating a new Crowd Funding Project\n\n\nRequirements before you start campaign creation:\n\n\n\n\nProject name and description\n\n\nA WhitePaper detailing the inner workings of your project\n\n\nA project split up into Project Development Milestones for easier management.\n\n\nA minimum viable product ( optional but risky without one )\n\n\nYou have enough \nETH\n to cover the \nBlockBits - Listing Requirements\n and understand the \nProject Specifications\n.\n\n\n\n\nUsing the Creation Wizard:\n\n\n\n\nDefine your project's name, description, WhitePaper, media, and more.\n\n\nSelect your Project Type \n( Investment or Donation )\n\n\nDefine Project Development Milestones \n( optional )\n\n\nChoose at least one Funding Method\n\n\nDirect Funding\n\n\nMinimum Entry Amount is disabled\n\n\n\n\n\n\nMilestone Funding - Requires at least 1 Project Development Milestone\n\n\nMinimum Entry Amount set to 1 \nETH\n by default\n\n\nEmergency Fund\n is enabled and can be disabled\n\n\n\n\n\n\n\n\n\n\nCreate at least one Funding Phase\n\n\nInternal \n( entry available only to BBT Token Holders and offers a Funding Discount - Fixed Program if other phases are created )\n \n( optional )\n\n\nPre-ICO \n( usually the phase where you attract investors from the outside )\n \n( optional )\n\n\nICO \n( main funding phase )\n\n\n\n\n\n\nFor each created Funding Phase select a Discount Program Type \n(optional)\n\n\nType 1 - Fixed\n\n\nType 2 - Progressively Lower\n\n\n\n\n\n\nFor each created \nFunding Phase\n select a \nToken Stake Calculation And Distribution Algorithm\n\n\nType 1 - Market decides token value\n\n\nType 2 - Sell a fixed amount of tokens for a fixed price\n\n\nType 3 - Sell a variable amount of tokens for a fixed price\n \n\n\n\n\n\n\nSelect a \nRevenue Distribution Method\n \n(optional)\n\n\nType 1 - Token Buyback\n\n\nType 2 - Dividends Payment\n\n\n\n\n\n\nReview and set remaining optional Project Bylaws\n\n\n\n\nReviewing a Crowd Funding Project\n\n\n\n\nReview Platform Fees \n\n\nDynamic Platform Base Fee\n breakout \n\n\n\n\n\n\nPreview Crowd Funding Project Page and share with others.\n\n\nMake updates on anything you want before Launching\n\n\n\n\nLaunching the Crowd Funding Project\n\n\n\n\n\n\nYou may use the \nCurrent Version BlockBits Platform Sandbox\n to test everything without consequences to your \nEthereum wallet\n if you so desire.\n\n\n\n\n\n\nAgain, make sure you have enough \nETH\n to cover the \nBlockBits - Listing Requirements\n and understand the \nProject Specifications\n\n\n\n\n\n\nOnce you are 100% satisfied with your Project Page and Settings you need to use the \"Generate Smart Contract\" option in the Project Launch Dashboard.\n\n\n\n\n\n\nThis will output the source code of all contracts you need to deploy.\n\n\n\n\n\n\nAt this stage you can opt to have a 3rd party programmer look at them and validate the things the contract does are \nthe ones stated in the Creation Wizard.\n\n\n\n\n\n\nIf you are satisfied and want to continue, start the \nCrowd Funding Project - Deployment Procedure\n.\n\n\n\n\n\n\nMake sure to follow the instructions to the letter, and if you have issues, use the support forum for help.\n\n\n\n\n\n\nCrowd Funding Lifecycle\n\n\nFunding Successful\n\n\nBased on selected \nToken Stake Calculation And Distribution Algorithm\n tokens and ETH will be distributed.\n\n\nFunding Failed\n\n\nFunding Failed CashBack procedure is activated.\n\n\nCrowd Funding Project End of life\n\n\nJust like BlockBits, the child project has the ability to use Code Upgrades in order to Evolve.\n\n\nCrowd Funding Project - Deployment Procedure\n\n\n\n\n\n\nMake sure you are using a Web3 compatible browser like Mist, or have the MetaMask addon for Chrome / Firefox / Opera \ninstalled and your wallet linked and unlocked.\n\n\n\n\n\n\nThis wallet needs to hold enough \nETH\n to cover \nBlockBits - Listing Requirements\n plus gas requirements for \ncontract deployment. Cost will be provided by the Creation Wizard.\n\n\n\n\n\n\nDeploy all provided contracts into the BlockChain by using the assigned \"Deploy Contract\" Button.\n\n\n\n\nThis sends transactions to the BlockBits Deployer and Validator in order to clone each asset required, and setup your settings in the new project instance. \n\n\n\n\n\n\n\n\nEach deployment will trigger a Web3 Request in your browser, that you need to APPROVE.\n\n\n\n\n\n\nIf approved by you the Main ApplicationEntity Contract's address is known and can be used to deploy the Dependency \nContracts\n\n\n\n\n\n\nOnce you deploy all Contracts, go to https://etherscan.io/verifyContract and using the new contract addresses and \nprovided source code, and create validations for each.\n\n\n\n\n\n\nAfter EtherScan Validation Step is complete, go back to the BlockBits Platform and trigger a Contract Validation.\n\n\n\n\n\n\nIf the Contract Validation is successful, you can now get your Crowd Funding Project listed on BlockBits by \ninitiating a Listing Request.\n\n\n\n\n\n\nClick on the \"Initiate Listing\" button in the My Crowd Funding Projects List.\n\n\n\n\n\n\nThis will trigger a Web3 Request in your browser, that you need to APPROVE.\n\n\n\n\n\n\nThis is where you send the \nBlockBits - Listing Requirements\n fee to the BlockBits ListingContract in order to appear in the BlockBits Platform.", 
+            "title": "Launching Through BlockBits"
+        }, 
+        {
+            "location": "/child_changes/#crowd-funded-project-specifics", 
+            "text": "The following details apply to projects Launched and Managed using the BlockBits Platform", 
+            "title": "Crowd Funded Project Specifics"
+        }, 
+        {
+            "location": "/child_changes/#creating-a-new-crowd-funding-project", 
+            "text": "", 
+            "title": "Creating a new Crowd Funding Project"
+        }, 
+        {
+            "location": "/child_changes/#requirements-before-you-start-campaign-creation", 
+            "text": "Project name and description  A WhitePaper detailing the inner workings of your project  A project split up into Project Development Milestones for easier management.  A minimum viable product ( optional but risky without one )  You have enough  ETH  to cover the  BlockBits - Listing Requirements  and understand the  Project Specifications .", 
+            "title": "Requirements before you start campaign creation:"
+        }, 
+        {
+            "location": "/child_changes/#using-the-creation-wizard", 
+            "text": "Define your project's name, description, WhitePaper, media, and more.  Select your Project Type  ( Investment or Donation )  Define Project Development Milestones  ( optional )  Choose at least one Funding Method  Direct Funding  Minimum Entry Amount is disabled    Milestone Funding - Requires at least 1 Project Development Milestone  Minimum Entry Amount set to 1  ETH  by default  Emergency Fund  is enabled and can be disabled      Create at least one Funding Phase  Internal  ( entry available only to BBT Token Holders and offers a Funding Discount - Fixed Program if other phases are created )   ( optional )  Pre-ICO  ( usually the phase where you attract investors from the outside )   ( optional )  ICO  ( main funding phase )    For each created Funding Phase select a Discount Program Type  (optional)  Type 1 - Fixed  Type 2 - Progressively Lower    For each created  Funding Phase  select a  Token Stake Calculation And Distribution Algorithm  Type 1 - Market decides token value  Type 2 - Sell a fixed amount of tokens for a fixed price  Type 3 - Sell a variable amount of tokens for a fixed price      Select a  Revenue Distribution Method   (optional)  Type 1 - Token Buyback  Type 2 - Dividends Payment    Review and set remaining optional Project Bylaws", 
+            "title": "Using the Creation Wizard:"
+        }, 
+        {
+            "location": "/child_changes/#reviewing-a-crowd-funding-project", 
+            "text": "Review Platform Fees   Dynamic Platform Base Fee  breakout     Preview Crowd Funding Project Page and share with others.  Make updates on anything you want before Launching", 
+            "title": "Reviewing a Crowd Funding Project"
+        }, 
+        {
+            "location": "/child_changes/#launching-the-crowd-funding-project", 
+            "text": "You may use the  Current Version BlockBits Platform Sandbox  to test everything without consequences to your  Ethereum wallet  if you so desire.    Again, make sure you have enough  ETH  to cover the  BlockBits - Listing Requirements  and understand the  Project Specifications    Once you are 100% satisfied with your Project Page and Settings you need to use the \"Generate Smart Contract\" option in the Project Launch Dashboard.    This will output the source code of all contracts you need to deploy.    At this stage you can opt to have a 3rd party programmer look at them and validate the things the contract does are \nthe ones stated in the Creation Wizard.    If you are satisfied and want to continue, start the  Crowd Funding Project - Deployment Procedure .    Make sure to follow the instructions to the letter, and if you have issues, use the support forum for help.", 
+            "title": "Launching the Crowd Funding Project"
+        }, 
+        {
+            "location": "/child_changes/#crowd-funding-lifecycle", 
+            "text": "", 
+            "title": "Crowd Funding Lifecycle"
+        }, 
+        {
+            "location": "/child_changes/#funding-successful", 
+            "text": "Based on selected  Token Stake Calculation And Distribution Algorithm  tokens and ETH will be distributed.", 
+            "title": "Funding Successful"
+        }, 
+        {
+            "location": "/child_changes/#funding-failed", 
+            "text": "Funding Failed CashBack procedure is activated.", 
+            "title": "Funding Failed"
+        }, 
+        {
+            "location": "/child_changes/#crowd-funding-project-end-of-life", 
+            "text": "Just like BlockBits, the child project has the ability to use Code Upgrades in order to Evolve.", 
+            "title": "Crowd Funding Project End of life"
+        }, 
+        {
+            "location": "/child_changes/#crowd-funding-project-deployment-procedure", 
+            "text": "Make sure you are using a Web3 compatible browser like Mist, or have the MetaMask addon for Chrome / Firefox / Opera \ninstalled and your wallet linked and unlocked.    This wallet needs to hold enough  ETH  to cover  BlockBits - Listing Requirements  plus gas requirements for \ncontract deployment. Cost will be provided by the Creation Wizard.    Deploy all provided contracts into the BlockChain by using the assigned \"Deploy Contract\" Button.   This sends transactions to the BlockBits Deployer and Validator in order to clone each asset required, and setup your settings in the new project instance.      Each deployment will trigger a Web3 Request in your browser, that you need to APPROVE.    If approved by you the Main ApplicationEntity Contract's address is known and can be used to deploy the Dependency \nContracts    Once you deploy all Contracts, go to https://etherscan.io/verifyContract and using the new contract addresses and \nprovided source code, and create validations for each.    After EtherScan Validation Step is complete, go back to the BlockBits Platform and trigger a Contract Validation.    If the Contract Validation is successful, you can now get your Crowd Funding Project listed on BlockBits by \ninitiating a Listing Request.    Click on the \"Initiate Listing\" button in the My Crowd Funding Projects List.    This will trigger a Web3 Request in your browser, that you need to APPROVE.    This is where you send the  BlockBits - Listing Requirements  fee to the BlockBits ListingContract in order to appear in the BlockBits Platform.", 
+            "title": "Crowd Funding Project - Deployment Procedure"
+        }, 
+        {
+            "location": "/project_specs/", 
+            "text": "Introduction\n\n\nThe Project tabs contain features and processes used by any project that is launched through the BlockBits Platform, including the platform itself.\n\n\nSmart Contract\n\n\nRepresents a collection of code written in the \nSolidity Language\n deployed in the Ethereum BlockChain.\n\n\nEach Contract has an \nowner\n property which represents the only entity ( address ) that can change it.\n\n\nProject Owner\n\n\nAn Ethereum wallet address that owns a smart contract / project.\n\n\nCan represent a Multi Signature Wallet with as many members as wanted that approve BlockChain transactions sent to Smart Contracts.\n\n\nDeployer Address\n\n\nThe Ethereum wallet address that deployed the smart contract.\n\n\nUsed to insert settings into Application Assets and then link them into the Application Entity. \n\n\nProject - Types\n\n\nTypes - Investment\n\n\n\n\nAny project that is not treated as a \"Donation\"\n\n\n\n\nTypes - Donation\n\n\n\n\nCharity\n\n\nOpen Source Software\n\n\nOther (in your words)\n\n\n\n\nDevelopment Milestones\n\n\nA project listed through the platform should be split up in a couple of steps, we call each of these steps a\n\nDevelopment Milestone\n.\n\n\nThey are optionally created by the \nProject Owner\n and serve the purpose of splitting up the project\ninto smaller manageable parts.\n\n\nJust like in software development, most projects can be split up in \"Phases\". We call them Development Milestones and each one has a percentage of the raised funds linked to it, and requires community acceptance in order for funds and tokens to be released.\n\n\nRequirements\n\n\n\n\nDuration - in days\n\n\nFunding Percentage - 0-100 ( uint8 )\n\n\n\n\nRevenue Stream\n\n\nRepresents the revenue stream the Application can impose directly in it's Application Entity Contract.\n\n\nEmergency Fund\n\n\n\n\nOnly available if \nMilestone Funding\n is used and can be disabled.\n\n\nIs set as a percentage in \nProject Bylaws - Emergency Fund Percentage\n.\n\n\nIs added into minimum required funding automatically.\n\n\nIf the fund is not used, \nThe Project Owner\n receives the full amount at the end of all \nDevelopment Milestones\n \n\n\nRequesting the \nEmergency Fund\n release will only be possible once.\n\n\nLocked Token are released to the \nProject Investors\n in full either when the fund is voted by them or when the Project reaches \nProject - State - Delivered\n.\n\n\nHas a \nPlatform Testable Risk Factor\n attached.\n\n\n\n\nA project that has an Emergency Fund is less likely to fail due to market volatility.\n\n\n\n\nInvestor / Token Holder\n\n\nA person that invests into a Project.\nAlso called a \nToken Holder\n.\n\n\nApplication Entity\n\n\nRepresents the main \nSmart Contract\n that the GatewayInterface links to.\n\n\nTies \nApplication Assets\n together in one place and represents the main functionality of the DAPP.\n\n\nCan provide a built in \nmigrate\n method that will need to be run and succeed in case of an upgrade.\n\n\nApplication Assets\n\n\nRepresent all sub contracts or libraries linked to the \nApplication Entity\n.", 
+            "title": "Project - Specifications"
+        }, 
+        {
+            "location": "/project_specs/#introduction", 
+            "text": "The Project tabs contain features and processes used by any project that is launched through the BlockBits Platform, including the platform itself.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/project_specs/#smart-contract", 
+            "text": "Represents a collection of code written in the  Solidity Language  deployed in the Ethereum BlockChain.  Each Contract has an  owner  property which represents the only entity ( address ) that can change it.", 
+            "title": "Smart Contract"
+        }, 
+        {
+            "location": "/project_specs/#project-owner", 
+            "text": "An Ethereum wallet address that owns a smart contract / project.  Can represent a Multi Signature Wallet with as many members as wanted that approve BlockChain transactions sent to Smart Contracts.", 
+            "title": "Project Owner"
+        }, 
+        {
+            "location": "/project_specs/#deployer-address", 
+            "text": "The Ethereum wallet address that deployed the smart contract.  Used to insert settings into Application Assets and then link them into the Application Entity.", 
+            "title": "Deployer Address"
+        }, 
+        {
+            "location": "/project_specs/#project-types", 
+            "text": "", 
+            "title": "Project - Types"
+        }, 
+        {
+            "location": "/project_specs/#types-investment", 
+            "text": "Any project that is not treated as a \"Donation\"", 
+            "title": "Types - Investment"
+        }, 
+        {
+            "location": "/project_specs/#types-donation", 
+            "text": "Charity  Open Source Software  Other (in your words)", 
+            "title": "Types - Donation"
+        }, 
+        {
+            "location": "/project_specs/#development-milestones", 
+            "text": "A project listed through the platform should be split up in a couple of steps, we call each of these steps a Development Milestone .  They are optionally created by the  Project Owner  and serve the purpose of splitting up the project\ninto smaller manageable parts.  Just like in software development, most projects can be split up in \"Phases\". We call them Development Milestones and each one has a percentage of the raised funds linked to it, and requires community acceptance in order for funds and tokens to be released.", 
+            "title": "Development Milestones"
+        }, 
+        {
+            "location": "/project_specs/#requirements", 
+            "text": "Duration - in days  Funding Percentage - 0-100 ( uint8 )", 
+            "title": "Requirements"
+        }, 
+        {
+            "location": "/project_specs/#revenue-stream", 
+            "text": "Represents the revenue stream the Application can impose directly in it's Application Entity Contract.", 
+            "title": "Revenue Stream"
+        }, 
+        {
+            "location": "/project_specs/#emergency-fund", 
+            "text": "Only available if  Milestone Funding  is used and can be disabled.  Is set as a percentage in  Project Bylaws - Emergency Fund Percentage .  Is added into minimum required funding automatically.  If the fund is not used,  The Project Owner  receives the full amount at the end of all  Development Milestones    Requesting the  Emergency Fund  release will only be possible once.  Locked Token are released to the  Project Investors  in full either when the fund is voted by them or when the Project reaches  Project - State - Delivered .  Has a  Platform Testable Risk Factor  attached.   A project that has an Emergency Fund is less likely to fail due to market volatility.", 
+            "title": "Emergency Fund"
+        }, 
+        {
+            "location": "/project_specs/#investor-token-holder", 
+            "text": "A person that invests into a Project.\nAlso called a  Token Holder .", 
+            "title": "Investor / Token Holder"
+        }, 
+        {
+            "location": "/project_specs/#application-entity", 
+            "text": "Represents the main  Smart Contract  that the GatewayInterface links to.  Ties  Application Assets  together in one place and represents the main functionality of the DAPP.  Can provide a built in  migrate  method that will need to be run and succeed in case of an upgrade.", 
+            "title": "Application Entity"
+        }, 
+        {
+            "location": "/project_specs/#application-assets", 
+            "text": "Represent all sub contracts or libraries linked to the  Application Entity .", 
+            "title": "Application Assets"
+        }, 
+        {
+            "location": "/project_bylaws/", 
+            "text": "Description\n\n\nSettings that affect the operation of the project's contracts.\n\n\nThese settings are hardcoded into the BlockBits Platform Smart Contacts and for \nCrowd Funding Child Project\n \nthey are set in the Creation Wizard, reviewed and then hardcoded in their respective Application ByLaws Section.\n\n\nThe rest of the settings are decided by the \nProject Owner\n.\n\n\nBylaws are public and can be used by anyone to determine the current state of the project.\n\n\nBylaw Settings\n\n\nToken Sale Percentage\n\n\n\n\nkey: \ntoken_sale_percentage\n\n\ntype: \nint8\n\n\nvalue: \n(0 to 100)\n what percentage of the whole token supply is to be sold in the funding process\n\n\n\n\nToken Fixed Supply\n\n\n\n\nkey: \ntoken_fixed_supply\n\n\ntype: \nbool\n\n\nvalue: \n(true / false)\n \n\n\n\n\nOwner's Tokens are Locked\n\n\n\n\nkey: \ntoken_fixed_supply\n\n\ntype: \nbool\n\n\nvalue: \n(true / false)\n \n\n\n\n\nToken Sale Calculation And Distribution Algorithm\n\n\n\n\nkey: \ntokenSCADA\n\n\ntype: \nbytes32\n\n\nvalue: \n\"TokenSCADA1Market\"\n \n\n\n\n\nNOTE: TokenSCADA1Market SCADA requires global soft and hard caps\n\n\n\n\nFunding Global Soft Cap\n\n\n\n\nkey: \nfunding_global_soft_cap\n\n\ntype: \nint256\n\n\nvalue: \n0\n \n\n\n\n\nFunding Global Hard Cap\n\n\n\n\nkey: \nfunding_global_hard_cap\n\n\ntype: \nint256\n\n\nvalue: \n0\n \n\n\n\n\nToken Bounty Percentage\n\n\n\n\nkey: \ntoken_bounty_percentage\n\n\ntype: \nint8\n\n\nvalue: \n1\n \n\n\n\n\nProposal Voting Duration\n\n\n\n\nkey: \nproposal_voting_duration\n\n\ntype: \nint256\n\n\nvalue: \n7 * days\n \n\n\n\n\nMeeting Creation Limit\n\n\n\n\nkey: \nmeeting_time_set_req\n\n\ntype: \nint256\n\n\nvalue: \n7 * days\n \n\n\n\n\nNOTE: how many days a meeting needs to be created in advance\n\n\n\n\nDevelopment Start\n\n\n\n\nkey: \ndevelopment_start\n\n\ntype: \nint256\n\n\nvalue: \nico_end + 14 * days\n \n\n\n\n\nMeeting Postponing Min\n\n\n\n\nkey: \nmin_postponing\n\n\ntype: \nint256\n\n\nvalue: \n7 * days\n \n\n\n\n\nMeeting Postponing Max\n\n\n\n\nkey: \nmax_postponing\n\n\ntype: \nint256\n\n\nvalue: \n90 * days\n \n\n\n\n\nEmergency Fund Percentage\n\n\n\n\nkey: \nemergency_fund_percentage\n\n\ntype: \nint256\n\n\nvalue: \n(0 to 50)\n \n\n\n\n\nNOTE: if this is available, emergency fund will be crated out of total milestone funding amount. The rest gets then split up into milestone balances using their respective percentage settings\n\n\n\n\nCashBack Funding Failed\n\n\nNOTE: there is no bylaw for this at the moment, will be added for child projects at a later date.\n\n\n\n\nCashBack After No Vote\n\n\n\n\nkey: \nemergency_fund_percentage\n\n\ntype: \nint256\n\n\nvalue: \n7 * days\n \n\n\n\n\nCashBack Owner MIA\n\n\n\n\nkey: \ncashback_owner_mia_dur\n\n\ntype: \nint256\n\n\nvalue: \n365 * days", 
+            "title": "Project - Bylaws"
+        }, 
+        {
+            "location": "/project_bylaws/#description", 
+            "text": "Settings that affect the operation of the project's contracts.  These settings are hardcoded into the BlockBits Platform Smart Contacts and for  Crowd Funding Child Project  \nthey are set in the Creation Wizard, reviewed and then hardcoded in their respective Application ByLaws Section.  The rest of the settings are decided by the  Project Owner .  Bylaws are public and can be used by anyone to determine the current state of the project.", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/project_bylaws/#bylaw-settings", 
+            "text": "", 
+            "title": "Bylaw Settings"
+        }, 
+        {
+            "location": "/project_bylaws/#token-sale-percentage", 
+            "text": "key:  token_sale_percentage  type:  int8  value:  (0 to 100)  what percentage of the whole token supply is to be sold in the funding process", 
+            "title": "Token Sale Percentage"
+        }, 
+        {
+            "location": "/project_bylaws/#token-fixed-supply", 
+            "text": "key:  token_fixed_supply  type:  bool  value:  (true / false)", 
+            "title": "Token Fixed Supply"
+        }, 
+        {
+            "location": "/project_bylaws/#owners-tokens-are-locked", 
+            "text": "key:  token_fixed_supply  type:  bool  value:  (true / false)", 
+            "title": "Owner's Tokens are Locked"
+        }, 
+        {
+            "location": "/project_bylaws/#token-sale-calculation-and-distribution-algorithm", 
+            "text": "key:  tokenSCADA  type:  bytes32  value:  \"TokenSCADA1Market\"     NOTE: TokenSCADA1Market SCADA requires global soft and hard caps", 
+            "title": "Token Sale Calculation And Distribution Algorithm"
+        }, 
+        {
+            "location": "/project_bylaws/#funding-global-soft-cap", 
+            "text": "key:  funding_global_soft_cap  type:  int256  value:  0", 
+            "title": "Funding Global Soft Cap"
+        }, 
+        {
+            "location": "/project_bylaws/#funding-global-hard-cap", 
+            "text": "key:  funding_global_hard_cap  type:  int256  value:  0", 
+            "title": "Funding Global Hard Cap"
+        }, 
+        {
+            "location": "/project_bylaws/#token-bounty-percentage", 
+            "text": "key:  token_bounty_percentage  type:  int8  value:  1", 
+            "title": "Token Bounty Percentage"
+        }, 
+        {
+            "location": "/project_bylaws/#proposal-voting-duration", 
+            "text": "key:  proposal_voting_duration  type:  int256  value:  7 * days", 
+            "title": "Proposal Voting Duration"
+        }, 
+        {
+            "location": "/project_bylaws/#meeting-creation-limit", 
+            "text": "key:  meeting_time_set_req  type:  int256  value:  7 * days     NOTE: how many days a meeting needs to be created in advance", 
+            "title": "Meeting Creation Limit"
+        }, 
+        {
+            "location": "/project_bylaws/#development-start", 
+            "text": "key:  development_start  type:  int256  value:  ico_end + 14 * days", 
+            "title": "Development Start"
+        }, 
+        {
+            "location": "/project_bylaws/#meeting-postponing-min", 
+            "text": "key:  min_postponing  type:  int256  value:  7 * days", 
+            "title": "Meeting Postponing Min"
+        }, 
+        {
+            "location": "/project_bylaws/#meeting-postponing-max", 
+            "text": "key:  max_postponing  type:  int256  value:  90 * days", 
+            "title": "Meeting Postponing Max"
+        }, 
+        {
+            "location": "/project_bylaws/#emergency-fund-percentage", 
+            "text": "key:  emergency_fund_percentage  type:  int256  value:  (0 to 50)     NOTE: if this is available, emergency fund will be crated out of total milestone funding amount. The rest gets then split up into milestone balances using their respective percentage settings", 
+            "title": "Emergency Fund Percentage"
+        }, 
+        {
+            "location": "/project_bylaws/#cashback-funding-failed", 
+            "text": "NOTE: there is no bylaw for this at the moment, will be added for child projects at a later date.", 
+            "title": "CashBack Funding Failed"
+        }, 
+        {
+            "location": "/project_bylaws/#cashback-after-no-vote", 
+            "text": "key:  emergency_fund_percentage  type:  int256  value:  7 * days", 
+            "title": "CashBack After No Vote"
+        }, 
+        {
+            "location": "/project_bylaws/#cashback-owner-mia", 
+            "text": "key:  cashback_owner_mia_dur  type:  int256  value:  365 * days", 
+            "title": "CashBack Owner MIA"
+        }, 
+        {
+            "location": "/project_funding/", 
+            "text": "Funding Vaults\n\n\nEach Investor has their own separate smart contract, that stores and locks ETH and tokens until an action is available. This contract mitigates issues that can arise from hacking attempts, by enforcing 2 hardcoded output addresses, namely, the platform and investor wallets.\n\n\nFunding Methods\n\n\n\n\nFor each \nFunding Method\n the \nProject Owner\n can optionally set a \nMinimum Entry Amount\n.\n\n\n\n\nDirect Funding Payments\n\n\nDirect Funding payments will lock ETH until either the project is successfully funded, or it fails. If the project is successfully funded, the ETH is released to the platform's multi signature wallet address, and tokens get sent to the vault's owner wallet address. If the project's funding fails, the funds are unlocked and can be claimed back by the vault's owner.\n\n\nNOTE: This is the traditional way of investing into ICOs where one gives \"value\" and receives \"tokens\" but with the additional enforcement that denies anyone from spending the value until the funding outcome is known.\n\n\nMilestone Funding Payments\n\n\nMilestone Funding payments adhere to the same rules as Direct funding when it comes to incoming funds and release in case of funding failure. The fundamental difference is that, if the project's funding is successful, funds and tokens get released only upon successful completion and voting by investors in development milestones.\n\n\nIn practice, an investor has the choice to fund a project by locking up their ETH in a smart contract, that upon their vote will release the funds to the project, in case the project delivered on what it promised . Otherwise, the investor can use the CashBack procedure to take their money back. This will require some involvement from the investor at validating the project's roadmap, and voting accordingly. Of course, they also have the choice to opt out of the voting process at any time by choosing to do nothing. In other words, the investor gets to validate if the project is actually delivering on its promises, or take their money back. In the case it does deliver, one gets to \"buy tokens at the PRE ICO or ICO price\".\n\n\nThis funding method has a 1 ETH minimum entry irregardless of the Funding Phase ( PRE / ICO ).\n\n\nMinimum Entry Amount\n\n\nRepresents the minimum required \nETH\n to be sent for each \nBuy Request\n in order to be accepted.\n\n\nFunding Phases\n\n\nInternal PRE ICO\n\n\nCrowd Funding Child Project specific:\n\n\n\n\nOptional and enabled by the \nProject Owner\n.\n\n\nOnly \nBBX Token\n owners can participate if they meet the requirements.\n\n\nsee \nToken Utility\n and \nMinimum Entry Amount\n.\n\n\n\n\n\n\nThis Funding Phase has a minimum required discount of 10% that can be increased by the \nProject Owner\n.\n\n\nInternal PRE ICO Funding Phase - \nFunding Discount\n is always \nType 1 - Fixed\n and is computed by adding \nConfigured Discount to the \nNext Funding Phase Discount Calculation\n.\n\n\n\n\nPre-ICO\n\n\nUsually the phase where you attract investors from the outside\n\n\nInitial Coin Offering (ICO)\n\n\nMain funding phase\n\n\nFunding Discounts or Bonuses:\n\n\nCan be attached to any Funding Phase to affect the \nToken Stake Calculation And Distribution Algorithm\n.\n\n\nType 1 - Fixed\n\n\n\n\nProvides a constant discount for said Funding Phase.\n\n\n\n\nType 2 - Progressively Lower:\n\n\n\n\nProvides a diminishing discount for said Funding Phase. \n( Starts high and lowers over time )\n\n\n\n\nDeployed in \n3.4 - Basic Risk indicators and Collaboration tools\n\n\nToken Stake Calculation And Distribution Algorithm\n\n\nIn short Token SCADA. Used to calculate token amounts bought by investors in Funding Phases.\n\n\nThere are 3 unknown variables out of which at least 1 is always required.\n\n\n\n\n1) Total Token Supply available to the Funding Phase.\n\n\n2) Parity with \nETH\n \n( X Tokens = 1 ETH )\n\n\n3) Received amount of \nETH\n \n( always unknown )\n\n\n\n\nOnce 2 variables are known they can be used to determine the other.\n\n\nType 1 - Market decides token value\n\n\nInputs:\n\n\n\n\nDefined Total Supply of tokens available in Current Funding Phase\n\n\nReceived amount of ETH\n\n\nMinimum parity \n( optional )\n\n\n\n\nProvides:\n\n\n\n\nParity with \nETH\n \n( calculated by amount divided by total supply =\n 1 Token = X ETH )\n\n\n\n\nObservations:\n\n\n\n\nWill sell the whole supply of Tokens available to Current Funding Phase\n\n\nIf minimum parity is provided and not reached, token allocation is done using provided parity parameter and\nremaining tokens are distributed to all participants in all Completed Funding Phases in order to maintain\nstake sharing \n( as a result excludes Project Owner )\n.\n\n\n\n\nUse cases:\n\n\n\n\nMinimum parity not present - usable only in the First Funding Phase, where you want the market to determine\nyour token price.\n\n\nMinimum parity used from previous Funding Phase - enabled for usage only after at least 1 Funding Phase where\nparity was determined.\n\n\n\n\nType 2 - Sell a fixed amount of tokens for a fixed price\n\n\nInputs:\n\n\n\n\nDefined Parity with \nETH\n \n( X Tokens = 1 ETH )\n\n\nDefined Total Supply of tokens available in Current Funding Phase\n\n\nDefined \nUnsold Token Action\n\n\nDefined \nBuy Request Over Limit Action\n\n\n\n\nProvides:\n\n\n\n\nInformation about total amount of required \nETH\n for successful funding\n\n\n\n\nObservations:\n\n\n\n\nCan sell the whole supply of Tokens available to Current Funding Phase, but will usually not do so unless \nBuy Request Over Limit Action\n allows partial orders and sufficient demand exists.\n\n\n\n\nUse cases:\n\n\n\n\nAny Funding Phase where you want to sell a fixed amount of tokens\n\n\n\n\nDeployed in \n3.4 - Basic Risk indicators and Collaboration tools\n\n\nType 3 - Sell a variable amount of tokens for a fixed price\n\n\nInputs:\n\n\n\n\nDefined Parity with \nETH\n \n( X Tokens = 1 ETH )\n\n\nReceived amount of ETH\n\n\n\n\nGenerates:\n \n\n\n\n\nTotal Supply of tokens available in Funding Phase respectively Project\n\n\n\n\nObservations:\n \n\n\n\n\nWill sell the whole supply of Tokens available to Current Funding Phase\n\n\n\n\nUse cases:\n \n\n\n\n\nAny Funding Phase where you want the first Funding Phase to determine the token supply of the whole Project\n\n\n\n\nDeployed in \n3.4 - Basic Risk indicators and Collaboration tools\n\n\nBuy Request Over Limit Action:\n\n\n\n\nDeny Transaction\n - deny transaction and return \nETH\n to the \nProject Investor\n.\n\n\nAllow Partial Buy In\n - allocate remaining locked tokens to the request, and allow the \nProject Investor\n to\nrequest a refund on the remaining unspent \nETH\n\n\n\n\nUnsold Token Actions\n\n\n\n\nBurn unsold tokens\n\n\nDistribute to all funding participants ( does not include owner )\n\n\nMove to next Funding Phase ( enabled if next Funding Phase exists )\n\n\nReturn to Project Owner, deposited in Funds Vault as locked tokens\n\n\nReturn to Project Owner, deposited in Funds Vault as unlocked tokens ?!", 
+            "title": "Project - Funding"
+        }, 
+        {
+            "location": "/project_funding/#funding-vaults", 
+            "text": "Each Investor has their own separate smart contract, that stores and locks ETH and tokens until an action is available. This contract mitigates issues that can arise from hacking attempts, by enforcing 2 hardcoded output addresses, namely, the platform and investor wallets.", 
+            "title": "Funding Vaults"
+        }, 
+        {
+            "location": "/project_funding/#funding-methods", 
+            "text": "For each  Funding Method  the  Project Owner  can optionally set a  Minimum Entry Amount .", 
+            "title": "Funding Methods"
+        }, 
+        {
+            "location": "/project_funding/#direct-funding-payments", 
+            "text": "Direct Funding payments will lock ETH until either the project is successfully funded, or it fails. If the project is successfully funded, the ETH is released to the platform's multi signature wallet address, and tokens get sent to the vault's owner wallet address. If the project's funding fails, the funds are unlocked and can be claimed back by the vault's owner.  NOTE: This is the traditional way of investing into ICOs where one gives \"value\" and receives \"tokens\" but with the additional enforcement that denies anyone from spending the value until the funding outcome is known.", 
+            "title": "Direct Funding Payments"
+        }, 
+        {
+            "location": "/project_funding/#milestone-funding-payments", 
+            "text": "Milestone Funding payments adhere to the same rules as Direct funding when it comes to incoming funds and release in case of funding failure. The fundamental difference is that, if the project's funding is successful, funds and tokens get released only upon successful completion and voting by investors in development milestones.  In practice, an investor has the choice to fund a project by locking up their ETH in a smart contract, that upon their vote will release the funds to the project, in case the project delivered on what it promised . Otherwise, the investor can use the CashBack procedure to take their money back. This will require some involvement from the investor at validating the project's roadmap, and voting accordingly. Of course, they also have the choice to opt out of the voting process at any time by choosing to do nothing. In other words, the investor gets to validate if the project is actually delivering on its promises, or take their money back. In the case it does deliver, one gets to \"buy tokens at the PRE ICO or ICO price\".  This funding method has a 1 ETH minimum entry irregardless of the Funding Phase ( PRE / ICO ).", 
+            "title": "Milestone Funding Payments"
+        }, 
+        {
+            "location": "/project_funding/#minimum-entry-amount", 
+            "text": "Represents the minimum required  ETH  to be sent for each  Buy Request  in order to be accepted.", 
+            "title": "Minimum Entry Amount"
+        }, 
+        {
+            "location": "/project_funding/#funding-phases", 
+            "text": "", 
+            "title": "Funding Phases"
+        }, 
+        {
+            "location": "/project_funding/#internal-pre-ico", 
+            "text": "Crowd Funding Child Project specific:   Optional and enabled by the  Project Owner .  Only  BBX Token  owners can participate if they meet the requirements.  see  Token Utility  and  Minimum Entry Amount .    This Funding Phase has a minimum required discount of 10% that can be increased by the  Project Owner .  Internal PRE ICO Funding Phase -  Funding Discount  is always  Type 1 - Fixed  and is computed by adding \nConfigured Discount to the  Next Funding Phase Discount Calculation .", 
+            "title": "Internal PRE ICO"
+        }, 
+        {
+            "location": "/project_funding/#pre-ico", 
+            "text": "Usually the phase where you attract investors from the outside", 
+            "title": "Pre-ICO"
+        }, 
+        {
+            "location": "/project_funding/#initial-coin-offering-ico", 
+            "text": "Main funding phase", 
+            "title": "Initial Coin Offering (ICO)"
+        }, 
+        {
+            "location": "/project_funding/#funding-discounts-or-bonuses", 
+            "text": "Can be attached to any Funding Phase to affect the  Token Stake Calculation And Distribution Algorithm .", 
+            "title": "Funding Discounts or Bonuses:"
+        }, 
+        {
+            "location": "/project_funding/#type-1-fixed", 
+            "text": "Provides a constant discount for said Funding Phase.", 
+            "title": "Type 1 - Fixed"
+        }, 
+        {
+            "location": "/project_funding/#type-2-progressively-lower", 
+            "text": "Provides a diminishing discount for said Funding Phase.  ( Starts high and lowers over time )   Deployed in  3.4 - Basic Risk indicators and Collaboration tools", 
+            "title": "Type 2 - Progressively Lower:"
+        }, 
+        {
+            "location": "/project_funding/#token-stake-calculation-and-distribution-algorithm", 
+            "text": "In short Token SCADA. Used to calculate token amounts bought by investors in Funding Phases.  There are 3 unknown variables out of which at least 1 is always required.   1) Total Token Supply available to the Funding Phase.  2) Parity with  ETH   ( X Tokens = 1 ETH )  3) Received amount of  ETH   ( always unknown )   Once 2 variables are known they can be used to determine the other.", 
+            "title": "Token Stake Calculation And Distribution Algorithm"
+        }, 
+        {
+            "location": "/project_funding/#type-1-market-decides-token-value", 
+            "text": "Inputs:   Defined Total Supply of tokens available in Current Funding Phase  Received amount of ETH  Minimum parity  ( optional )   Provides:   Parity with  ETH   ( calculated by amount divided by total supply =  1 Token = X ETH )   Observations:   Will sell the whole supply of Tokens available to Current Funding Phase  If minimum parity is provided and not reached, token allocation is done using provided parity parameter and\nremaining tokens are distributed to all participants in all Completed Funding Phases in order to maintain\nstake sharing  ( as a result excludes Project Owner ) .   Use cases:   Minimum parity not present - usable only in the First Funding Phase, where you want the market to determine\nyour token price.  Minimum parity used from previous Funding Phase - enabled for usage only after at least 1 Funding Phase where\nparity was determined.", 
+            "title": "Type 1 - Market decides token value"
+        }, 
+        {
+            "location": "/project_funding/#type-2-sell-a-fixed-amount-of-tokens-for-a-fixed-price", 
+            "text": "Inputs:   Defined Parity with  ETH   ( X Tokens = 1 ETH )  Defined Total Supply of tokens available in Current Funding Phase  Defined  Unsold Token Action  Defined  Buy Request Over Limit Action   Provides:   Information about total amount of required  ETH  for successful funding   Observations:   Can sell the whole supply of Tokens available to Current Funding Phase, but will usually not do so unless  Buy Request Over Limit Action  allows partial orders and sufficient demand exists.   Use cases:   Any Funding Phase where you want to sell a fixed amount of tokens   Deployed in  3.4 - Basic Risk indicators and Collaboration tools", 
+            "title": "Type 2 - Sell a fixed amount of tokens for a fixed price"
+        }, 
+        {
+            "location": "/project_funding/#type-3-sell-a-variable-amount-of-tokens-for-a-fixed-price", 
+            "text": "Inputs:   Defined Parity with  ETH   ( X Tokens = 1 ETH )  Received amount of ETH   Generates:     Total Supply of tokens available in Funding Phase respectively Project   Observations:     Will sell the whole supply of Tokens available to Current Funding Phase   Use cases:     Any Funding Phase where you want the first Funding Phase to determine the token supply of the whole Project   Deployed in  3.4 - Basic Risk indicators and Collaboration tools", 
+            "title": "Type 3 - Sell a variable amount of tokens for a fixed price"
+        }, 
+        {
+            "location": "/project_funding/#buy-request-over-limit-action", 
+            "text": "Deny Transaction  - deny transaction and return  ETH  to the  Project Investor .  Allow Partial Buy In  - allocate remaining locked tokens to the request, and allow the  Project Investor  to\nrequest a refund on the remaining unspent  ETH", 
+            "title": "Buy Request Over Limit Action:"
+        }, 
+        {
+            "location": "/project_funding/#unsold-token-actions", 
+            "text": "Burn unsold tokens  Distribute to all funding participants ( does not include owner )  Move to next Funding Phase ( enabled if next Funding Phase exists )  Return to Project Owner, deposited in Funds Vault as locked tokens  Return to Project Owner, deposited in Funds Vault as unlocked tokens ?!", 
+            "title": "Unsold Token Actions"
+        }, 
+        {
+            "location": "/project_cashback/", 
+            "text": "CashBack Procedures\n\n\nAt this stage of development the code enforces three CashBack procedures which unlock ETH to be retrieved back by the investors from their respective Funding Vaults. Each CashBack case is hardcoded into Funding Vaults and forces the Funding Vault to unlock ETH in case it is triggered.\n\n\nFunding Failed CashBack\n\n\nThis mechanism is triggered if the funding of the project Failed, or if the funding period should have ended and 7 days have passed and funding processing has not been initiated. \n\n\nDevelopment Milestone Completion CashBack\n\n\nThis mechanism is triggered if the Investor votes NO to a Development Milestone Completion Proposal.\n\n\nProject Owner Missing In Action CashBack\n\n\nThis mechanism is triggered if the project owner misses a Development Milestone Completion Meeting.", 
+            "title": "Project - CashBack"
+        }, 
+        {
+            "location": "/project_cashback/#cashback-procedures", 
+            "text": "At this stage of development the code enforces three CashBack procedures which unlock ETH to be retrieved back by the investors from their respective Funding Vaults. Each CashBack case is hardcoded into Funding Vaults and forces the Funding Vault to unlock ETH in case it is triggered.", 
+            "title": "CashBack Procedures"
+        }, 
+        {
+            "location": "/project_cashback/#funding-failed-cashback", 
+            "text": "This mechanism is triggered if the funding of the project Failed, or if the funding period should have ended and 7 days have passed and funding processing has not been initiated.", 
+            "title": "Funding Failed CashBack"
+        }, 
+        {
+            "location": "/project_cashback/#development-milestone-completion-cashback", 
+            "text": "This mechanism is triggered if the Investor votes NO to a Development Milestone Completion Proposal.", 
+            "title": "Development Milestone Completion CashBack"
+        }, 
+        {
+            "location": "/project_cashback/#project-owner-missing-in-action-cashback", 
+            "text": "This mechanism is triggered if the project owner misses a Development Milestone Completion Meeting.", 
+            "title": "Project Owner Missing In Action CashBack"
+        }, 
+        {
+            "location": "/project_proposals/", 
+            "text": "Flow\n\n\n\n\nNew Proposal\n\n\nProposal Voting Phase \n( Duration set by Project Bylaws - Proposal Voting Duration )\n\n\nProposal Action - Execution\n\n\n\n\nTypes\n\n\nEmergency Funding Release\n\n\nCan be triggered only once by the \nProject Owner\n at any time.\n\n\nMilestone Acceptance\n\n\nIs triggered by the system once a Milestone Reaches Delivery Meeting time.\n\n\nMilestone Postponing\n\n\nCan be triggered only once per Milestone by the \nProject Owner\n at any time after said Milestone development starts. Current time needs to be before milestone end + proposal voting time.\n\n\nCode Upgrade\n\n\nProject is NOT at \nPhase 4 - Development Completed\n\n\n\n\nCan be triggered only once per new ApplicationEntity address by the \nProject Owner\n at any time.\n\n\n\n\nProject is at \nPhase 4 - Development Completed\n\n\n\n\nCan be triggered only once per new ApplicationEntity address by any \nToken Holder\n at any time.\n\n\n\n\nVoting\n\n\nBefore \nPhase 4 - Development Completed\n all Proposals except Project Delisting, are voted only by Token Holders that have tokens locked in a Funding Vault.\n\n\nAfter \nPhase 4 - Development Completed\n Proposals are voted by all token holders.\n\n\nVoting Power\n\n\nVoting power represents the total number of tokens the wallet address owns.", 
+            "title": "Project - Proposals"
+        }, 
+        {
+            "location": "/project_proposals/#flow", 
+            "text": "New Proposal  Proposal Voting Phase  ( Duration set by Project Bylaws - Proposal Voting Duration )  Proposal Action - Execution", 
+            "title": "Flow"
+        }, 
+        {
+            "location": "/project_proposals/#types", 
+            "text": "", 
+            "title": "Types"
+        }, 
+        {
+            "location": "/project_proposals/#emergency-funding-release", 
+            "text": "Can be triggered only once by the  Project Owner  at any time.", 
+            "title": "Emergency Funding Release"
+        }, 
+        {
+            "location": "/project_proposals/#milestone-acceptance", 
+            "text": "Is triggered by the system once a Milestone Reaches Delivery Meeting time.", 
+            "title": "Milestone Acceptance"
+        }, 
+        {
+            "location": "/project_proposals/#milestone-postponing", 
+            "text": "Can be triggered only once per Milestone by the  Project Owner  at any time after said Milestone development starts. Current time needs to be before milestone end + proposal voting time.", 
+            "title": "Milestone Postponing"
+        }, 
+        {
+            "location": "/project_proposals/#code-upgrade", 
+            "text": "Project is NOT at  Phase 4 - Development Completed   Can be triggered only once per new ApplicationEntity address by the  Project Owner  at any time.   Project is at  Phase 4 - Development Completed   Can be triggered only once per new ApplicationEntity address by any  Token Holder  at any time.", 
+            "title": "Code Upgrade"
+        }, 
+        {
+            "location": "/project_proposals/#voting", 
+            "text": "Before  Phase 4 - Development Completed  all Proposals except Project Delisting, are voted only by Token Holders that have tokens locked in a Funding Vault.  After  Phase 4 - Development Completed  Proposals are voted by all token holders.", 
+            "title": "Voting"
+        }, 
+        {
+            "location": "/project_proposals/#voting-power", 
+            "text": "Voting power represents the total number of tokens the wallet address owns.", 
+            "title": "Voting Power"
+        }, 
+        {
+            "location": "/project_risk/", 
+            "text": "Risk Factors and how they are calculated\n\n\n1. Platform NON Testable Risk Factors\n\n\n1.1. Has Minimal viable product ?\n\n\n\n\nTRUE - returns 0\n\n\nFALSE - returns 10\n\n\n\n\n1.2. Uses BlockChain ?\n\n\nRequires\n: Minimal viable product\n\n\n\n\nTRUE - returns score 0\n\n\nFALSE - returns score 5\n\n\n\n\n1.3. Is BlockChain Usage Planned ?\n\n\n\n\nTRUE - returns score 0\n\n\nFALSE - returns score 10\n\n\n\n\n2. Platform Testable Risk Factors\n\n\nGeneral Risk Indicator\n is calculated by multiplying each \nIndicator Score\n by it's \nRelevance Risk Indicator \nCoefficient:\n and finally adding all the results. \n\n\n2.1. Token Minting\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nChecks\n if an ApplicationEntity can Mint Tokens after All Funding Periods are completed ?\n\n\n\n\nTRUE - returns \nIndicator Score\n 10\n\n\nFALSE - returns \nIndicator Score\n 0\n\n\n\n\n2.2. Token Sale - Market decides token value\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nIf \nToken Stake Calculation And Distribution Algorithm\n is \nType 1 - Market decides token value\n.\n\n\n\n\nTRUE - returns \nIndicator Score\n 0\n\n\nFALSE - returns \nIndicator Score\n 10\n\n\n\n\n2.3. Token Sale - Sell a fixed amount of tokens for a fixed price\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nIf \nToken Stake Calculation And Distribution Algorithm\n is \nType 2 - Sell a fixed amount of tokens for a fixed price\n.\n\n\n\n\nTRUE - returns \nIndicator Score\n 0\n\n\nFALSE - returns \nIndicator Score\n 10\n\n\n\n\n2.4. Token Sale - Sell a variable amount of tokens for a fixed price\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nIf \nToken Stake Calculation And Distribution Algorithm\n is \nType 3 - Sell a variable amount of tokens for a fixed price\n and \nBuy Request Over Limit Action\n is Deny Transaction\n\n\n\n\nreturns \nIndicator Score\n 5\n\n\n\n\nelse \nBuy Request Over Limit Action\n is Allow Partial Buy In\n\n\n\n\nreturns \nIndicator Score\n 0\n\n\n\n\nOTHER CASES: - returns score 10\n\n\n2.5. Funding Risk\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\n2.5.1 Only Minimum Required Funding\n\n\nExists\n\n- TRUE - returns \nIndicator Score\n 0\n- FALSE - returns \nIndicator Score\n 8\n\n\n2.5.2 Only Maximum Required Funding\n\n\nExists\n\n- TRUE - returns \nIndicator Score\n 2\n- FALSE - returns \nIndicator Score\n 0\n\n\n2.5.3 Both Minimum And Maximum Required Funding Exist\n\n\n\n\n\n\nOperation\n: Divide Maximum Required Funding to Minimum Required Funding\n\n\n\n\n\n\nIf Ratio smaller or equal to 3 \nIndicator Score\n is 0\n\n\n\n\nIf Ratio higher than 3 and smaller or equal to 6 the \nIndicator Score\n is 1\n\n\nIf Ratio higher than 6 the \nIndicator Score\n is 2\n\n\n\n\n2.6. Accepted Funding Payments\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\n2.6.1 Only Milestone Funding Payments Accepted\n\n\n\n\nTODO - Refactor\n\n\n\n\nIf any of your Development Milestones does not require \nProject Investor\n voting to release the funds then:\n\n\n\n\ntotal up each required milestone that is set as complete and has no voting requirement\n\n\n\n\nget percentage of funds required from total for each 10% of minimum that this represents a score increase by 1 point\n\n\n\n\n\n\nreturns calculated score\n\n\n\n\n\n\n2.6.2 Only Direct Funding Payments Accepted\n\n\n\n\nreturns \nIndicator Score\n 10\n\n\n\n\n2.6.3 Both Milestone Funding and Direct Funding Payments Accepted\n\n\nHint:\n Use \"Milestone Funding Payments Accepted\" score and if it is higher than 8, use it.\n\n\n\n\nreturns \nIndicator Score\n 8\n\n\n\n\n2.7. Selling percentage of total supply\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nSelling Supply Ranges\n\n\n\n\n\n\n\n\nStart\n\n\nEnd Inclusive\n\n\nIndicator Score\n\n\n\n\n\n\n\n\n\n\n0\n\n\n50\n\n\n0\n\n\n\n\n\n\n50\n\n\n60\n\n\n2\n\n\n\n\n\n\n60\n\n\n70\n\n\n4\n\n\n\n\n\n\n70\n\n\n80\n\n\n6\n\n\n\n\n\n\n80\n\n\n90\n\n\n8\n\n\n\n\n\n\n90\n\n\n100\n\n\n10\n\n\n\n\n\n\n\n\n2.8. Milestone Duration\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nMilestone Duration Median Ranges\n in months\n\n\n\n\n\n\n\n\nStart\n\n\nEnd Inclusive\n\n\nIndicator Score\n\n\n\n\n\n\n\n\n\n\n0\n\n\n0.5\n\n\n10\n\n\n\n\n\n\n0.5\n\n\n0.75\n\n\n5\n\n\n\n\n\n\n0.75\n\n\n1\n\n\n1\n\n\n\n\n\n\n1\n\n\n3\n\n\n0\n\n\n\n\n\n\n3\n\n\n4\n\n\n1\n\n\n\n\n\n\n4\n\n\n5\n\n\n3\n\n\n\n\n\n\n5\n\n\n6\n\n\n5\n\n\n\n\n\n\n6\n\n\nInf.\n\n\n10\n\n\n\n\n\n\n\n\n2.9. Total Project Duration\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nTotal Project Duration Median Ranges\n in months\n\n\n\n\n\n\n\n\nStart\n\n\nEnd Inclusive\n\n\nIndicator Score\n\n\n\n\n\n\n\n\n\n\n0\n\n\n12\n\n\n0\n\n\n\n\n\n\n12\n\n\n18\n\n\n2\n\n\n\n\n\n\n18\n\n\n24\n\n\n4\n\n\n\n\n\n\n24\n\n\n36\n\n\n6\n\n\n\n\n\n\n36\n\n\nInf.\n\n\n10\n\n\n\n\n\n\n\n\n2.10. Emergency Fund Exists\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nAsserts if \nEmergency Fund\n is used.\n\n\n\n\nTRUE - returns \nIndicator Score\n 0\n\n\nFALSE - returns \nIndicator Score\n 10\n\n\n\n\n2.11. Poorly Defined or No Development Milestones\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\nIf one milestone value is higher than 50%, or two combined higher than 80%\n\n\n\n\nTRUE - returns \nIndicator Score\n 0\n\n\nFALSE - returns \nIndicator Score\n 10\n\n\n\n\n2.12. Provides a Revenue Distribution Method\n\n\nRelevance Risk Indicator Coefficient:\n 1\n\n\n\n\nTRUE - returns \nIndicator Score\n 0\n\n\nFALSE - returns \nIndicator Score\n 10\n\n\n\n\nPlatform - Risk Ranking\n\n\n1. Platform NON Testable Risk Factors\n\n\n\n\n\n\n\n\nIndicator Name\n\n\nRelevance Risk Indicator Coefficient\n\n\n\n\n\n\n\n\n\n\n1.1. Has Minimal viable product ?\n\n\n1\n\n\n\n\n\n\n1.2. Uses BlockChain ?\n\n\n1\n\n\n\n\n\n\n1.3. Is BlockChain Usage Planned ?\n\n\n1\n\n\n\n\n\n\n\n\n@TODO: Update Relevance Risk Indicator Coefficient after more research for better scoring\n\n\n2. Platform Testable Risk Factors\n\n\n\n\n\n\n\n\nIndicator Name\n\n\nRelevance Risk Indicator Coefficient\n\n\n\n\n\n\n\n\n\n\n2.1. Token Minting\n\n\n1\n\n\n\n\n\n\n2.2. Token Sale - Market decides token value\n\n\n1\n\n\n\n\n\n\n2.3. Token Sale - Sell a fixed amount of tokens for a fixed price\n\n\n1\n\n\n\n\n\n\n2.4. Token Sale - Sell a variable amount of tokens for a fixed price\n\n\n1\n\n\n\n\n\n\n2.5. Funding Risk\n\n\n1\n\n\n\n\n\n\n2.6. Accepted Funding Payments\n\n\n1\n\n\n\n\n\n\n2.7. Selling percentage of total supply\n\n\n1\n\n\n\n\n\n\n2.8. Milestone Duration\n\n\n1\n\n\n\n\n\n\n2.9. Total Project Duration\n\n\n1\n\n\n\n\n\n\n2.10. Emergency Fund Exists\n\n\n1\n\n\n\n\n\n\n2.11. Poorly Defined or No Development Milestones\n\n\n1\n\n\n\n\n\n\n2.12. Provides a Revenue Distribution Method\n\n\n1\n\n\n\n\n\n\n\n\n@TODO: Update Relevance Risk Indicator Coefficient after more research for better scoring", 
+            "title": "Project - Risk Indicators"
+        }, 
+        {
+            "location": "/project_risk/#1-platform-non-testable-risk-factors", 
+            "text": "", 
+            "title": "1. Platform NON Testable Risk Factors"
+        }, 
+        {
+            "location": "/project_risk/#11-has-minimal-viable-product", 
+            "text": "TRUE - returns 0  FALSE - returns 10", 
+            "title": "1.1. Has Minimal viable product ?"
+        }, 
+        {
+            "location": "/project_risk/#12-uses-blockchain", 
+            "text": "Requires : Minimal viable product   TRUE - returns score 0  FALSE - returns score 5", 
+            "title": "1.2. Uses BlockChain ?"
+        }, 
+        {
+            "location": "/project_risk/#13-is-blockchain-usage-planned", 
+            "text": "TRUE - returns score 0  FALSE - returns score 10", 
+            "title": "1.3. Is BlockChain Usage Planned ?"
+        }, 
+        {
+            "location": "/project_risk/#2-platform-testable-risk-factors", 
+            "text": "General Risk Indicator  is calculated by multiplying each  Indicator Score  by it's  Relevance Risk Indicator \nCoefficient:  and finally adding all the results.", 
+            "title": "2. Platform Testable Risk Factors"
+        }, 
+        {
+            "location": "/project_risk/#21-token-minting", 
+            "text": "Relevance Risk Indicator Coefficient:  1  Checks  if an ApplicationEntity can Mint Tokens after All Funding Periods are completed ?   TRUE - returns  Indicator Score  10  FALSE - returns  Indicator Score  0", 
+            "title": "2.1. Token Minting"
+        }, 
+        {
+            "location": "/project_risk/#22-token-sale-market-decides-token-value", 
+            "text": "Relevance Risk Indicator Coefficient:  1  If  Token Stake Calculation And Distribution Algorithm  is  Type 1 - Market decides token value .   TRUE - returns  Indicator Score  0  FALSE - returns  Indicator Score  10", 
+            "title": "2.2. Token Sale - Market decides token value"
+        }, 
+        {
+            "location": "/project_risk/#23-token-sale-sell-a-fixed-amount-of-tokens-for-a-fixed-price", 
+            "text": "Relevance Risk Indicator Coefficient:  1  If  Token Stake Calculation And Distribution Algorithm  is  Type 2 - Sell a fixed amount of tokens for a fixed price .   TRUE - returns  Indicator Score  0  FALSE - returns  Indicator Score  10", 
+            "title": "2.3. Token Sale - Sell a fixed amount of tokens for a fixed price"
+        }, 
+        {
+            "location": "/project_risk/#24-token-sale-sell-a-variable-amount-of-tokens-for-a-fixed-price", 
+            "text": "Relevance Risk Indicator Coefficient:  1  If  Token Stake Calculation And Distribution Algorithm  is  Type 3 - Sell a variable amount of tokens for a fixed price  and  Buy Request Over Limit Action  is Deny Transaction   returns  Indicator Score  5   else  Buy Request Over Limit Action  is Allow Partial Buy In   returns  Indicator Score  0   OTHER CASES: - returns score 10", 
+            "title": "2.4. Token Sale - Sell a variable amount of tokens for a fixed price"
+        }, 
+        {
+            "location": "/project_risk/#25-funding-risk", 
+            "text": "Relevance Risk Indicator Coefficient:  1", 
+            "title": "2.5. Funding Risk"
+        }, 
+        {
+            "location": "/project_risk/#251-only-minimum-required-funding", 
+            "text": "Exists \n- TRUE - returns  Indicator Score  0\n- FALSE - returns  Indicator Score  8", 
+            "title": "2.5.1 Only Minimum Required Funding"
+        }, 
+        {
+            "location": "/project_risk/#252-only-maximum-required-funding", 
+            "text": "Exists \n- TRUE - returns  Indicator Score  2\n- FALSE - returns  Indicator Score  0", 
+            "title": "2.5.2 Only Maximum Required Funding"
+        }, 
+        {
+            "location": "/project_risk/#253-both-minimum-and-maximum-required-funding-exist", 
+            "text": "Operation : Divide Maximum Required Funding to Minimum Required Funding    If Ratio smaller or equal to 3  Indicator Score  is 0   If Ratio higher than 3 and smaller or equal to 6 the  Indicator Score  is 1  If Ratio higher than 6 the  Indicator Score  is 2", 
+            "title": "2.5.3 Both Minimum And Maximum Required Funding Exist"
+        }, 
+        {
+            "location": "/project_risk/#26-accepted-funding-payments", 
+            "text": "Relevance Risk Indicator Coefficient:  1", 
+            "title": "2.6. Accepted Funding Payments"
+        }, 
+        {
+            "location": "/project_risk/#261-only-milestone-funding-payments-accepted", 
+            "text": "TODO - Refactor   If any of your Development Milestones does not require  Project Investor  voting to release the funds then:   total up each required milestone that is set as complete and has no voting requirement   get percentage of funds required from total for each 10% of minimum that this represents a score increase by 1 point    returns calculated score", 
+            "title": "2.6.1 Only Milestone Funding Payments Accepted"
+        }, 
+        {
+            "location": "/project_risk/#262-only-direct-funding-payments-accepted", 
+            "text": "returns  Indicator Score  10", 
+            "title": "2.6.2 Only Direct Funding Payments Accepted"
+        }, 
+        {
+            "location": "/project_risk/#263-both-milestone-funding-and-direct-funding-payments-accepted", 
+            "text": "Hint:  Use \"Milestone Funding Payments Accepted\" score and if it is higher than 8, use it.   returns  Indicator Score  8", 
+            "title": "2.6.3 Both Milestone Funding and Direct Funding Payments Accepted"
+        }, 
+        {
+            "location": "/project_risk/#27-selling-percentage-of-total-supply", 
+            "text": "Relevance Risk Indicator Coefficient:  1  Selling Supply Ranges     Start  End Inclusive  Indicator Score      0  50  0    50  60  2    60  70  4    70  80  6    80  90  8    90  100  10", 
+            "title": "2.7. Selling percentage of total supply"
+        }, 
+        {
+            "location": "/project_risk/#28-milestone-duration", 
+            "text": "Relevance Risk Indicator Coefficient:  1  Milestone Duration Median Ranges  in months     Start  End Inclusive  Indicator Score      0  0.5  10    0.5  0.75  5    0.75  1  1    1  3  0    3  4  1    4  5  3    5  6  5    6  Inf.  10", 
+            "title": "2.8. Milestone Duration"
+        }, 
+        {
+            "location": "/project_risk/#29-total-project-duration", 
+            "text": "Relevance Risk Indicator Coefficient:  1  Total Project Duration Median Ranges  in months     Start  End Inclusive  Indicator Score      0  12  0    12  18  2    18  24  4    24  36  6    36  Inf.  10", 
+            "title": "2.9. Total Project Duration"
+        }, 
+        {
+            "location": "/project_risk/#210-emergency-fund-exists", 
+            "text": "Relevance Risk Indicator Coefficient:  1  Asserts if  Emergency Fund  is used.   TRUE - returns  Indicator Score  0  FALSE - returns  Indicator Score  10", 
+            "title": "2.10. Emergency Fund Exists"
+        }, 
+        {
+            "location": "/project_risk/#211-poorly-defined-or-no-development-milestones", 
+            "text": "Relevance Risk Indicator Coefficient:  1  If one milestone value is higher than 50%, or two combined higher than 80%   TRUE - returns  Indicator Score  0  FALSE - returns  Indicator Score  10", 
+            "title": "2.11. Poorly Defined or No Development Milestones"
+        }, 
+        {
+            "location": "/project_risk/#212-provides-a-revenue-distribution-method", 
+            "text": "Relevance Risk Indicator Coefficient:  1   TRUE - returns  Indicator Score  0  FALSE - returns  Indicator Score  10", 
+            "title": "2.12. Provides a Revenue Distribution Method"
+        }, 
+        {
+            "location": "/project_risk/#platform-risk-ranking", 
+            "text": "", 
+            "title": "Platform - Risk Ranking"
+        }, 
+        {
+            "location": "/project_risk/#1-platform-non-testable-risk-factors_1", 
+            "text": "Indicator Name  Relevance Risk Indicator Coefficient      1.1. Has Minimal viable product ?  1    1.2. Uses BlockChain ?  1    1.3. Is BlockChain Usage Planned ?  1     @TODO: Update Relevance Risk Indicator Coefficient after more research for better scoring", 
+            "title": "1. Platform NON Testable Risk Factors"
+        }, 
+        {
+            "location": "/project_risk/#2-platform-testable-risk-factors_1", 
+            "text": "Indicator Name  Relevance Risk Indicator Coefficient      2.1. Token Minting  1    2.2. Token Sale - Market decides token value  1    2.3. Token Sale - Sell a fixed amount of tokens for a fixed price  1    2.4. Token Sale - Sell a variable amount of tokens for a fixed price  1    2.5. Funding Risk  1    2.6. Accepted Funding Payments  1    2.7. Selling percentage of total supply  1    2.8. Milestone Duration  1    2.9. Total Project Duration  1    2.10. Emergency Fund Exists  1    2.11. Poorly Defined or No Development Milestones  1    2.12. Provides a Revenue Distribution Method  1     @TODO: Update Relevance Risk Indicator Coefficient after more research for better scoring", 
+            "title": "2. Platform Testable Risk Factors"
+        }, 
+        {
+            "location": "/project_tools/", 
+            "text": "Code Integration and Deployment Tools\n\n\n\n\nOnce the Project reaches \nPhase 4 - Development Completed\n, we will release our internal tool for writing and testing Code Upgrades for the BlockBits Platform, as well as deploying and validating said code.\n\n\nCan be used by any \nToken Holder\n to write Code Upgrades and initiate Pull Requests into the BlockBits Platform, that will then be Voted for acceptance by \nToken Holders\n.", 
+            "title": "Project - Tools"
+        }, 
+        {
+            "location": "/project_tools/#code-integration-and-deployment-tools", 
+            "text": "Once the Project reaches  Phase 4 - Development Completed , we will release our internal tool for writing and testing Code Upgrades for the BlockBits Platform, as well as deploying and validating said code.  Can be used by any  Token Holder  to write Code Upgrades and initiate Pull Requests into the BlockBits Platform, that will then be Voted for acceptance by  Token Holders .", 
+            "title": "Code Integration and Deployment Tools"
+        }, 
+        {
+            "location": "/project_tokens/", 
+            "text": "Specifications\n\n\n\n\n\n\n\n\nKey\n\n\nValue\n\n\nNote\n\n\n\n\n\n\n\n\n\n\nType\n\n\nERC20\n\n\nToken contract can be found in ListingContract -\n ApplicationEntity -\n TokenManagerEntity -\n \nTokenEntity\n\n\n\n\n\n\nSymbol\n\n\n\n\nChosen by Project Owner\n\n\n\n\n\n\nDecimals\n\n\n\n\nChosen by Project Owner\n\n\n\n\n\n\nTotal Supply\n\n\n\n\nChosen by Project Owner\n\n\n\n\n\n\nICO Supply\n\n\n\n\nCalculated using Project Bylaws\n\n\n\n\n\n\nICO Bounty Supply\n\n\n\n\nCalculated using Project Bylaws ( defaults to 1% of Total Supply )\n\n\n\n\n\n\nTotal Circulating Supply\n\n\n\n\nICO Supply + ICO Bounty Supply\n\n\n\n\n\n\nProject Owner Supply\n\n\n\n\nLocked or Unlocked \n - Chosen by Project Owner\n\n\n\n\n\n\nSupply is FIXED\n\n\n\n\nTRUE or FALSE - Chosen by Project Owner\n\n\n\n\n\n\n\n\nUtility\n\n\nLocked tokens are used for Voting Development Milestone Releases.\n\n\nProject Owner can use Code Upgrades to add a planned utility directly into the Application Entity.", 
+            "title": "Project - Tokens"
+        }, 
+        {
+            "location": "/project_tokens/#specifications", 
+            "text": "Key  Value  Note      Type  ERC20  Token contract can be found in ListingContract -  ApplicationEntity -  TokenManagerEntity -   TokenEntity    Symbol   Chosen by Project Owner    Decimals   Chosen by Project Owner    Total Supply   Chosen by Project Owner    ICO Supply   Calculated using Project Bylaws    ICO Bounty Supply   Calculated using Project Bylaws ( defaults to 1% of Total Supply )    Total Circulating Supply   ICO Supply + ICO Bounty Supply    Project Owner Supply   Locked or Unlocked   - Chosen by Project Owner    Supply is FIXED   TRUE or FALSE - Chosen by Project Owner", 
+            "title": "Specifications"
+        }, 
+        {
+            "location": "/project_tokens/#utility", 
+            "text": "Locked tokens are used for Voting Development Milestone Releases.  Project Owner can use Code Upgrades to add a planned utility directly into the Application Entity.", 
+            "title": "Utility"
+        }, 
+        {
+            "location": "/project_states/", 
+            "text": "State - New\n\n\nA new private Project has been created by a \nProject Owner\n and all it's data is stored in \nStorage - LEVEL 2\n \nusing a password to Encrypt and Decrypt it.\n\n\nState - Published\n\n\nAt this stage, the \nProject Owner\n is ready to share the Project with collaborators, and sends out invitations.\n\n\nAny change done to the Project, will result in a new Project Revision ( think git ) and the \nProject Owner\n can accept\nthe change request as the main version to be used.\n\n\nState - Deployed\n\n\nProject is ready and gets deployed.\n- Smart contracts are deployed to the Ethereum BlockChain ( \nStorage - LEVEL 1\n ) \n- Project media ( descriptions and images ) is deployed to  \nStorage - LEVEL 2\n \n\n\nState - Launched\n\n\n\n\nIf current time is \n\n\nbefore funding time period, CAN BE DELISTED.\n\n\nafter funding time period, starts accepting contributions.\n\n\n\n\n\n\n\n\nState - Funding Failed\n\n\nState - Funding Successful\n\n\n\n\nallow token transfers from direct funding\n\n\n\n\nallow eth transfer from direct funding to the owner's multisig\n\n\n\n\n\n\nif advance payment fund exists, it is released to the owner and tokens to the investors\n\n\n\n\n\n\nState - Development start\n\n\n\n\nStarts at date specified in bylaws\n\n\nCreates first milestone meeting\n\n\n\n\nState - In Development - Cycle\n\n\nFor each milestone:\n\n\n\n\n\n\nmilestones left?\n\n\n\n\nNO - #  State - Development Complete \n\n\nYES\n\n\nCreates milestone meeting at the end of milestone deadline \n\n\nnew meeting creation for date\n\n\nbased on bylaws, require Input from owner about meeting fixed timestamp ( hour / minute )\n\n\nnew meeting announcement for date\n\n\n\n\n\n\nowner fails to set timestamp X days in advance ( based on bylaws ), at meeting date start cash out period\n\n\nfail, starts global CashBack period ( duration in bylaws MIA Owner )\n\n\nnever run action - #  State - CashBack\n\n\n\n\n\n\n\n\n\n\nowner sets meeting timestamp\n\n\nat meeting\n\n\nnext day starts proposal voting period\n\n\nafter result, if negative, wait ( duration in bylaws ) days for individual NO Cashbacks\n\n\ncash out can only be done by voters that said NO in the proposal.\n\n\n1 second after cash out period ends run meeting action.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nnew proposal can be created for postponing a milestone deadline.\n\n\n\n\n\n\nState - Development Complete\n\n\nRepresents the state of a project that has finished delivery of all \nProject Development Milestones\n and all have been accepted by \nProject Investors\n.\n\n\n\n\nBlockBits - Roadmap - \n# Phase 4 - Development Completed\n\n\nOwner is now a token holder.", 
+            "title": "Project - States"
+        }, 
+        {
+            "location": "/project_states/#state-new", 
+            "text": "A new private Project has been created by a  Project Owner  and all it's data is stored in  Storage - LEVEL 2  \nusing a password to Encrypt and Decrypt it.", 
+            "title": "State - New"
+        }, 
+        {
+            "location": "/project_states/#state-published", 
+            "text": "At this stage, the  Project Owner  is ready to share the Project with collaborators, and sends out invitations.  Any change done to the Project, will result in a new Project Revision ( think git ) and the  Project Owner  can accept\nthe change request as the main version to be used.", 
+            "title": "State - Published"
+        }, 
+        {
+            "location": "/project_states/#state-deployed", 
+            "text": "Project is ready and gets deployed.\n- Smart contracts are deployed to the Ethereum BlockChain (  Storage - LEVEL 1  ) \n- Project media ( descriptions and images ) is deployed to   Storage - LEVEL 2", 
+            "title": "State - Deployed"
+        }, 
+        {
+            "location": "/project_states/#state-launched", 
+            "text": "If current time is   before funding time period, CAN BE DELISTED.  after funding time period, starts accepting contributions.", 
+            "title": "State - Launched"
+        }, 
+        {
+            "location": "/project_states/#state-funding-failed", 
+            "text": "", 
+            "title": "State - Funding Failed"
+        }, 
+        {
+            "location": "/project_states/#state-funding-successful", 
+            "text": "allow token transfers from direct funding   allow eth transfer from direct funding to the owner's multisig    if advance payment fund exists, it is released to the owner and tokens to the investors", 
+            "title": "State - Funding Successful"
+        }, 
+        {
+            "location": "/project_states/#state-development-start", 
+            "text": "Starts at date specified in bylaws  Creates first milestone meeting", 
+            "title": "State - Development start"
+        }, 
+        {
+            "location": "/project_states/#state-in-development-cycle", 
+            "text": "For each milestone:    milestones left?   NO - #  State - Development Complete   YES  Creates milestone meeting at the end of milestone deadline   new meeting creation for date  based on bylaws, require Input from owner about meeting fixed timestamp ( hour / minute )  new meeting announcement for date    owner fails to set timestamp X days in advance ( based on bylaws ), at meeting date start cash out period  fail, starts global CashBack period ( duration in bylaws MIA Owner )  never run action - #  State - CashBack      owner sets meeting timestamp  at meeting  next day starts proposal voting period  after result, if negative, wait ( duration in bylaws ) days for individual NO Cashbacks  cash out can only be done by voters that said NO in the proposal.  1 second after cash out period ends run meeting action.                 new proposal can be created for postponing a milestone deadline.", 
+            "title": "State - In Development - Cycle"
+        }, 
+        {
+            "location": "/project_states/#state-development-complete", 
+            "text": "Represents the state of a project that has finished delivery of all  Project Development Milestones  and all have been accepted by  Project Investors .   BlockBits - Roadmap -  # Phase 4 - Development Completed  Owner is now a token holder.", 
+            "title": "State - Development Complete"
+        }, 
+        {
+            "location": "/project_storage/", 
+            "text": "Full BlockChain Data Storage\n\n\nHas been considered but deemed too expensive in order to store anything more than just HashKeys / Paths to files \nresiding in Swarm or IPFS.\n\n\nCost: ~0.035 \nETH\n per KB\n\n\nHybrid Data Storage\n\n\nBlockChain Storage\n\n\nWill be storing just HashKeys as pointers to files hosted on Swarm or IPFS.\n\n\nUser Data Storage\n\n\nSwarm\n is a distributed storage platform and content distribution \nservice, a native base layer service of the ethereum web 3 stack. The primary objective of Swarm is to provide a \ndecentralized and redundant store of Ethereum's public record, in particular to store and distribute dapp code and \ndata as well as block chain data.\n\n\nIPFS\n (the InterPlanetary File System) is a new hypermedia distribution protocol, \naddressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to \nmake the web faster, safer, and more open.\n\n\nSwarm vs IPFS\n details.\n\n\nBoth are valid options for the project, yet none of them are stable enough to support it at the time of writing.\n\n\nDevelopment Milestone \n3.4 - Basic Risk indicators and Collaboration tools\n will look at implementing it.\n\n\nPublic Data Storage\n\n\nWill be done using Hybrid storage.\n\n\nPrivate Data Storage\n\n\nWill be done using Hybrid storage.\n\n\nUsing \nUser Data Signing and Validation\n we can implement an encrypted storage using a user provided password.", 
+            "title": "Project - Storage"
+        }, 
+        {
+            "location": "/project_storage/#full-blockchain-data-storage", 
+            "text": "Has been considered but deemed too expensive in order to store anything more than just HashKeys / Paths to files \nresiding in Swarm or IPFS.  Cost: ~0.035  ETH  per KB", 
+            "title": "Full BlockChain Data Storage"
+        }, 
+        {
+            "location": "/project_storage/#hybrid-data-storage", 
+            "text": "", 
+            "title": "Hybrid Data Storage"
+        }, 
+        {
+            "location": "/project_storage/#blockchain-storage", 
+            "text": "Will be storing just HashKeys as pointers to files hosted on Swarm or IPFS.", 
+            "title": "BlockChain Storage"
+        }, 
+        {
+            "location": "/project_storage/#user-data-storage", 
+            "text": "Swarm  is a distributed storage platform and content distribution \nservice, a native base layer service of the ethereum web 3 stack. The primary objective of Swarm is to provide a \ndecentralized and redundant store of Ethereum's public record, in particular to store and distribute dapp code and \ndata as well as block chain data.  IPFS  (the InterPlanetary File System) is a new hypermedia distribution protocol, \naddressed by content and identities. IPFS enables the creation of completely distributed applications. It aims to \nmake the web faster, safer, and more open.  Swarm vs IPFS  details.  Both are valid options for the project, yet none of them are stable enough to support it at the time of writing.  Development Milestone  3.4 - Basic Risk indicators and Collaboration tools  will look at implementing it.", 
+            "title": "User Data Storage"
+        }, 
+        {
+            "location": "/project_storage/#public-data-storage", 
+            "text": "Will be done using Hybrid storage.", 
+            "title": "Public Data Storage"
+        }, 
+        {
+            "location": "/project_storage/#private-data-storage", 
+            "text": "Will be done using Hybrid storage.  Using  User Data Signing and Validation  we can implement an encrypted storage using a user provided password.", 
+            "title": "Private Data Storage"
+        }, 
+        {
+            "location": "/examples/", 
+            "text": "Use Cases and Examples:\n\n\nLet's take a look at a project that has been successfully funded.\n\n\nIn order to promote good management, failing a \nDevelopment Milestone\n should have rather big repercussions to your Project and will reflect your \nManagement Ability\n as a Project Owner.\n\n\nThe Platform allows the Project Owner to initiate a \nMilestone Postponing Proposal\n in order to Postpone a \nDevelopment Milestone\n Meeting.\n\n\n\n\n\n\nProject Bylaws - Meeting Postponing Min\n and \nProject Bylaws - Meeting Postponing Max\n dictate the minimum and maximum number of days that can be added to the existing \nDevelopment Milestone\n.\n\n\n\n\n\n\nThis can only be done once per \nDevelopment Milestone\n.\n\n\n\n\n\n\nExample Crowd Funded Project Bylaws\n\n\n\n\n\n\n\n\nBylaw Name\n\n\nValue\n\n\n\n\n\n\n\n\n\n\nProject Bylaws - Meeting Postponing Min\n\n\n7\n days\n\n\n\n\n\n\nProject Bylaws - Meeting Postponing Max\n\n\n90\n days\n\n\n\n\n\n\nProject Bylaws - Proposal Voting Duration\n\n\n7\n days\n\n\n\n\n\n\nProject Bylaws - CashBack After No Vote\n\n\n7\n days\n\n\n\n\n\n\nProject Bylaws - CashBack Owner MIA\n\n\n365\n days\n\n\n\n\n\n\nProject Bylaws - Voting Phase - Duration\n\n\n7\n days\n\n\n\n\n\n\n\n\nFlow:\n\n\n\n\nOwner has a successfully funded project, 8 Development Milestones available.\n\n\nDevelopment Milestone #1 was completed and delivered successfully.\n\n\nDevelopment Milestone #2 was completed and delivered successfully.\n\n\nDevelopment Milestone #3 was completed and delivered successfully.\n\n\nOwner is working on Development Milestone #4 - work time 90 days\n\n\n\n\n14 Days left before Development Milestone #4 - Meeting. Because of some unforeseen circumstances the project  encountered delays. \n\n\n\n\nThe team has yet to find a solution, but is confident they will and this will not affect the timeline, yet this is a risk that investors should be notified on.\n\n\nThe Project Owner writes an \nOfficial Announcement\n on the Platform detailing the issues and how they plan to address them.\n\n\nThe Owner now has 2 choices:\n\n\n1 - \nBe prepared\n and create a \nMilestone Postponing Proposal\n where Token Holders will be able to Vote to postpone the meeting \nJust in case\n\n\nIf the \nProposal Result\n is successful, the Meeting and Deadline is postponed.\n\n\nIf the \nProposal Result\n is rejected, then the Meeting will take place.\n\n\nThis allows for a more transparent interaction between Project Owner and Investors\n\n\n\n\n\n\n2 - \nDecide to wing it\n and just wait and see what happens. If all fails they can just try to explain things to the Investors at the \nMilestone Delivery Meeting\n and hope the resulting \nProposal Vote\n is successful.\n\n\nIf the team outright fails in delivering the Development Milestone, they lost all their future funding.\n\n\nEven if the team succeeds in delivering the Development Milestone, it results in questionable behaviour, that should not really be acceptable in Investment Projects.\n\n\nThis can be a rather problematic outcome for everyone\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDevelopment Milestone #4 - Meeting takes place.\n\n\n\n\nAt this meeting the requirements ( code / services / etc ) of the Development Milestone have been delivered or not. \n\n\nAfter the meeting the \nVoting Phase\n begins, where Token Holders decide to Accept the Not.\n\n\nBased on which approach the owner took ( \"Be prepared and Postpone\" or \"Wing it\" ) some investors might feel let down and want to Cash out funds locked in future Development Milestones.\n\n\n\n\n\n\n\n\nIn this case, if the majority votes NO to said Development Milestone delivery proposal, anyone that votes NO can CashBack their remaining funds.", 
+            "title": "Examples"
+        }, 
+        {
+            "location": "/examples/#use-cases-and-examples", 
+            "text": "Let's take a look at a project that has been successfully funded.  In order to promote good management, failing a  Development Milestone  should have rather big repercussions to your Project and will reflect your  Management Ability  as a Project Owner.  The Platform allows the Project Owner to initiate a  Milestone Postponing Proposal  in order to Postpone a  Development Milestone  Meeting.    Project Bylaws - Meeting Postponing Min  and  Project Bylaws - Meeting Postponing Max  dictate the minimum and maximum number of days that can be added to the existing  Development Milestone .    This can only be done once per  Development Milestone .    Example Crowd Funded Project Bylaws     Bylaw Name  Value      Project Bylaws - Meeting Postponing Min  7  days    Project Bylaws - Meeting Postponing Max  90  days    Project Bylaws - Proposal Voting Duration  7  days    Project Bylaws - CashBack After No Vote  7  days    Project Bylaws - CashBack Owner MIA  365  days    Project Bylaws - Voting Phase - Duration  7  days     Flow:   Owner has a successfully funded project, 8 Development Milestones available.  Development Milestone #1 was completed and delivered successfully.  Development Milestone #2 was completed and delivered successfully.  Development Milestone #3 was completed and delivered successfully.  Owner is working on Development Milestone #4 - work time 90 days   14 Days left before Development Milestone #4 - Meeting. Because of some unforeseen circumstances the project  encountered delays.    The team has yet to find a solution, but is confident they will and this will not affect the timeline, yet this is a risk that investors should be notified on.  The Project Owner writes an  Official Announcement  on the Platform detailing the issues and how they plan to address them.  The Owner now has 2 choices:  1 -  Be prepared  and create a  Milestone Postponing Proposal  where Token Holders will be able to Vote to postpone the meeting  Just in case  If the  Proposal Result  is successful, the Meeting and Deadline is postponed.  If the  Proposal Result  is rejected, then the Meeting will take place.  This allows for a more transparent interaction between Project Owner and Investors    2 -  Decide to wing it  and just wait and see what happens. If all fails they can just try to explain things to the Investors at the  Milestone Delivery Meeting  and hope the resulting  Proposal Vote  is successful.  If the team outright fails in delivering the Development Milestone, they lost all their future funding.  Even if the team succeeds in delivering the Development Milestone, it results in questionable behaviour, that should not really be acceptable in Investment Projects.  This can be a rather problematic outcome for everyone         Development Milestone #4 - Meeting takes place.   At this meeting the requirements ( code / services / etc ) of the Development Milestone have been delivered or not.   After the meeting the  Voting Phase  begins, where Token Holders decide to Accept the Not.  Based on which approach the owner took ( \"Be prepared and Postpone\" or \"Wing it\" ) some investors might feel let down and want to Cash out funds locked in future Development Milestones.     In this case, if the majority votes NO to said Development Milestone delivery proposal, anyone that votes NO can CashBack their remaining funds.", 
+            "title": "Use Cases and Examples:"
+        }, 
+        {
+            "location": "/project_under_consideration/", 
+            "text": "These are a few features that could be implemented if the community really wants them.\n\n\nDirect Milestone Funding Selection\n\n\nAn investor can select a preferred milestone they want to fund, only being able to vote on said milestone.\n\n\nIndividual Milestone Required Funding acts like Soft Cap\n\n\nA project can decide to set funding soft caps to be calculated on milestone required funding.\nWhich leads to the project implementing only said milestones which have been funded instead of distributing funds over the whole project.", 
+            "title": "Features Under Consideration"
+        }, 
+        {
+            "location": "/project_under_consideration/#direct-milestone-funding-selection", 
+            "text": "An investor can select a preferred milestone they want to fund, only being able to vote on said milestone.", 
+            "title": "Direct Milestone Funding Selection"
+        }, 
+        {
+            "location": "/project_under_consideration/#individual-milestone-required-funding-acts-like-soft-cap", 
+            "text": "A project can decide to set funding soft caps to be calculated on milestone required funding.\nWhich leads to the project implementing only said milestones which have been funded instead of distributing funds over the whole project.", 
+            "title": "Individual Milestone Required Funding acts like Soft Cap"
+        }
+    ]
+}

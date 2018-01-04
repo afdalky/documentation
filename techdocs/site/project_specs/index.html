@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Project - Specifications - BlockBits Technical Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Project - Specifications";
+    var mkdocs_page_input_path = "project_specs.md";
+    var mkdocs_page_url = "/project_specs/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BlockBits Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_intro/">Technical Documentation Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_useful_links/">BlockBits - Useful Links</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_roadmap/">BlockBits - Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_development/">BlockBits - Development</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_changes/">BlockBits - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_gateway/">BlockBits - GatewayInterface</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_bounty/">BlockBits - Bounty Programs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_revenuedistribution/">BlockBits - Revenue Distribution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_tokens/">BlockBits - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_notifications/">BlockBits - Notifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_extras/">BlockBits - Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../child_changes/">Launching Through BlockBits</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Project - Specifications</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#introduction">Introduction</a></li>
+    
+
+    <li class="toctree-l2"><a href="#smart-contract">Smart Contract</a></li>
+    
+
+    <li class="toctree-l2"><a href="#project-owner">Project Owner</a></li>
+    
+
+    <li class="toctree-l2"><a href="#deployer-address">Deployer Address</a></li>
+    
+
+    <li class="toctree-l2"><a href="#project-types">Project - Types</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#types-investment">Types - Investment</a></li>
+        
+            <li><a class="toctree-l3" href="#types-donation">Types - Donation</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#development-milestones">Development Milestones</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#requirements">Requirements</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#revenue-stream">Revenue Stream</a></li>
+    
+
+    <li class="toctree-l2"><a href="#emergency-fund">Emergency Fund</a></li>
+    
+
+    <li class="toctree-l2"><a href="#investor-token-holder">Investor / Token Holder</a></li>
+    
+
+    <li class="toctree-l2"><a href="#application-entity">Application Entity</a></li>
+    
+
+    <li class="toctree-l2"><a href="#application-assets">Application Assets</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_bylaws/">Project - Bylaws</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_funding/">Project - Funding</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_cashback/">Project - CashBack</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_proposals/">Project - Proposals</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_risk/">Project - Risk Indicators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tools/">Project - Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tokens/">Project - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_states/">Project - States</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_storage/">Project - Storage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../examples/">Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_under_consideration/">Features Under Consideration</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BlockBits Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Project - Specifications</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<p>The Project tabs contain features and processes used by any project that is launched through the BlockBits Platform, including the platform itself.</p>
+<h1 id="smart-contract">Smart Contract</h1>
+<p>Represents a collection of code written in the <strong>Solidity Language</strong> deployed in the Ethereum BlockChain.</p>
+<p>Each Contract has an <strong>owner</strong> property which represents the only entity ( address ) that can change it.</p>
+<h1 id="project-owner">Project Owner</h1>
+<p>An Ethereum wallet address that owns a smart contract / project.</p>
+<p>Can represent a Multi Signature Wallet with as many members as wanted that approve BlockChain transactions sent to Smart Contracts.</p>
+<h1 id="deployer-address">Deployer Address</h1>
+<p>The Ethereum wallet address that deployed the smart contract.</p>
+<p>Used to insert settings into Application Assets and then link them into the Application Entity. </p>
+<h1 id="project-types">Project - Types</h1>
+<h2 id="types-investment">Types - Investment</h2>
+<ul>
+<li>Any project that is not treated as a "Donation"</li>
+</ul>
+<h2 id="types-donation">Types - Donation</h2>
+<ul>
+<li>Charity</li>
+<li>Open Source Software</li>
+<li>Other (in your words)</li>
+</ul>
+<h1 id="development-milestones">Development Milestones</h1>
+<p>A project listed through the platform should be split up in a couple of steps, we call each of these steps a
+<strong>Development Milestone</strong>.</p>
+<p>They are optionally created by the <a href="#project-owner">Project Owner</a> and serve the purpose of splitting up the project
+into smaller manageable parts.</p>
+<p>Just like in software development, most projects can be split up in "Phases". We call them Development Milestones and each one has a percentage of the raised funds linked to it, and requires community acceptance in order for funds and tokens to be released.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Duration - in days</li>
+<li>Funding Percentage - 0-100 ( uint8 )</li>
+</ul>
+<h1 id="revenue-stream">Revenue Stream</h1>
+<p>Represents the revenue stream the Application can impose directly in it's Application Entity Contract.</p>
+<h1 id="emergency-fund">Emergency Fund</h1>
+<ul>
+<li>Only available if <a href="#">Milestone Funding</a> is used and can be disabled.</li>
+<li>Is set as a percentage in <a href="../project_bylaws/#emergency-fund-percentage">Project Bylaws - Emergency Fund Percentage</a>.</li>
+<li>Is added into minimum required funding automatically.</li>
+<li>If the fund is not used, <a href="#">The Project Owner</a> receives the full amount at the end of all <a href="../project_specs/#development-milestones">Development Milestones</a> </li>
+<li>Requesting the <strong>Emergency Fund</strong> release will only be possible once.</li>
+<li>Locked Token are released to the <a href="#">Project Investors</a> in full either when the fund is voted by them or when the Project reaches <a href="#">Project - State - Delivered</a>.</li>
+<li>Has a <a href="#">Platform Testable Risk Factor</a> attached.</li>
+</ul>
+<pre><code class="bluebg">A project that has an Emergency Fund is less likely to fail due to market volatility.
+</code></pre>
+
+<h1 id="investor-token-holder">Investor / Token Holder</h1>
+<p>A person that invests into a Project.
+Also called a <strong>Token Holder</strong>.</p>
+<h1 id="application-entity">Application Entity</h1>
+<p>Represents the main <strong>Smart Contract</strong> that the GatewayInterface links to.</p>
+<p>Ties <strong>Application Assets</strong> together in one place and represents the main functionality of the DAPP.</p>
+<p>Can provide a built in <strong>migrate</strong> method that will need to be run and succeed in case of an upgrade.</p>
+<h1 id="application-assets">Application Assets</h1>
+<p>Represent all sub contracts or libraries linked to the <a href="#application-entity">Application Entity</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project_bylaws/" class="btn btn-neutral float-right" title="Project - Bylaws">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../child_changes/" class="btn btn-neutral" title="Launching Through BlockBits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../child_changes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../project_bylaws/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

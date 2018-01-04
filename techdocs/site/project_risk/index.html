@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Project - Risk Indicators - BlockBits Technical Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Project - Risk Indicators";
+    var mkdocs_page_input_path = "project_risk.md";
+    var mkdocs_page_url = "/project_risk/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BlockBits Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_intro/">Technical Documentation Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_useful_links/">BlockBits - Useful Links</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_roadmap/">BlockBits - Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_development/">BlockBits - Development</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_changes/">BlockBits - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_gateway/">BlockBits - GatewayInterface</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_bounty/">BlockBits - Bounty Programs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_revenuedistribution/">BlockBits - Revenue Distribution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_tokens/">BlockBits - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_notifications/">BlockBits - Notifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_extras/">BlockBits - Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../child_changes/">Launching Through BlockBits</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_specs/">Project - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_bylaws/">Project - Bylaws</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_funding/">Project - Funding</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_cashback/">Project - CashBack</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_proposals/">Project - Proposals</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Project - Risk Indicators</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#1-platform-non-testable-risk-factors">1. Platform NON Testable Risk Factors</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#11-has-minimal-viable-product">1.1. Has Minimal viable product ?</a></li>
+        
+            <li><a class="toctree-l3" href="#12-uses-blockchain">1.2. Uses BlockChain ?</a></li>
+        
+            <li><a class="toctree-l3" href="#13-is-blockchain-usage-planned">1.3. Is BlockChain Usage Planned ?</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#2-platform-testable-risk-factors">2. Platform Testable Risk Factors</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#21-token-minting">2.1. Token Minting</a></li>
+        
+            <li><a class="toctree-l3" href="#22-token-sale-market-decides-token-value">2.2. Token Sale - Market decides token value</a></li>
+        
+            <li><a class="toctree-l3" href="#23-token-sale-sell-a-fixed-amount-of-tokens-for-a-fixed-price">2.3. Token Sale - Sell a fixed amount of tokens for a fixed price</a></li>
+        
+            <li><a class="toctree-l3" href="#24-token-sale-sell-a-variable-amount-of-tokens-for-a-fixed-price">2.4. Token Sale - Sell a variable amount of tokens for a fixed price</a></li>
+        
+            <li><a class="toctree-l3" href="#25-funding-risk">2.5. Funding Risk</a></li>
+        
+            <li><a class="toctree-l3" href="#26-accepted-funding-payments">2.6. Accepted Funding Payments</a></li>
+        
+            <li><a class="toctree-l3" href="#27-selling-percentage-of-total-supply">2.7. Selling percentage of total supply</a></li>
+        
+            <li><a class="toctree-l3" href="#28-milestone-duration">2.8. Milestone Duration</a></li>
+        
+            <li><a class="toctree-l3" href="#29-total-project-duration">2.9. Total Project Duration</a></li>
+        
+            <li><a class="toctree-l3" href="#210-emergency-fund-exists">2.10. Emergency Fund Exists</a></li>
+        
+            <li><a class="toctree-l3" href="#211-poorly-defined-or-no-development-milestones">2.11. Poorly Defined or No Development Milestones</a></li>
+        
+            <li><a class="toctree-l3" href="#212-provides-a-revenue-distribution-method">2.12. Provides a Revenue Distribution Method</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#platform-risk-ranking">Platform - Risk Ranking</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#1-platform-non-testable-risk-factors_1">1. Platform NON Testable Risk Factors</a></li>
+        
+            <li><a class="toctree-l3" href="#2-platform-testable-risk-factors_1">2. Platform Testable Risk Factors</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tools/">Project - Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tokens/">Project - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_states/">Project - States</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_storage/">Project - Storage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../examples/">Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_under_consideration/">Features Under Consideration</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BlockBits Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Project - Risk Indicators</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Risk Factors and how they are calculated</p>
+<h1 id="1-platform-non-testable-risk-factors">1. Platform NON Testable Risk Factors</h1>
+<h2 id="11-has-minimal-viable-product">1.1. Has Minimal viable product ?</h2>
+<ul>
+<li>TRUE - returns 0</li>
+<li>FALSE - returns 10</li>
+</ul>
+<h2 id="12-uses-blockchain">1.2. Uses BlockChain ?</h2>
+<p><strong>Requires</strong>: Minimal viable product</p>
+<ul>
+<li>TRUE - returns score 0</li>
+<li>FALSE - returns score 5</li>
+</ul>
+<h2 id="13-is-blockchain-usage-planned">1.3. Is BlockChain Usage Planned ?</h2>
+<ul>
+<li>TRUE - returns score 0</li>
+<li>FALSE - returns score 10</li>
+</ul>
+<h1 id="2-platform-testable-risk-factors">2. Platform Testable Risk Factors</h1>
+<p><strong>General Risk Indicator</strong> is calculated by multiplying each <strong>Indicator Score</strong> by it's <strong>Relevance Risk Indicator 
+Coefficient:</strong> and finally adding all the results. </p>
+<h2 id="21-token-minting">2.1. Token Minting</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p><strong>Checks</strong> if an ApplicationEntity can Mint Tokens after All Funding Periods are completed ?</p>
+<ul>
+<li>TRUE - returns <strong>Indicator Score</strong> 10</li>
+<li>FALSE - returns <strong>Indicator Score</strong> 0</li>
+</ul>
+<h2 id="22-token-sale-market-decides-token-value">2.2. Token Sale - Market decides token value</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p>If <a href="">Token Stake Calculation And Distribution Algorithm</a> is <a href="#">Type 1 - Market decides token value</a>.</p>
+<ul>
+<li>TRUE - returns <strong>Indicator Score</strong> 0</li>
+<li>FALSE - returns <strong>Indicator Score</strong> 10</li>
+</ul>
+<h2 id="23-token-sale-sell-a-fixed-amount-of-tokens-for-a-fixed-price">2.3. Token Sale - Sell a fixed amount of tokens for a fixed price</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p>If <a href="">Token Stake Calculation And Distribution Algorithm</a> is <a href="#">Type 2 - Sell a fixed amount of tokens for a fixed price</a>.</p>
+<ul>
+<li>TRUE - returns <strong>Indicator Score</strong> 0</li>
+<li>FALSE - returns <strong>Indicator Score</strong> 10</li>
+</ul>
+<h2 id="24-token-sale-sell-a-variable-amount-of-tokens-for-a-fixed-price">2.4. Token Sale - Sell a variable amount of tokens for a fixed price</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p>If <a href="">Token Stake Calculation And Distribution Algorithm</a> is <a href="#">Type 3 - Sell a variable amount of tokens for a fixed price</a> and <a href="#">Buy Request Over Limit Action</a> is Deny Transaction</p>
+<ul>
+<li>returns <strong>Indicator Score</strong> 5</li>
+</ul>
+<p>else <a href="#">Buy Request Over Limit Action</a> is Allow Partial Buy In</p>
+<ul>
+<li>returns <strong>Indicator Score</strong> 0</li>
+</ul>
+<p><code>OTHER CASES: - returns score 10</code></p>
+<h2 id="25-funding-risk">2.5. Funding Risk</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<h3 id="251-only-minimum-required-funding">2.5.1 Only Minimum Required Funding</h3>
+<p><strong>Exists</strong>
+- TRUE - returns <strong>Indicator Score</strong> 0
+- FALSE - returns <strong>Indicator Score</strong> 8</p>
+<h3 id="252-only-maximum-required-funding">2.5.2 Only Maximum Required Funding</h3>
+<p><strong>Exists</strong>
+- TRUE - returns <strong>Indicator Score</strong> 2
+- FALSE - returns <strong>Indicator Score</strong> 0</p>
+<h3 id="253-both-minimum-and-maximum-required-funding-exist">2.5.3 Both Minimum And Maximum Required Funding Exist</h3>
+<ul>
+<li>
+<p><strong>Operation</strong>: Divide Maximum Required Funding to Minimum Required Funding</p>
+</li>
+<li>
+<p>If Ratio smaller or equal to 3 <strong>Indicator Score</strong> is 0</p>
+</li>
+<li>If Ratio higher than 3 and smaller or equal to 6 the <strong>Indicator Score</strong> is 1</li>
+<li>If Ratio higher than 6 the <strong>Indicator Score</strong> is 2</li>
+</ul>
+<h2 id="26-accepted-funding-payments">2.6. Accepted Funding Payments</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<h3 id="261-only-milestone-funding-payments-accepted">2.6.1 Only Milestone Funding Payments Accepted</h3>
+<blockquote>
+<p>TODO - Refactor</p>
+</blockquote>
+<p>If any of your Development Milestones does not require <a href="#">Project Investor</a> voting to release the funds then:</p>
+<ul>
+<li>total up each required milestone that is set as complete and has no voting requirement</li>
+<li>
+<p>get percentage of funds required from total for each 10% of minimum that this represents a score increase by 1 point</p>
+</li>
+<li>
+<p>returns calculated score</p>
+</li>
+</ul>
+<h3 id="262-only-direct-funding-payments-accepted">2.6.2 Only Direct Funding Payments Accepted</h3>
+<ul>
+<li>returns <strong>Indicator Score</strong> 10</li>
+</ul>
+<h3 id="263-both-milestone-funding-and-direct-funding-payments-accepted">2.6.3 Both Milestone Funding and Direct Funding Payments Accepted</h3>
+<p><strong>Hint:</strong> Use "Milestone Funding Payments Accepted" score and if it is higher than 8, use it.</p>
+<ul>
+<li>returns <strong>Indicator Score</strong> 8</li>
+</ul>
+<h2 id="27-selling-percentage-of-total-supply">2.7. Selling percentage of total supply</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p><strong>Selling Supply Ranges</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">Start</th>
+<th align="center">End Inclusive</th>
+<th align="center"><strong>Indicator Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">50</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">50</td>
+<td align="center">60</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center">70</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">70</td>
+<td align="center">80</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td align="center">90</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">90</td>
+<td align="center">100</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="28-milestone-duration">2.8. Milestone Duration</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p><strong>Milestone Duration Median Ranges</strong> in months</p>
+<table>
+<thead>
+<tr>
+<th align="center">Start</th>
+<th align="center">End Inclusive</th>
+<th align="center"><strong>Indicator Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0.5</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">0.5</td>
+<td align="center">0.75</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">0.75</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">5</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">Inf.</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="29-total-project-duration">2.9. Total Project Duration</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p><strong>Total Project Duration Median Ranges</strong> in months</p>
+<table>
+<thead>
+<tr>
+<th align="center">Start</th>
+<th align="center">End Inclusive</th>
+<th align="center"><strong>Indicator Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">12</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center">18</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">18</td>
+<td align="center">24</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">24</td>
+<td align="center">36</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">36</td>
+<td align="center">Inf.</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="210-emergency-fund-exists">2.10. Emergency Fund Exists</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p>Asserts if <a href="#">Emergency Fund</a> is used.</p>
+<ul>
+<li>TRUE - returns <strong>Indicator Score</strong> 0</li>
+<li>FALSE - returns <strong>Indicator Score</strong> 10</li>
+</ul>
+<h2 id="211-poorly-defined-or-no-development-milestones">2.11. Poorly Defined or No Development Milestones</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<p>If one milestone value is higher than 50%, or two combined higher than 80%</p>
+<ul>
+<li>TRUE - returns <strong>Indicator Score</strong> 0</li>
+<li>FALSE - returns <strong>Indicator Score</strong> 10</li>
+</ul>
+<h2 id="212-provides-a-revenue-distribution-method">2.12. Provides a Revenue Distribution Method</h2>
+<p><strong>Relevance Risk Indicator Coefficient:</strong> 1</p>
+<ul>
+<li>TRUE - returns <strong>Indicator Score</strong> 0</li>
+<li>FALSE - returns <strong>Indicator Score</strong> 10</li>
+</ul>
+<h1 id="platform-risk-ranking">Platform - Risk Ranking</h1>
+<h3 id="1-platform-non-testable-risk-factors_1">1. Platform NON Testable Risk Factors</h3>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Indicator Name</strong></th>
+<th align="center"><strong>Relevance Risk Indicator Coefficient</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1.1. Has Minimal viable product ?</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">1.2. Uses BlockChain ?</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">1.3. Is BlockChain Usage Planned ?</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><code>@TODO: Update Relevance Risk Indicator Coefficient after more research for better scoring</code></p>
+<h3 id="2-platform-testable-risk-factors_1">2. Platform Testable Risk Factors</h3>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Indicator Name</strong></th>
+<th align="center"><strong>Relevance Risk Indicator Coefficient</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">2.1. Token Minting</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.2. Token Sale - Market decides token value</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.3. Token Sale - Sell a fixed amount of tokens for a fixed price</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.4. Token Sale - Sell a variable amount of tokens for a fixed price</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.5. Funding Risk</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.6. Accepted Funding Payments</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.7. Selling percentage of total supply</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.8. Milestone Duration</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.9. Total Project Duration</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.10. Emergency Fund Exists</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.11. Poorly Defined or No Development Milestones</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">2.12. Provides a Revenue Distribution Method</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><code>@TODO: Update Relevance Risk Indicator Coefficient after more research for better scoring</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project_tools/" class="btn btn-neutral float-right" title="Project - Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../project_proposals/" class="btn btn-neutral" title="Project - Proposals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../project_proposals/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../project_tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

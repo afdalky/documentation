@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>BlockBits - Specifications - BlockBits Technical Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "BlockBits - Specifications";
+    var mkdocs_page_input_path = "bbt_changes.md";
+    var mkdocs_page_url = "/bbt_changes/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BlockBits Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_intro/">Technical Documentation Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_useful_links/">BlockBits - Useful Links</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_roadmap/">BlockBits - Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_development/">BlockBits - Development</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">BlockBits - Specifications</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#platform-account">Platform Account</a></li>
+    
+
+    <li class="toctree-l2"><a href="#bylaw-settings">Bylaw Settings</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#blockbits-listing-fee">BlockBits Listing Fee</a></li>
+        
+            <li><a class="toctree-l3" href="#blockbits-standard-platform-base-fee">BlockBits Standard Platform Base Fee</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#dynamic-platform-base-fee">Dynamic Platform Base Fee</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#standard-platform-base-fee">Standard Platform Base Fee</a></li>
+        
+            <li><a class="toctree-l3" href="#no-platform-base-fee">No Platform Base Fee</a></li>
+        
+            <li><a class="toctree-l3" href="#adjusted-platform-base-fee">Adjusted Platform Base Fee</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#listing-requirements">Listing Requirements</a></li>
+    
+
+    <li class="toctree-l2"><a href="#outside-donations-contract">Outside Donations Contract</a></li>
+    
+
+    <li class="toctree-l2"><a href="#proposals">Proposals</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#delisting-proposal">Delisting Proposal</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#revenue-stream">Revenue Stream</a></li>
+    
+
+    <li class="toctree-l2"><a href="#voting-power">Voting Power</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_gateway/">BlockBits - GatewayInterface</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_bounty/">BlockBits - Bounty Programs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_revenuedistribution/">BlockBits - Revenue Distribution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_tokens/">BlockBits - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_notifications/">BlockBits - Notifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_extras/">BlockBits - Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../child_changes/">Launching Through BlockBits</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_specs/">Project - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_bylaws/">Project - Bylaws</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_funding/">Project - Funding</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_cashback/">Project - CashBack</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_proposals/">Project - Proposals</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_risk/">Project - Risk Indicators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tools/">Project - Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tokens/">Project - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_states/">Project - States</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_storage/">Project - Storage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../examples/">Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_under_consideration/">Features Under Consideration</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BlockBits Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>BlockBits - Specifications</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>BlockBits Platform Specific Concepts and Changes </p>
+<h1 id="platform-account">Platform Account</h1>
+<p>Your account is your ethereum wallet address.</p>
+<h1 id="bylaw-settings">Bylaw Settings</h1>
+<p><strong>Overrides default <a href="../project_bylaws/#bylaw-settings">Project - Bylaw Settings</a>.</strong></p>
+<p><strong>Keeps all functionality and adds:</strong></p>
+<h2 id="blockbits-listing-fee">BlockBits Listing Fee</h2>
+<ul>
+<li>Description: see <a href="#listing-requirements">Platform - Listing Requirements</a></li>
+<li>Defaults to: <strong>1%</strong></li>
+</ul>
+<h2 id="blockbits-standard-platform-base-fee">BlockBits Standard Platform Base Fee</h2>
+<ul>
+<li>Description: see <a href="#dynamic-platform-base-fee">Dynamic Platform Base Fee</a></li>
+<li>Defaults to: <strong>1%</strong></li>
+</ul>
+<h1 id="dynamic-platform-base-fee">Dynamic Platform Base Fee</h1>
+<p>Charged to the Child Project if Funding is Successful</p>
+<p>Is represented by the <a href="#adjusted-platform-base-fee">Adjusted Platform Base Fee</a>.</p>
+<h2 id="standard-platform-base-fee">Standard Platform Base Fee</h2>
+<ul>
+<li><a href="#blockbits-listing-fee">BlockBits Listing Fee</a> is the Base Fee used in the <a href="#adjusted-platform-base-fee">Adjusted Platform Base Fee</a> calculations.</li>
+</ul>
+<h2 id="no-platform-base-fee">No Platform Base Fee</h2>
+<ul>
+<li><a href="#standard-platform-base-fee">Standard Platform Base Fee</a> Is set to zero.</li>
+<li>Applies only if the whole raised <strong>ETH</strong> amount represents only Milestone Funding payments.</li>
+<li>Is still taken into account in <a href="#adjusted-platform-base-fee">Adjusted Platform Base Fee</a>.</li>
+</ul>
+<h2 id="adjusted-platform-base-fee">Adjusted Platform Base Fee</h2>
+<ul>
+<li>Represents a cost to the Crowd Funded Project in raised ETH.</li>
+<li>If 1 cost is higher than <a href="#standard-platform-base-fee">Standard Platform Base Fee</a>, all individual costs are accumulated and represent the Adjusted Platform Base Fee. </li>
+<li>This means, the more you give out, the more you get charged.</li>
+<li>We do this in order to <strong>discourage reckless spending</strong>.</li>
+</ul>
+<h3 id="available-costs">Available Costs</h3>
+<ul>
+<li>There is no minimum or maximum setting enforcement but each one affects the Resulting Fee.</li>
+<li>The share of each "Cost" can be set by the Project Owner.</li>
+</ul>
+<h4 id="bounty-cost">Bounty Cost</h4>
+<ul>
+<li>If Bounties are enabled, they represent a Token Cost to the platform.</li>
+</ul>
+<h4 id="external-services-cost">External Services Cost</h4>
+<ul>
+<li>If External Services Cost are enabled, they represent an <strong>ETH</strong> Cost to the platform.</li>
+</ul>
+<p><code>NOTE: Not implemented - under consideration</code></p>
+<h1 id="listing-requirements">Listing Requirements</h1>
+<p><strong>Change requires a <a href="#">Application Entity - Code Upgrade Proposal</a></strong></p>
+<ul>
+<li>
+<p>Can be disabled by setting to 0</p>
+</li>
+<li>
+<p>In order to deter the launch of campaigns that are pointless and to insure that the Crowd Funded Project Creator is 
+serious there is a <a href="#">Bylaws Settings - Platform Listing Fee</a> requirement.</p>
+</li>
+<li>
+<p>If the <a href="#">Bylaws Settings - Platform Listing Fee</a> cost is present the represented <strong>ETH</strong> is locked into the listing 
+contract until the successful completion of the funding of said project. </p>
+</li>
+<li>
+<p>If project fails to get funded, or is delisted, said <strong>ETH</strong> is transferred to the <a href="#">BlockBits Reserve Fund</a></p>
+</li>
+</ul>
+<p><strong>Activated after:</strong> <a href="../bbt_roadmap/#32-3rd-party-launch-functionality">BlockBits - Roadmap - 3.2 3rd Party Launch Functionality</a> is complete.</p>
+<h1 id="outside-donations-contract">Outside Donations Contract</h1>
+<p><strong>Changes require a <a href="#">Application Entity - Code Upgrade Proposal</a></strong></p>
+<ul>
+<li>Any <strong>ETH</strong> sent to this contract is forwarded to the following organizations:<ul>
+<li>Metamask, EtherScan, MyEtherWallet.</li>
+</ul>
+</li>
+<li>This contract serves the purpose of retrieving lost founds in abandoned Child Projects.</li>
+<li>The funds are donated because otherwise any involved party might take advantage in their favour.</li>
+<li>The idea behind it, is that due to the nature of wallets, we do not want lost funds to be locked in the BlockChain 
+forever. Instead they are donated to causes or projects that actually create value in the BlockChain.</li>
+</ul>
+<p><strong>Activated after:</strong> <a href="../bbt_roadmap/#32-3rd-party-launch-functionality">BlockBits - Roadmap - 3.2 3rd Party Launch Functionality</a> is complete.</p>
+<h1 id="proposals">Proposals</h1>
+<p><strong>Overrides default <a href="../project_specs/#proposals">Project - Proposals</a>.</strong></p>
+<p><strong>Keeps all functionality and adds:</strong></p>
+<h2 id="delisting-proposal">Delisting Proposal</h2>
+<ul>
+<li>
+<p>Can be created only once per Listing Contract Item ( Child Project ) by any <a href="../project_specs/#investor-token-holder">Token Holder</a> at any time, as long as said Child is has not started receiving funds.</p>
+</li>
+<li>
+<p>This allows all Token Holders to vote on the proposal to delist said project from the BlockBits Platform Listing.</p>
+</li>
+</ul>
+<pre><code class="bluebg">In special cases the delisting can be forced by using a Code Upgrade that is successfully accepted.
+</code></pre>
+
+<h1 id="revenue-stream">Revenue Stream</h1>
+<p><strong>Overrides default <a href="#">Revenue Stream</a>.</strong></p>
+<p><strong>Changes:</strong>
+- Revenue Stream is created by the fees applied to <a href="../child_changes/">Child - Projects</a> using the BlockBits Platform through the 
+<a href="#">Dynamic Platform Base Fee</a>.</p>
+<p><strong>Activated after:</strong> <a href="../bbt_roadmap/#32-3rd-party-launch-functionality">BlockBits - Roadmap - 3.2 3rd Party Launch Functionality</a> is complete.</p>
+<h1 id="voting-power">Voting Power</h1>
+<p><strong>Overrides default <a href="../project_specs/#voting-power">Voting Power</a>.</strong></p>
+<p><strong>Changes:</strong></p>
+<ul>
+<li>In the case of a <strong>Delisting Proposal</strong> Voting Power is determined by the amount of <a href="#">BBX Tokens</a> owned at the END of the <a href="../project_specs/#voting-phase">Proposal - Voting Phase</a>, ( includes both Vault and Investor wallet ).</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../bbt_gateway/" class="btn btn-neutral float-right" title="BlockBits - GatewayInterface">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bbt_development/" class="btn btn-neutral" title="BlockBits - Development"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../bbt_development/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../bbt_gateway/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

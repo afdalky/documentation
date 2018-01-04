@@ -1,0 +1,17 @@
+code {
+    /* display: block; */
+    margin-top: 5px;
+    margin-bottom:10px;
+}
+
+code.asciidoc, code.bluebg {
+    white-space: normal;
+}
+
+code.bluebg {
+    background: #e7f2fa;
+}
+
+.wy-menu-vertical li.current a.toctree-l3 {
+    padding: 0.4045em 3.527em;
+}

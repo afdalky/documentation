@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Algorithms/TokenSCADA1Market.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/Algorithms/</a> TokenSCADA1Market.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+&nbsp;
+ * @name        Token Stake Calculation And Distribution Algorithm - Type 1 - Market decides token value
+ * @package     BlockBitsIO
+ * @author      Micky Socaci &lt;micky@nowlive.ro&gt;
+&nbsp;
+&nbsp;
+    **Inputs:**
+&nbsp;
+    - Defined Total Supply of tokens available in Current Funding Phase
+    - Received amount of ETH
+    - Minimum parity `( optional )`
+&nbsp;
+    **Provides:**
+&nbsp;
+    - Parity with [ETH](#) `( calculated by amount divided by total supply =&gt; 1 Token = X ETH )`
+&nbsp;
+&nbsp;
+    **Observations:**
+&nbsp;
+    - Will sell the whole supply of Tokens available to Current Funding Phase
+    - If minimum parity is provided and not reached, token allocation is done using provided parity parameter and
+    remaining tokens are distributed to all participants in all Completed Funding Phases in order to maintain
+    stake sharing `( as a result excludes Project Owner )`.
+&nbsp;
+&nbsp;
+    **Use cases:**
+    - Minimum parity not present - usable only in the First Funding Phase, where you want the market to determine
+    your token price.
+    - Minimum parity used from previous Funding Phase - enabled for usage only after at least 1 Funding Phase where
+    parity was determined.
+&nbsp;
+&nbsp;
+    // Explained:
+&nbsp;
+	Our offering has 2 Funding Phases, a PRE ICO Phase, and an ICO Phase. These
+Phases are only limited by time and the hard cap.
+&nbsp;
+    Pre ICO token allocation is 10%, non guaranteed discount starts at 25%
+    ICO token allocation is 40%
+    Global Token Sale allocation totals: 50% (PRE ICO + ICO)
+&nbsp;
+	There are no guaranteed discounts and token amounts, they are decided by
+actual participation into the sale.
+    This means Hard cap can be reached in the PRE ICO if demand is as such.
+&nbsp;
+    This can be quite hard to grasp, so here are the details:
+&nbsp;
+    Once Hard Cap, or Funding Phase Time is reached we have 2 cases:
+	Case 1:
+	- Hard cap is reached in PRE ICO, the whole token allocation ( Global Token
+Sale allocation ) is distributed to investors and Funding is complete. No other
+Funding Phases will take place.
+&nbsp;
+	Case 2:
+	- Hard cap is not reached.
+	Based on raised amount of ether, and the token allocated to PRE ICO Funding
+Phase, we calculate the Parity ( raised amount divided by token supply ) of the
+next Funding Phase ( ICO ). We call this PRE ICO - TOKEN PRICE.
+&nbsp;
+    Said parity plus non guaranteed discount is used as the starting floor price
+for selling tokens in the next Funding Phase (ICO Phase).
+    We call this ICO START PRICE.
+&nbsp;
+    Once Hard Cap, or Funding Phase Time is reached we have 2 new cases:
+&nbsp;
+    Case 2.1: Global Funding reached Soft Cap:
+    - Buy orders in PRE ICO Phase, will be awarded tokens using PRE ICO - TOKEN
+PRICE.
+&nbsp;
+    - We calculate ICO Phase parity. ( raised amount divided by token supply )
+    - If resulting parity is lower than ICO START PRICE then ICO - TOKEN PRICE
+is ICO START PRICE.
+    - If resulting parity is higher than ICO START PRICE then ICO - TOKEN PRICE
+is Resulting Parity.
+&nbsp;
+    - For buy orders in ICO Phase, Tokens will be allocated using ICO - TOKEN
+PRICE.
+&nbsp;
+    - After ICO Token allocation, if any tokens remain unsold, they are
+distributed to ALL Funding Participants. This excludes the Project's Team in order
+to maintain the token share balances to 50% team / 50% investors.
+&nbsp;
+&nbsp;
+&nbsp;
+*/
+&nbsp;
+pragma solidity 0.4.17;
+&nbsp;
+import "./TokenSCADAGeneric.sol";
+&nbsp;
+&nbsp;
+&nbsp;
+contract TokenSCADA1Market is TokenSCADAGeneric {
+&nbsp;
+    // __constructor, passes arguments to parent constructor
+    function
+        TokenSCADA1Market (address _tokenContract, address _fundingContract )
+        TokenSCADAGeneric( _tokenContract,  _fundingContract )
+        public
+    {
+        // this algorithm needs hard cap on funding phases to not exist!
+        SCADA_requires_hard_cap = false;
+    }
+&nbsp;
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 16 2017 10:22:19 GMT+0200 (EET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

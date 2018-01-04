@@ -1,0 +1,1991 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/ApplicationEntity.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> ApplicationEntity.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.08% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>147/153</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>89/102</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>42/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.68% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>155/162</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">218×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19925×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136×</span>
+<span class="cline-any cline-yes">136×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1135×</span>
+<span class="cline-any cline-yes">1134×</span>
+<span class="cline-any cline-yes">1134×</span>
+<span class="cline-any cline-yes">1134×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1135×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3205×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1808×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1492×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">131×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136×</span>
+<span class="cline-any cline-yes">1043×</span>
+<span class="cline-any cline-yes">1043×</span>
+<span class="cline-any cline-yes">1043×</span>
+<span class="cline-any cline-yes">1043×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">135×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">312×</span>
+<span class="cline-any cline-yes">309×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3248×</span>
+<span class="cline-any cline-yes">3242×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1511×</span>
+<span class="cline-any cline-yes">1509×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3117×</span>
+<span class="cline-any cline-yes">3115×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">849×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">849×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">848×</span>
+<span class="cline-any cline-yes">848×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">848×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">848×</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">847×</span>
+<span class="cline-any cline-yes">847×</span>
+<span class="cline-any cline-yes">844×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">844×</span>
+<span class="cline-any cline-yes">844×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">844×</span>
+<span class="cline-any cline-yes">496×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">847×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">844×</span>
+<span class="cline-any cline-yes">89×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">755×</span>
+<span class="cline-any cline-yes">283×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">472×</span>
+<span class="cline-any cline-yes">124×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">348×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">348×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">336×</span>
+<span class="cline-any cline-yes">336×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">817×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">849×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">193×</span>
+<span class="cline-any cline-yes">149×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">193×</span>
+<span class="cline-any cline-yes">129×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">577×</span>
+<span class="cline-any cline-yes">240×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">577×</span>
+<span class="cline-any cline-yes">361×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">577×</span>
+<span class="cline-any cline-yes">57×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">848×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1692×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1692×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">78×</span>
+<span class="cline-any cline-yes">51×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">373×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1169×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1169×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1692×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+&nbsp;
+ * @name        Application Entity Contract
+ * @package     BlockBitsIO
+ * @author      Micky Socaci &lt;micky@nowlive.ro&gt;
+&nbsp;
+ Contains the main company Entity Contract code deployed and linked to the Gateway Interface.
+&nbsp;
+*/
+&nbsp;
+pragma solidity ^0.4.17;
+&nbsp;
+import "./GatewayInterface.sol";
+import "./Entity/Proposals.sol";
+import "./Entity/Funding.sol";
+import "./Entity/Meetings.sol";
+import "./Entity/Milestones.sol";
+import "./Entity/BountyManager.sol";
+import "./Entity/TokenManager.sol";
+import "./Entity/FundingManager.sol";
+import "./Entity/ListingContract.sol";
+import "./Entity/NewsContract.sol";
+&nbsp;
+contract ApplicationEntity {
+&nbsp;
+    /* Source Code Url */
+    bytes32 sourceCodeUrl;
+&nbsp;
+    /* Entity initialised or not */
+    bool public _initialized = false;
+&nbsp;
+    /* Entity locked or not */
+    bool public _locked = false;
+&nbsp;
+    /* Current Entity State */
+    uint8 public CurrentEntityState;
+&nbsp;
+    /* Available Entity State */
+    mapping (bytes32 =&gt; uint8) public EntityStates;
+&nbsp;
+    /* GatewayInterface address */
+    address public GatewayInterfaceAddress;
+&nbsp;
+    /* Parent Entity Instance */
+    GatewayInterface GatewayInterfaceEntity;
+&nbsp;
+    /* Asset Entities */
+    Proposals public ProposalsEntity;
+    Funding public FundingEntity;
+    Milestones public MilestonesEntity;
+    Meetings public MeetingsEntity;
+    BountyManager public BountyManagerEntity;
+    TokenManager public TokenManagerEntity;
+    ListingContract public ListingContractEntity;
+    FundingManager public FundingManagerEntity;
+    NewsContract public NewsContractEntity;
+&nbsp;
+    /* Asset Collection */
+    mapping (bytes32 =&gt; address) public AssetCollection;
+    mapping (uint8 =&gt; bytes32) public AssetCollectionIdToName;
+    uint8 public AssetCollectionNum = 0;
+&nbsp;
+    event EventAppEntityReady ( address indexed _address );
+    event EventAppEntityCodeUpgradeProposal ( address indexed _address, bytes32 indexed _sourceCodeUrl );
+    event EventAppEntityInitAsset ( bytes32 indexed _name, address indexed _address );
+    event EventAppEntityInitAssetsToThis ( uint8 indexed _assetNum );
+    event EventAppEntityAssetsToNewApplication ( address indexed _address );
+    event EventAppEntityLocked ( address indexed _address );
+&nbsp;
+    address public deployerAddress;
+&nbsp;
+    function ApplicationEntity() public {
+        deployerAddress = msg.sender;
+        setEntityStates();
+        CurrentEntityState = getEntityState("NEW");
+    }
+&nbsp;
+    function setEntityStates() internal {
+&nbsp;
+        // ApplicationEntity States
+        EntityStates["__IGNORED__"]                 = 0;
+        EntityStates["NEW"]                         = 1;
+        EntityStates["WAITING"]                     = 2;
+&nbsp;
+        EntityStates["IN_FUNDING"]                  = 3;
+&nbsp;
+        EntityStates["IN_DEVELOPMENT"]              = 5;
+        EntityStates["IN_CODE_UPGRADE"]             = 50;
+&nbsp;
+        EntityStates["UPGRADED"]                    = 100;
+&nbsp;
+        EntityStates["IN_GLOBAL_CASHBACK"]          = 150;
+        EntityStates["LOCKED"]                      = 200;
+&nbsp;
+        EntityStates["DEVELOPMENT_COMPLETE"]        = 250;
+    }
+&nbsp;
+    function getEntityState(bytes32 name) public view returns (uint8) {
+        return EntityStates[name];
+    }
+&nbsp;
+    /*
+    * Initialize Application and it's assets
+    * If gateway is freshly deployed, just link
+    * else, create a voting proposal that needs to be accepted for the linking
+    *
+    * @param        address _newAddress
+    * @param        bytes32 _sourceCodeUrl
+    *
+    * @modifiers    requireNoParent, requireNotInitialised
+    */
+    function linkToGateway(
+        address _GatewayInterfaceAddress,
+        bytes32 _sourceCodeUrl
+    )
+        external
+        requireNoParent
+        requireNotInitialised
+        onlyDeployer
+    {
+        GatewayInterfaceAddress = _GatewayInterfaceAddress;
+        sourceCodeUrl = _sourceCodeUrl;
+&nbsp;
+        // init gateway entity and set app address
+        GatewayInterfaceEntity = GatewayInterface(GatewayInterfaceAddress);
+        GatewayInterfaceEntity.requestCodeUpgrade( address(this), sourceCodeUrl );
+    }
+&nbsp;
+    function setUpgradeState(uint8 state) public onlyGatewayInterface {
+        CurrentEntityState = state;
+    }
+&nbsp;
+    /*
+        For the sake of simplicity, and solidity warnings about "unknown gas usage" do this.. instead of sending
+        an array of addresses
+    */
+    function addAssetProposals(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        ProposalsEntity = Proposals(_assetAddresses);
+        assetInitialized("Proposals", _assetAddresses);
+    }
+&nbsp;
+    function addAssetFunding(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        FundingEntity = Funding(_assetAddresses);
+        assetInitialized("Funding", _assetAddresses);
+    }
+&nbsp;
+    function addAssetMilestones(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        MilestonesEntity = Milestones(_assetAddresses);
+        assetInitialized("Milestones", _assetAddresses);
+    }
+&nbsp;
+    function addAssetMeetings(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        MeetingsEntity = Meetings(_assetAddresses);
+        assetInitialized("Meetings", _assetAddresses);
+    }
+&nbsp;
+    function addAssetBountyManager(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        BountyManagerEntity = BountyManager(_assetAddresses);
+        assetInitialized("BountyManager", _assetAddresses);
+    }
+&nbsp;
+    function addAssetTokenManager(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        TokenManagerEntity = TokenManager(_assetAddresses);
+        assetInitialized("TokenManager", _assetAddresses);
+    }
+&nbsp;
+    function addAssetFundingManager(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        FundingManagerEntity = FundingManager(_assetAddresses);
+        assetInitialized("FundingManager", _assetAddresses);
+    }
+&nbsp;
+    function addAssetListingContract(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        ListingContractEntity = ListingContract(_assetAddresses);
+        assetInitialized("ListingContract", _assetAddresses);
+    }
+&nbsp;
+    function addAssetNewsContract(address _assetAddresses) external requireNotInitialised onlyDeployer {
+        NewsContractEntity = NewsContract(_assetAddresses);
+        assetInitialized("NewsContract", _assetAddresses);
+    }
+&nbsp;
+    function assetInitialized(bytes32 name, address _assetAddresses) internal {
+        if(AssetCollection[name] == 0x0) {
+            AssetCollectionIdToName[AssetCollectionNum] = name;
+            AssetCollection[name] = _assetAddresses;
+            AssetCollectionNum++;
+        } else {
+            // just replace
+            AssetCollection[name] = _assetAddresses;
+        }
+        EventAppEntityInitAsset(name, _assetAddresses);
+    }
+&nbsp;
+    function getAssetAddressByName(bytes32 _name) public view returns (address) {
+        return AssetCollection[_name];
+    }
+&nbsp;
+    /* Application Bylaws mapping */
+    mapping (bytes32 =&gt; uint256) public BylawsUint256;
+    mapping (bytes32 =&gt; bytes32) public BylawsBytes32;
+&nbsp;
+&nbsp;
+    function setBylawUint256(bytes32 name, uint256 value) public requireNotInitialised onlyDeployer {
+        BylawsUint256[name] = value;
+    }
+&nbsp;
+    function getBylawUint256(bytes32 name) public view requireInitialised returns (uint256) {
+        return BylawsUint256[name];
+    }
+&nbsp;
+    function setBylawBytes32(bytes32 name, bytes32 value) public requireNotInitialised onlyDeployer {
+        BylawsBytes32[name] = value;
+    }
+&nbsp;
+    function getBylawBytes32(bytes32 name) public view requireInitialised returns (bytes32) {
+        return BylawsBytes32[name];
+    }
+&nbsp;
+    function initialize() external requireNotInitialised onlyGatewayInterface returns (bool) {
+        _initialized = true;
+        EventAppEntityReady( address(this) );
+        return true;
+    }
+&nbsp;
+    function getParentAddress() external view returns(address) {
+        return GatewayInterfaceAddress;
+    }
+&nbsp;
+    function createCodeUpgradeProposal(
+        address _newAddress,
+        bytes32 _sourceCodeUrl
+    )
+        external
+        requireInitialised
+        onlyGatewayInterface
+        returns (uint256)
+    {
+        // proposals create new.. code upgrade proposal
+        EventAppEntityCodeUpgradeProposal ( _newAddress, _sourceCodeUrl );
+&nbsp;
+        // return true;
+        return ProposalsEntity.addCodeUpgradeProposal(_newAddress, _sourceCodeUrl);
+    }
+&nbsp;
+    /*
+    * Only a proposal can update the ApplicationEntity Contract address
+    *
+    * @param        address _newAddress
+    * @modifiers    onlyProposalsAsset
+    */
+    function acceptCodeUpgradeProposal(address _newAddress) external onlyProposalsAsset  {
+        GatewayInterfaceEntity.approveCodeUpgrade( _newAddress );
+    }
+&nbsp;
+    function initializeAssetsToThisApplication() external onlyGatewayInterface returns (bool) {
+&nbsp;
+        for(uint8 i = 0; i &lt; AssetCollectionNum; i++ ) {
+            bytes32 _name = AssetCollectionIdToName[i];
+            address current = AssetCollection[_name];
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(current != address(0x0)) {
+                if(!current.call(bytes4(keccak256("setInitialOwnerAndName(bytes32)")), _name) ) {
+                    revert();
+                }
+            } else {
+<span class="cstat-no" title="statement not covered" >                revert()</span>;
+            }
+        }
+        EventAppEntityInitAssetsToThis( AssetCollectionNum );
+&nbsp;
+        return true;
+    }
+&nbsp;
+    function transferAssetsToNewApplication(address _newAddress) external onlyGatewayInterface returns (bool){
+        for(uint8 i = 0; i &lt; AssetCollectionNum; i++ ) {
+            
+            bytes32 _name = AssetCollectionIdToName[i];
+            address current = AssetCollection[_name];
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(current != address(0x0)) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(!current.call(bytes4(keccak256("transferToNewOwner(address)")), _newAddress) ) {
+<span class="cstat-no" title="statement not covered" >                    revert()</span>;
+                }
+            } else {
+<span class="cstat-no" title="statement not covered" >                revert()</span>;
+            }
+        }
+        EventAppEntityAssetsToNewApplication ( _newAddress );
+        return true;
+    }
+&nbsp;
+    /*
+    * Only the gateway interface can lock current app after a successful code upgrade proposal
+    *
+    * @modifiers    onlyGatewayInterface
+    */
+    function lock() external onlyGatewayInterface returns (bool) {
+        _locked = true;
+        CurrentEntityState = getEntityState("UPGRADED");
+        EventAppEntityLocked(address(this));
+        return true;
+    }
+&nbsp;
+    /*
+        DUMMY METHOD, to be replaced in a future Code Upgrade with a check to determine if sender should be able to initiate a code upgrade
+        specifically used after milestone development completes
+    */
+    address testAddressAllowUpgradeFrom;
+    function canInitiateCodeUpgrade(address _sender) public view returns(bool) {
+        // suppress warning
+        if(testAddressAllowUpgradeFrom != 0x0 &amp;&amp; testAddressAllowUpgradeFrom == _sender) {
+            return true;
+        }
+        return false;
+    }
+&nbsp;
+    /*
+    * Throws if called by any other entity except GatewayInterface
+    */
+    modifier onlyGatewayInterface() {
+        require(GatewayInterfaceAddress != address(0) &amp;&amp; msg.sender == GatewayInterfaceAddress);
+        _;
+    }
+&nbsp;
+    /*
+    * Throws if called by any other entity except Proposals Asset Contract
+    */
+    modifier onlyProposalsAsset() {
+        require(msg.sender == address(ProposalsEntity));
+        _;
+    }
+&nbsp;
+    modifier requireNoParent() {
+        require(GatewayInterfaceAddress == address(0x0));
+        _;
+    }
+&nbsp;
+    modifier requireNotInitialised() {
+        require(_initialized == false &amp;&amp; _locked == false);
+        _;
+    }
+&nbsp;
+    modifier requireInitialised() {
+        require(_initialized == true &amp;&amp; _locked == false);
+        _;
+    }
+&nbsp;
+    modifier onlyDeployer() {
+        require(msg.sender == deployerAddress);
+        _;
+    }
+&nbsp;
+    event DebugApplicationRequiredChanges( uint8 indexed _current, uint8 indexed _required );
+    event EventApplicationEntityProcessor(uint8 indexed _current, uint8 indexed _required);
+&nbsp;
+    /*
+        We could create a generic method that iterates through all assets, and using assembly language get the return
+        value of the "hasRequiredStateChanges" method on each asset. Based on return, run doStateChanges on them or not.
+&nbsp;
+        Or we could be using a generic ABI contract that only defines the "hasRequiredStateChanges" and "doStateChanges"
+        methods thus not requiring any assembly variable / memory management
+&nbsp;
+        Problem with both cases is the fact that our application needs to change only specific asset states depending
+        on it's own current state, thus making a generic call wasteful in gas usage.
+&nbsp;
+        Let's stay away from that and follow the same approach as we do inside an asset.
+        - view method: -&gt; get required state changes
+        - view method: -&gt; has state changes
+        - processor that does the actual changes.
+        - doStateChanges recursive method that runs the processor if views require it to.
+&nbsp;
+        // pretty similar to FundingManager
+    */
+&nbsp;
+    function doStateChanges() public {
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(!_locked) {
+            // process assets first so we can initialize them from NEW to WAITING
+            AssetProcessor();
+&nbsp;
+            var (returnedCurrentEntityState, EntityStateRequired) = getRequiredStateChanges();
+            bool callAgain = false;
+&nbsp;
+            DebugApplicationRequiredChanges( returnedCurrentEntityState, EntityStateRequired );
+&nbsp;
+            if(EntityStateRequired != getEntityState("__IGNORED__") ) {
+                EntityProcessor(EntityStateRequired);
+                callAgain = true;
+            }
+        } else {
+<span class="cstat-no" title="statement not covered" >            revert()</span>;
+        }
+    }
+&nbsp;
+    function hasRequiredStateChanges() public view returns (bool) {
+        bool hasChanges = false;
+        if(!_locked) {
+            var (returnedCurrentEntityState, EntityStateRequired) = getRequiredStateChanges();
+            // suppress unused local variable warning
+            returnedCurrentEntityState = 0;
+            if(EntityStateRequired != getEntityState("__IGNORED__") ) {
+                hasChanges = true;
+            }
+&nbsp;
+            if(anyAssetHasChanges()) {
+                hasChanges = true;
+            }
+        }
+        return hasChanges;
+    }
+&nbsp;
+    function anyAssetHasChanges() public view returns (bool) {
+        if( FundingEntity.hasRequiredStateChanges() ) {
+            return true;
+        }
+        if( FundingManagerEntity.hasRequiredStateChanges() ) {
+            return true;
+        }
+        if( MilestonesEntity.hasRequiredStateChanges() ) {
+            return true;
+        }
+        <span class="missing-if-branch" title="if path not taken" >I</span>if( ProposalsEntity.hasRequiredStateChanges() ) {
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        }
+&nbsp;
+        return extendedAnyAssetHasChanges();
+    }
+&nbsp;
+    // use this when extending "has changes"
+    function extendedAnyAssetHasChanges() internal view returns (bool) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(_initialized) {}
+        return false;
+    }
+&nbsp;
+    // use this when extending "asset state processor"
+    function extendedAssetProcessor() internal  {
+        // does not exist, but we check anyway to bypass compier warning about function state mutability
+        <span class="missing-if-branch" title="if path not taken" >I</span>if ( CurrentEntityState == 255 ) {
+            ProposalsEntity.process();
+        }
+    }
+&nbsp;
+    // view methods decide if changes are to be made
+    // in case of tasks, we do them in the Processors.
+&nbsp;
+    function AssetProcessor() internal {
+&nbsp;
+&nbsp;
+        if ( CurrentEntityState == getEntityState("NEW") ) {
+&nbsp;
+            // move all assets that have states to "WAITING"
+            if(FundingEntity.hasRequiredStateChanges()) {
+                FundingEntity.doStateChanges();
+            }
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(FundingManagerEntity.hasRequiredStateChanges()) {
+                FundingManagerEntity.doStateChanges();
+            }
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if( MilestonesEntity.hasRequiredStateChanges() ) {
+                MilestonesEntity.doStateChanges();
+            }
+&nbsp;
+        } else if ( CurrentEntityState == getEntityState("WAITING") ) {
+&nbsp;
+            if( FundingEntity.hasRequiredStateChanges() ) {
+                FundingEntity.doStateChanges();
+            }
+        }
+        else if ( CurrentEntityState == getEntityState("IN_FUNDING") ) {
+&nbsp;
+            if( FundingEntity.hasRequiredStateChanges() ) {
+                FundingEntity.doStateChanges();
+            }
+&nbsp;
+            if( FundingManagerEntity.hasRequiredStateChanges() ) {
+                FundingManagerEntity.doStateChanges();
+            }
+        }
+        else if ( CurrentEntityState == getEntityState("IN_DEVELOPMENT") ) {
+&nbsp;
+            if( FundingManagerEntity.hasRequiredStateChanges() ) {
+                FundingManagerEntity.doStateChanges();
+            }
+&nbsp;
+            if(MilestonesEntity.hasRequiredStateChanges()) {
+                MilestonesEntity.doStateChanges();
+            }
+&nbsp;
+            if(ProposalsEntity.hasRequiredStateChanges()) {
+                ProposalsEntity.process();
+            }
+        }
+        else <span class="missing-if-branch" title="else path not taken" >E</span>if ( CurrentEntityState == getEntityState("DEVELOPMENT_COMPLETE") ) {
+&nbsp;
+            if(ProposalsEntity.hasRequiredStateChanges()) {
+                ProposalsEntity.process();
+            }
+        }
+&nbsp;
+        extendedAssetProcessor();
+    }
+&nbsp;
+    function EntityProcessor(uint8 EntityStateRequired) internal {
+&nbsp;
+        EventApplicationEntityProcessor( CurrentEntityState, EntityStateRequired );
+&nbsp;
+        // Update our Entity State
+        CurrentEntityState = EntityStateRequired;
+&nbsp;
+        // Do State Specific Updates
+&nbsp;
+        if ( EntityStateRequired == getEntityState("IN_FUNDING") ) {
+            // run Funding state changer
+            // doStateChanges
+        }
+&nbsp;
+        // EntityStateRequired = getEntityState("IN_FUNDING");
+&nbsp;
+&nbsp;
+        // Funding Failed
+        /*
+        if ( EntityStateRequired == getEntityState("FUNDING_FAILED_START") ) {
+            // set ProcessVaultList Task
+            currentTask = getHash("FUNDING_FAILED_START", "");
+            CurrentEntityState = getEntityState("FUNDING_FAILED_PROGRESS");
+        } else if ( EntityStateRequired == getEntityState("FUNDING_FAILED_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+&nbsp;
+            // Funding Successful
+        } else if ( EntityStateRequired == getEntityState("FUNDING_SUCCESSFUL_START") ) {
+&nbsp;
+            // init SCADA variable cache.
+            if(TokenSCADAEntity.initCacheForVariables()) {
+                // start processing vaults
+                currentTask = getHash("FUNDING_SUCCESSFUL_START", "");
+                CurrentEntityState = getEntityState("FUNDING_SUCCESSFUL_PROGRESS");
+            } else {
+                // something went really wrong, just bail out for now
+                CurrentEntityState = getEntityState("FUNDING_FAILED_START");
+            }
+        } else if ( EntityStateRequired == getEntityState("FUNDING_SUCCESSFUL_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+            // Milestones
+        } else if ( EntityStateRequired == getEntityState("MILESTONE_PROCESS_START") ) {
+            currentTask = getHash("MILESTONE_PROCESS_START", getCurrentMilestoneId() );
+            CurrentEntityState = getEntityState("MILESTONE_PROCESS_PROGRESS");
+        } else if ( EntityStateRequired == getEntityState("MILESTONE_PROCESS_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+&nbsp;
+            // Completion
+        } else if ( EntityStateRequired == getEntityState("COMPLETE_PROCESS_START") ) {
+            currentTask = getHash("COMPLETE_PROCESS_START", "");
+            CurrentEntityState = getEntityState("COMPLETE_PROCESS_PROGRESS");
+        } else if ( EntityStateRequired == getEntityState("COMPLETE_PROCESS_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+        }
+        */
+    }
+&nbsp;
+    /*
+     * Method: Get Entity Required State Changes
+     *
+     * @access       public
+     * @type         method
+     *
+     * @return       ( uint8 CurrentEntityState, uint8 EntityStateRequired )
+     */
+    function getRequiredStateChanges() public view returns (uint8, uint8) {
+&nbsp;
+        uint8 EntityStateRequired = getEntityState("__IGNORED__");
+&nbsp;
+        if( CurrentEntityState == getEntityState("NEW") ) {
+            // general so we know we initialized
+            EntityStateRequired = getEntityState("WAITING");
+&nbsp;
+        } else if ( CurrentEntityState == getEntityState("WAITING") ) {
+&nbsp;
+            // Funding Started
+            if( FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("IN_PROGRESS") ) {
+                EntityStateRequired = getEntityState("IN_FUNDING");
+            }
+&nbsp;
+        } else if ( CurrentEntityState == getEntityState("IN_FUNDING") ) {
+&nbsp;
+            if(FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("SUCCESSFUL_FINAL")) {
+                // SUCCESSFUL_FINAL means FUNDING was successful, and FundingManager has finished distributing tokens and ether
+                EntityStateRequired = getEntityState("IN_DEVELOPMENT");
+&nbsp;
+            } else if(FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("FAILED_FINAL")) {
+                // Funding failed..
+                EntityStateRequired = getEntityState("IN_GLOBAL_CASHBACK");
+            }
+&nbsp;
+        } else if ( CurrentEntityState == getEntityState("IN_DEVELOPMENT") ) {
+&nbsp;
+            // this is where most things happen
+            // milestones get developed
+            // code upgrades get initiated
+            // proposals get created and voted
+&nbsp;
+            /*
+            if(ProposalsEntity.CurrentEntityState() == ProposalsEntity.getEntityState("CODE_UPGRADE_ACCEPTED")) {
+                // check if we have an upgrade proposal that is accepted and move into said state
+                EntityStateRequired = getEntityState("START_CODE_UPGRADE");
+            }
+            else
+            */
+&nbsp;
+            if(MilestonesEntity.CurrentEntityState() == MilestonesEntity.getEntityState("DEVELOPMENT_COMPLETE")) {
+                // check if we finished developing all milestones .. and if so move state to complete.
+                EntityStateRequired = getEntityState("DEVELOPMENT_COMPLETE");
+            }
+&nbsp;
+            if(MilestonesEntity.CurrentEntityState() == MilestonesEntity.getEntityState("DEADLINE_MEETING_TIME_FAILED")) {
+                EntityStateRequired = getEntityState("IN_GLOBAL_CASHBACK");
+            }
+&nbsp;
+        } else <span class="missing-if-branch" title="if path not taken" >I</span>if ( CurrentEntityState == getEntityState("START_CODE_UPGRADE") ) {
+&nbsp;
+            // check stuff to move into IN_CODE_UPGRADE
+            // EntityStateRequired = getEntityState("IN_CODE_UPGRADE");
+&nbsp;
+        } else <span class="missing-if-branch" title="if path not taken" >I</span>if ( CurrentEntityState == getEntityState("IN_CODE_UPGRADE") ) {
+&nbsp;
+            // check stuff to finish
+            // EntityStateRequired = getEntityState("FINISHED_CODE_UPGRADE");
+&nbsp;
+        } else <span class="missing-if-branch" title="if path not taken" >I</span>if ( CurrentEntityState == getEntityState("FINISHED_CODE_UPGRADE") ) {
+&nbsp;
+            // move to IN_DEVELOPMENT or DEVELOPMENT_COMPLETE based on state before START_CODE_UPGRADE.
+            // EntityStateRequired = getEntityState("DEVELOPMENT_COMPLETE");
+            // EntityStateRequired = getEntityState("FINISHED_CODE_UPGRADE");
+&nbsp;
+        }
+&nbsp;
+&nbsp;
+        return (CurrentEntityState, EntityStateRequired);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getTimestamp() view public returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return now;</span>
+    }
+&nbsp;
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 16 2017 10:22:19 GMT+0200 (EET)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

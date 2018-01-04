@@ -1,0 +1,1667 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Entity/FundingManager.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/Entity/</a> FundingManager.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.39% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>187/194</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.52% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>108/122</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>22/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.07% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>171/178</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">116×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-yes">113×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">185×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">231×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">214×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2806×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">55×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-yes">93×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">94×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-yes">351×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">92×</span>
+<span class="cline-any cline-yes">92×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">168×</span>
+<span class="cline-any cline-yes">168×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1384×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1281×</span>
+<span class="cline-any cline-yes">1281×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">861×</span>
+<span class="cline-any cline-yes">861×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">352×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">235×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">114×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">234×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-yes">242×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-yes">133×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-yes">584×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">246×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-yes">411×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1568×</span>
+<span class="cline-any cline-yes">1568×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1568×</span>
+<span class="cline-any cline-yes">1568×</span>
+<span class="cline-any cline-yes">695×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1568×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">412×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1993×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1993×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1845×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1059×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">849×</span>
+<span class="cline-any cline-yes">849×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">144×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">849×</span>
+<span class="cline-any cline-yes">847×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">168×</span>
+<span class="cline-any cline-yes">66×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">102×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">288×</span>
+<span class="cline-any cline-yes">144×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">144×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">144×</span>
+<span class="cline-any cline-yes">123×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">148×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">88×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1993×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1993×</span>
+<span class="cline-any cline-yes">1993×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1845×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">148×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+&nbsp;
+ * @name        Funding Contract
+ * @package     BlockBitsIO
+ * @author      Micky Socaci &lt;micky@nowlive.ro&gt;
+&nbsp;
+ Contains the Funding Contract code deployed and linked to the Application Entity
+&nbsp;
+*/
+&nbsp;
+pragma solidity ^0.4.17;
+&nbsp;
+import "./../ApplicationAsset.sol";
+import "./FundingVault.sol";
+import "./TokenManager.sol";
+import "./Proposals.sol";
+import "./Milestones.sol";
+import "./Funding.sol";
+import "./Token.sol";
+import "./../Algorithms/TokenSCADA1Market.sol";
+&nbsp;
+contract FundingManager is ApplicationAsset {
+&nbsp;
+    Funding FundingEntity;
+    TokenManager TokenManagerEntity;
+    Token TokenEntity;
+    TokenSCADAGeneric TokenSCADAEntity;
+    Proposals ProposalsEntity;
+    Milestones MilestonesEntity;
+&nbsp;
+    uint256 public LockedVotingTokens = 0;
+&nbsp;
+    event EventFundingManagerReceivedPayment(address indexed _vault, uint8 indexed _payment_method, uint256 indexed _amount );
+    event EventFundingManagerProcessedVault(address _vault, uint256 id );
+&nbsp;
+    mapping  (address =&gt; address) public vaultList;
+    mapping  (uint256 =&gt; address) public vaultById;
+    uint256 public vaultNum = 0;
+&nbsp;
+    function setAssetStates() internal {
+        // Asset States
+        EntityStates["__IGNORED__"]                 = 0;
+        EntityStates["NEW"]                         = 1;
+        EntityStates["WAITING"]                     = 2;
+&nbsp;
+        EntityStates["FUNDING_FAILED_START"]        = 10;
+        EntityStates["FUNDING_FAILED_PROGRESS"]     = 11;
+        EntityStates["FUNDING_FAILED_DONE"]         = 12;
+&nbsp;
+        EntityStates["FUNDING_SUCCESSFUL_START"]    = 20;
+        EntityStates["FUNDING_SUCCESSFUL_PROGRESS"] = 21;
+        EntityStates["FUNDING_SUCCESSFUL_DONE"]     = 22;
+&nbsp;
+        EntityStates["MILESTONE_PROCESS_START"]     = 30;
+        EntityStates["MILESTONE_PROCESS_PROGRESS"]  = 31;
+        EntityStates["MILESTONE_PROCESS_DONE"]      = 32;
+&nbsp;
+        EntityStates["EMERGENCY_PROCESS_START"]     = 40;
+        EntityStates["EMERGENCY_PROCESS_PROGRESS"]  = 41;
+        EntityStates["EMERGENCY_PROCESS_DONE"]      = 42;
+&nbsp;
+&nbsp;
+        EntityStates["COMPLETE_PROCESS_START"]     = 100;
+        EntityStates["COMPLETE_PROCESS_PROGRESS"]  = 101;
+        EntityStates["COMPLETE_PROCESS_DONE"]      = 102;
+&nbsp;
+        // Funding Stage States
+        RecordStates["__IGNORED__"]     = 0;
+&nbsp;
+    }
+&nbsp;
+    function runBeforeApplyingSettings()
+        internal
+        requireInitialised
+        requireSettingsNotApplied
+    {
+        address FundingAddress = getApplicationAssetAddressByName('Funding');
+        FundingEntity = Funding(FundingAddress);
+        EventRunBeforeApplyingSettings(assetName);
+&nbsp;
+        address TokenManagerAddress = getApplicationAssetAddressByName('TokenManager');
+        TokenManagerEntity = TokenManager(TokenManagerAddress);
+        TokenEntity = Token(TokenManagerEntity.TokenEntity());
+&nbsp;
+        address TokenSCADAAddress = TokenManagerEntity.TokenSCADAEntity();
+        TokenSCADAEntity = TokenSCADAGeneric(TokenSCADAAddress) ;
+&nbsp;
+        address MilestonesAddress = getApplicationAssetAddressByName('Milestones');
+        MilestonesEntity = Milestones(MilestonesAddress) ;
+&nbsp;
+        address ProposalsAddress = getApplicationAssetAddressByName('Proposals');
+        ProposalsEntity = Proposals(ProposalsAddress) ;
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+    function receivePayment(address _sender, uint8 _payment_method, uint8 _funding_stage)
+        payable
+        public
+        requireInitialised
+        onlyAsset('Funding')
+        returns(bool)
+    {
+        // check that msg.value is higher than 0, don't really want to have to deal with minus in case the network breaks this somehow
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(msg.value &gt; 0) {
+            FundingVault vault;
+&nbsp;
+            // no vault present
+            if(!hasVault(_sender)) {
+                // create and initialize a new one
+                vault = new FundingVault();
+                <span class="missing-if-branch" title="else path not taken" >E</span>if(vault.initialize(
+                    _sender,
+                    FundingEntity.multiSigOutputAddress(),
+                    address(FundingEntity),
+                    address(getApplicationAssetAddressByName('Milestones')),
+                    address(getApplicationAssetAddressByName('Proposals'))
+                )) {
+                    // store new vault address.
+                    vaultList[_sender] = vault;
+                    // increase internal vault number
+                    vaultNum++;
+                    // assign vault to by int registry
+                    vaultById[vaultNum] = vault;
+&nbsp;
+                } else {
+<span class="cstat-no" title="statement not covered" >                    revert()</span>;
+                }
+            } else {
+                // use existing vault
+                vault = FundingVault(vaultList[_sender]);
+            }
+&nbsp;
+            EventFundingManagerReceivedPayment(vault, _payment_method, msg.value);
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if( vault.addPayment.value(msg.value)( _payment_method, _funding_stage ) ) {
+                return true;
+            } else {
+<span class="cstat-no" title="statement not covered" >                revert()</span>;
+            }
+        } else {
+<span class="cstat-no" title="statement not covered" >            revert()</span>;
+        }
+    }
+&nbsp;
+    function getMyVaultAddress(address _sender) public view returns (address) {
+        return vaultList[_sender];
+    }
+&nbsp;
+    function hasVault(address _sender) internal view returns(bool) {
+        if(vaultList[_sender] != address(0x0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+&nbsp;
+    bool public fundingProcessed = false;
+    uint256 public lastProcessedVaultId = 0;
+    uint8 public VaultCountPerProcess = 10;
+    bytes32 public currentTask = "";
+&nbsp;
+    mapping (bytes32 =&gt; bool) public taskByHash;
+&nbsp;
+    function setVaultCountPerProcess(uint8 _perProcess) external onlyDeployer {
+        if(_perProcess &gt; 0) {
+            VaultCountPerProcess = _perProcess;
+        } else {
+            revert();
+        }
+    }
+&nbsp;
+    function getHash(bytes32 actionType, bytes32 arg1) public pure returns ( bytes32 ) {
+        return keccak256(actionType, arg1);
+    }
+&nbsp;
+    function getCurrentMilestoneProcessed() public view returns (bool) {
+        return taskByHash[ getHash("MILESTONE_PROCESS_START", getCurrentMilestoneIdHash() ) ];
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+    function ProcessVaultList(uint8 length) internal {
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(taskByHash[currentTask] == false) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(
+                CurrentEntityState == getEntityState("FUNDING_FAILED_PROGRESS") ||
+                CurrentEntityState == getEntityState("FUNDING_SUCCESSFUL_PROGRESS") ||
+                CurrentEntityState == getEntityState("MILESTONE_PROCESS_PROGRESS") ||
+                CurrentEntityState == getEntityState("EMERGENCY_PROCESS_PROGRESS") ||
+                CurrentEntityState == getEntityState("COMPLETE_PROCESS_PROGRESS")
+            ) {
+&nbsp;
+                uint256 start = lastProcessedVaultId + 1;
+                uint256 end = start + length - 1;
+&nbsp;
+                if(end &gt; vaultNum) {
+                    end = vaultNum;
+                }
+&nbsp;
+                // first run
+                if(start == 1) {
+                    // reset LockedVotingTokens, as we reindex them
+                    LockedVotingTokens = 0;
+                }
+&nbsp;
+                for(uint256 i = start; i &lt;= end; i++) {
+                    address currentVault = vaultById[i];
+                    EventFundingManagerProcessedVault(currentVault, i);
+                    ProcessFundingVault(currentVault);
+                    lastProcessedVaultId++;
+                }
+                if(lastProcessedVaultId &gt;= vaultNum ) {
+                    // reset iterator and set task state to true so we can't call it again.
+                    lastProcessedVaultId = 0;
+                    taskByHash[currentTask] = true;
+                }
+            } else {
+<span class="cstat-no" title="statement not covered" >                revert()</span>;
+            }
+        } else {
+<span class="cstat-no" title="statement not covered" >            revert()</span>;
+        }
+    }
+&nbsp;
+    function processFundingFailedFinished() public view returns (bool) {
+        bytes32 thisHash = getHash("FUNDING_FAILED_START", "");
+        return taskByHash[thisHash];
+    }
+&nbsp;
+    function processFundingSuccessfulFinished() public view returns (bool) {
+        bytes32 thisHash = getHash("FUNDING_SUCCESSFUL_START", "");
+        return taskByHash[thisHash];
+    }
+&nbsp;
+    function getCurrentMilestoneIdHash() internal view returns (bytes32) {
+        return bytes32(MilestonesEntity.currentRecord());
+    }
+&nbsp;
+    function processMilestoneFinished() public view returns (bool) {
+        bytes32 thisHash = getHash("MILESTONE_PROCESS_START", getCurrentMilestoneIdHash());
+        return taskByHash[thisHash];
+    }
+&nbsp;
+    function processEmergencyFundReleaseFinished() public view returns (bool) {
+        bytes32 thisHash = getHash("EMERGENCY_PROCESS_START", bytes32(0));
+        return taskByHash[thisHash];
+    }
+&nbsp;
+    function ProcessFundingVault(address vaultAddress ) internal {
+        FundingVault vault = FundingVault(vaultAddress);
+&nbsp;
+        if(vault.allFundingProcessed() == false) {
+&nbsp;
+            if(CurrentEntityState == getEntityState("FUNDING_SUCCESSFUL_PROGRESS")) {
+&nbsp;
+                // step 1 -  transfer bought token share from "manager" to "vault"
+                TokenEntity.transfer( vaultAddress, vault.getBoughtTokens() );
+&nbsp;
+                // vault should now hold as many tokens as the investor bought using direct and milestone funding,
+                // as well as the ether they sent
+                // "direct funding" release -&gt; funds to owner / tokens to investor
+                if(!vault.ReleaseFundsAndTokens()) {
+                    revert();
+                }
+&nbsp;
+            } else if(CurrentEntityState == getEntityState("MILESTONE_PROCESS_PROGRESS")) {
+                // release funds to owner / tokens to investor
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(!vault.ReleaseFundsAndTokens()) {
+<span class="cstat-no" title="statement not covered" >                    revert()</span>;
+                }
+&nbsp;
+            } else if(CurrentEntityState == getEntityState("EMERGENCY_PROCESS_PROGRESS")) {
+                // release emergency funds to owner / tokens to investor
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(!vault.releaseTokensAndEtherForEmergencyFund()) {
+<span class="cstat-no" title="statement not covered" >                    revert()</span>;
+                }
+            }
+&nbsp;
+            // For proposal voting, we need to know how many investor locked tokens remain.
+            LockedVotingTokens+= getAfterTransferLockedTokenBalances(vaultAddress, true);
+&nbsp;
+        }
+    }
+&nbsp;
+    function getAfterTransferLockedTokenBalances(address vaultAddress, bool excludeCurrent) public view returns (uint256) {
+        FundingVault vault = FundingVault(vaultAddress);
+        uint8 currentMilestone = MilestonesEntity.currentRecord();
+&nbsp;
+        uint256 LockedBalance = 0;
+        // handle emergency funding first
+        if(vault.emergencyFundReleased() == false) {
+            LockedBalance+=vault.tokenBalances(0);
+        }
+&nbsp;
+        // get token balances starting from current
+        uint8 start = currentMilestone;
+&nbsp;
+        if(CurrentEntityState != getEntityState("FUNDING_SUCCESSFUL_PROGRESS")) {
+            if(excludeCurrent == true) {
+                start++;
+            }
+        }
+&nbsp;
+        for(uint8 i = start; i &lt; vault.BalanceNum() ; i++) {
+            LockedBalance+=vault.tokenBalances(i);
+        }
+        return LockedBalance;
+&nbsp;
+    }
+&nbsp;
+    function VaultRequestedUpdateForLockedVotingTokens(address owner) public {
+        // validate sender
+        address vaultAddress = vaultList[owner];
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(msg.sender == vaultAddress){
+            // get token balances starting from current
+            LockedVotingTokens-= getAfterTransferLockedTokenBalances(vaultAddress, false);
+        }
+    }
+&nbsp;
+    function doStateChanges() public {
+&nbsp;
+        var (returnedCurrentEntityState, EntityStateRequired) = getRequiredStateChanges();
+        bool callAgain = false;
+&nbsp;
+        DebugEntityRequiredChanges( assetName, returnedCurrentEntityState, EntityStateRequired );
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(EntityStateRequired != getEntityState("__IGNORED__") ) {
+            EntityProcessor(EntityStateRequired);
+            callAgain = true;
+        }
+    }
+&nbsp;
+    function hasRequiredStateChanges() public view returns (bool) {
+        bool hasChanges = false;
+        var (returnedCurrentEntityState, EntityStateRequired) = getRequiredStateChanges();
+        // suppress unused local variable warning
+        returnedCurrentEntityState = 0;
+        if(EntityStateRequired != getEntityState("__IGNORED__") ) {
+            hasChanges = true;
+        }
+        return hasChanges;
+    }
+&nbsp;
+    function EntityProcessor(uint8 EntityStateRequired) internal {
+&nbsp;
+        EventEntityProcessor( assetName, CurrentEntityState, EntityStateRequired );
+&nbsp;
+        // Update our Entity State
+        CurrentEntityState = EntityStateRequired;
+        // Do State Specific Updates
+&nbsp;
+// Funding Failed
+        if ( EntityStateRequired == getEntityState("FUNDING_FAILED_START") ) {
+            // set ProcessVaultList Task
+            currentTask = getHash("FUNDING_FAILED_START", "");
+            CurrentEntityState = getEntityState("FUNDING_FAILED_PROGRESS");
+        } else if ( EntityStateRequired == getEntityState("FUNDING_FAILED_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+&nbsp;
+// Funding Successful
+        } else if ( EntityStateRequired == getEntityState("FUNDING_SUCCESSFUL_START") ) {
+&nbsp;
+            // init SCADA variable cache.
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(TokenSCADAEntity.initCacheForVariables()) {
+                // start processing vaults
+                currentTask = getHash("FUNDING_SUCCESSFUL_START", "");
+                CurrentEntityState = getEntityState("FUNDING_SUCCESSFUL_PROGRESS");
+            } else {
+                // something went really wrong, just bail out for now
+                // CurrentEntityState = getEntityState("FUNDING_FAILED_START");
+            }
+        } else if ( EntityStateRequired == getEntityState("FUNDING_SUCCESSFUL_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+// Milestones
+        } else if ( EntityStateRequired == getEntityState("MILESTONE_PROCESS_START") ) {
+            currentTask = getHash("MILESTONE_PROCESS_START", getCurrentMilestoneIdHash() );
+            CurrentEntityState = getEntityState("MILESTONE_PROCESS_PROGRESS");
+&nbsp;
+        } else if ( EntityStateRequired == getEntityState("MILESTONE_PROCESS_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+&nbsp;
+// Emergency funding release
+        } else if ( EntityStateRequired == getEntityState("EMERGENCY_PROCESS_START") ) {
+            currentTask = getHash("EMERGENCY_PROCESS_START", bytes32(0) );
+            CurrentEntityState = getEntityState("EMERGENCY_PROCESS_PROGRESS");
+        } else if ( EntityStateRequired == getEntityState("EMERGENCY_PROCESS_PROGRESS") ) {
+            ProcessVaultList(VaultCountPerProcess);
+&nbsp;
+// Completion
+        } else if ( EntityStateRequired == getEntityState("COMPLETE_PROCESS_START") ) {
+            currentTask = getHash("COMPLETE_PROCESS_START", "");
+            CurrentEntityState = getEntityState("COMPLETE_PROCESS_PROGRESS");
+&nbsp;
+        } else if ( EntityStateRequired == getEntityState("COMPLETE_PROCESS_PROGRESS") ) {
+            // release platform owner tokens from token manager
+            TokenManagerEntity.ReleaseOwnersLockedTokens( FundingEntity.multiSigOutputAddress() );
+            CurrentEntityState = getEntityState("COMPLETE_PROCESS_DONE");
+        }
+&nbsp;
+    }
+&nbsp;
+    /*
+     * Method: Get Entity Required State Changes
+     *
+     * @access       public
+     * @type         method
+     *
+     * @return       ( uint8 CurrentEntityState, uint8 EntityStateRequired )
+     */
+    function getRequiredStateChanges() public view returns (uint8, uint8) {
+&nbsp;
+        uint8 EntityStateRequired = getEntityState("__IGNORED__");
+&nbsp;
+        if(ApplicationInFundingOrDevelopment()) {
+&nbsp;
+            if ( CurrentEntityState == getEntityState("WAITING") ) {
+                /*
+                    This is where we decide if we should process something
+                */
+&nbsp;
+                // For funding
+                if(FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("FAILED")) {
+                    EntityStateRequired = getEntityState("FUNDING_FAILED_START");
+                }
+                else if(FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("SUCCESSFUL")) {
+                    // make sure we haven't processed this yet
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if(taskByHash[ getHash("FUNDING_SUCCESSFUL_START", "") ] == false) {
+                        EntityStateRequired = getEntityState("FUNDING_SUCCESSFUL_START");
+                    }
+                }
+                else if(FundingEntity.CurrentEntityState() == FundingEntity.getEntityState("SUCCESSFUL_FINAL")) {
+&nbsp;
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if ( processMilestoneFinished() == false) {
+                        if(
+                            MilestonesEntity.CurrentEntityState() == MilestonesEntity.getEntityState("VOTING_ENDED_YES") ||
+                            MilestonesEntity.CurrentEntityState() == MilestonesEntity.getEntityState("VOTING_ENDED_NO_FINAL")
+                        ) {
+                            EntityStateRequired = getEntityState("MILESTONE_PROCESS_START");
+                        }
+                    }
+&nbsp;
+                    if(processEmergencyFundReleaseFinished() == false) {
+                        if(ProposalsEntity.EmergencyFundingReleaseApproved() == true) {
+                            EntityStateRequired = getEntityState("EMERGENCY_PROCESS_START");
+                        }
+                    }
+&nbsp;
+                    // else, check if all milestones have been processed and try finalising development process
+                    // EntityStateRequired = getEntityState("COMPLETE_PROCESS_START");
+&nbsp;
+&nbsp;
+                }
+&nbsp;
+            } else if ( CurrentEntityState == getEntityState("FUNDING_SUCCESSFUL_PROGRESS") ) {
+                // still in progress? check if we should move to done
+                if ( processFundingSuccessfulFinished() ) {
+                    EntityStateRequired = getEntityState("FUNDING_SUCCESSFUL_DONE");
+                } else {
+                    EntityStateRequired = getEntityState("FUNDING_SUCCESSFUL_PROGRESS");
+                }
+&nbsp;
+            } else if ( CurrentEntityState == getEntityState("FUNDING_SUCCESSFUL_DONE") ) {
+                EntityStateRequired = getEntityState("WAITING");
+&nbsp;
+    // Funding Failed
+            } else if ( CurrentEntityState == getEntityState("FUNDING_FAILED_PROGRESS") ) {
+                // still in progress? check if we should move to done
+                if ( processFundingFailedFinished() ) {
+                    EntityStateRequired = getEntityState("FUNDING_FAILED_DONE");
+                } else {
+                    EntityStateRequired = getEntityState("FUNDING_FAILED_PROGRESS");
+                }
+&nbsp;
+    // Milestone process
+            } else if ( CurrentEntityState == getEntityState("MILESTONE_PROCESS_PROGRESS") ) {
+                // still in progress? check if we should move to done
+&nbsp;
+                if ( processMilestoneFinished() ) {
+                    EntityStateRequired = getEntityState("MILESTONE_PROCESS_DONE");
+                } else {
+                    EntityStateRequired = getEntityState("MILESTONE_PROCESS_PROGRESS");
+                }
+&nbsp;
+            } else if ( CurrentEntityState == getEntityState("MILESTONE_PROCESS_DONE") ) {
+&nbsp;
+                if(processMilestoneFinished() == false) {
+                    EntityStateRequired = getEntityState("WAITING");
+&nbsp;
+                } else <span class="missing-if-branch" title="else path not taken" >E</span>if(MilestonesEntity.currentRecord() == MilestonesEntity.RecordNum()) {
+                    EntityStateRequired = getEntityState("COMPLETE_PROCESS_START");
+                }
+&nbsp;
+    // Emergency funding release
+            } else if ( CurrentEntityState == getEntityState("EMERGENCY_PROCESS_PROGRESS") ) {
+                // still in progress? check if we should move to done
+&nbsp;
+                if ( processEmergencyFundReleaseFinished() ) {
+                    EntityStateRequired = getEntityState("EMERGENCY_PROCESS_DONE");
+                } else {
+                    EntityStateRequired = getEntityState("EMERGENCY_PROCESS_PROGRESS");
+                }
+            } else if ( CurrentEntityState == getEntityState("EMERGENCY_PROCESS_DONE") ) {
+                EntityStateRequired = getEntityState("WAITING");
+&nbsp;
+    // Completion
+            } else <span class="missing-if-branch" title="else path not taken" >E</span>if ( CurrentEntityState == getEntityState("COMPLETE_PROCESS_PROGRESS") ) {
+                EntityStateRequired = getEntityState("COMPLETE_PROCESS_PROGRESS");
+            }
+        } else {
+&nbsp;
+            if( CurrentEntityState == getEntityState("NEW") ) {
+                // general so we know we initialized
+                EntityStateRequired = getEntityState("WAITING");
+            }
+        }
+&nbsp;
+        return (CurrentEntityState, EntityStateRequired);
+    }
+&nbsp;
+    function ApplicationInFundingOrDevelopment() public view returns(bool) {
+        uint8 AppState = getApplicationState();
+        if(
+            AppState == getApplicationEntityState("IN_FUNDING") ||
+            AppState == getApplicationEntityState("IN_DEVELOPMENT")
+        ) {
+            return true;
+        }
+        return false;
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 16 2017 10:22:19 GMT+0200 (EET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

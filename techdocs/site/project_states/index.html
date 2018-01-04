@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Project - States - BlockBits Technical Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Project - States";
+    var mkdocs_page_input_path = "project_states.md";
+    var mkdocs_page_url = "/project_states/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BlockBits Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_intro/">Technical Documentation Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_useful_links/">BlockBits - Useful Links</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_roadmap/">BlockBits - Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_development/">BlockBits - Development</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_changes/">BlockBits - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_gateway/">BlockBits - GatewayInterface</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_bounty/">BlockBits - Bounty Programs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_revenuedistribution/">BlockBits - Revenue Distribution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_tokens/">BlockBits - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_notifications/">BlockBits - Notifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_extras/">BlockBits - Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../child_changes/">Launching Through BlockBits</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_specs/">Project - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_bylaws/">Project - Bylaws</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_funding/">Project - Funding</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_cashback/">Project - CashBack</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_proposals/">Project - Proposals</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_risk/">Project - Risk Indicators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tools/">Project - Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tokens/">Project - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Project - States</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#state-new">State - New</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-published">State - Published</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-deployed">State - Deployed</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-launched">State - Launched</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-funding-failed">State - Funding Failed</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-funding-successful">State - Funding Successful</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-development-start">State - Development start</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-in-development-cycle">State - In Development - Cycle</a></li>
+    
+
+    <li class="toctree-l2"><a href="#state-development-complete">State - Development Complete</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_storage/">Project - Storage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../examples/">Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_under_consideration/">Features Under Consideration</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BlockBits Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Project - States</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="state-new">State - New</h1>
+<p>A new private Project has been created by a <a href="#">Project Owner</a> and all it's data is stored in <a href="#">Storage - LEVEL 2</a> 
+using a password to Encrypt and Decrypt it.</p>
+<h1 id="state-published">State - Published</h1>
+<p>At this stage, the <a href="#">Project Owner</a> is ready to share the Project with collaborators, and sends out invitations.</p>
+<p>Any change done to the Project, will result in a new Project Revision ( think git ) and the <a href="#">Project Owner</a> can accept
+the change request as the main version to be used.</p>
+<h1 id="state-deployed">State - Deployed</h1>
+<p>Project is ready and gets deployed.
+- Smart contracts are deployed to the Ethereum BlockChain ( <a href="#">Storage - LEVEL 1</a> ) 
+- Project media ( descriptions and images ) is deployed to  <a href="#">Storage - LEVEL 2</a> </p>
+<h1 id="state-launched">State - Launched</h1>
+<ul>
+<li>If current time is <ul>
+<li>before funding time period, CAN BE DELISTED.</li>
+<li>after funding time period, starts accepting contributions.</li>
+</ul>
+</li>
+</ul>
+<h1 id="state-funding-failed">State - Funding Failed</h1>
+<h1 id="state-funding-successful">State - Funding Successful</h1>
+<ul>
+<li>allow token transfers from direct funding</li>
+<li>
+<p>allow eth transfer from direct funding to the owner's multisig</p>
+</li>
+<li>
+<p>if advance payment fund exists, it is released to the owner and tokens to the investors</p>
+</li>
+</ul>
+<h1 id="state-development-start">State - Development start</h1>
+<ul>
+<li>Starts at date specified in bylaws</li>
+<li>Creates first milestone meeting</li>
+</ul>
+<h1 id="state-in-development-cycle">State - In Development - Cycle</h1>
+<p>For each milestone:</p>
+<ul>
+<li>
+<p>milestones left?</p>
+<ul>
+<li>NO - #  State - Development Complete </li>
+<li>YES<ul>
+<li>Creates milestone meeting at the end of milestone deadline </li>
+<li>new meeting creation for date<ul>
+<li>based on bylaws, require Input from owner about meeting fixed timestamp ( hour / minute )<ul>
+<li>new meeting announcement for date</li>
+</ul>
+</li>
+<li>owner fails to set timestamp X days in advance ( based on bylaws ), at meeting date start cash out period<ul>
+<li>fail, starts global CashBack period ( duration in bylaws MIA Owner )<ul>
+<li>never run action - #  State - CashBack</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>owner sets meeting timestamp<ul>
+<li>at meeting<ul>
+<li>next day starts proposal voting period<ul>
+<li>after result, if negative, wait ( duration in bylaws ) days for individual NO Cashbacks<ul>
+<li>cash out can only be done by voters that said NO in the proposal.</li>
+<li>1 second after cash out period ends run meeting action.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>new proposal can be created for postponing a milestone deadline.</p>
+</li>
+</ul>
+<h1 id="state-development-complete">State - Development Complete</h1>
+<p>Represents the state of a project that has finished delivery of all <a href="#">Project Development Milestones</a> and all have been accepted by <a href="#">Project Investors</a>.</p>
+<ul>
+<li>BlockBits - Roadmap - <a href="../project_states/#project-state-delivered"># Phase 4 - Development Completed</a></li>
+<li>Owner is now a token holder.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project_storage/" class="btn btn-neutral float-right" title="Project - Storage">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../project_tokens/" class="btn btn-neutral" title="Project - Tokens"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../project_tokens/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../project_storage/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Launching Through BlockBits - BlockBits Technical Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Launching Through BlockBits";
+    var mkdocs_page_input_path = "child_changes.md";
+    var mkdocs_page_url = "/child_changes/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BlockBits Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_intro/">Technical Documentation Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_useful_links/">BlockBits - Useful Links</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_roadmap/">BlockBits - Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_development/">BlockBits - Development</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_changes/">BlockBits - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_gateway/">BlockBits - GatewayInterface</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_bounty/">BlockBits - Bounty Programs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_revenuedistribution/">BlockBits - Revenue Distribution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_tokens/">BlockBits - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_notifications/">BlockBits - Notifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_extras/">BlockBits - Extras</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Launching Through BlockBits</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#crowd-funded-project-specifics">Crowd Funded Project Specifics</a></li>
+    
+
+    <li class="toctree-l2"><a href="#creating-a-new-crowd-funding-project">Creating a new Crowd Funding Project</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#requirements-before-you-start-campaign-creation">Requirements before you start campaign creation:</a></li>
+        
+            <li><a class="toctree-l3" href="#using-the-creation-wizard">Using the Creation Wizard:</a></li>
+        
+            <li><a class="toctree-l3" href="#reviewing-a-crowd-funding-project">Reviewing a Crowd Funding Project</a></li>
+        
+            <li><a class="toctree-l3" href="#launching-the-crowd-funding-project">Launching the Crowd Funding Project</a></li>
+        
+            <li><a class="toctree-l3" href="#crowd-funding-lifecycle">Crowd Funding Lifecycle</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#funding-successful">Funding Successful</a></li>
+    
+
+    <li class="toctree-l2"><a href="#funding-failed">Funding Failed</a></li>
+    
+
+    <li class="toctree-l2"><a href="#crowd-funding-project-end-of-life">Crowd Funding Project End of life</a></li>
+    
+
+    <li class="toctree-l2"><a href="#crowd-funding-project-deployment-procedure">Crowd Funding Project - Deployment Procedure</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_specs/">Project - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_bylaws/">Project - Bylaws</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_funding/">Project - Funding</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_cashback/">Project - CashBack</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_proposals/">Project - Proposals</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_risk/">Project - Risk Indicators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tools/">Project - Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tokens/">Project - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_states/">Project - States</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_storage/">Project - Storage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../examples/">Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_under_consideration/">Features Under Consideration</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BlockBits Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Launching Through BlockBits</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="crowd-funded-project-specifics">Crowd Funded Project Specifics</h1>
+<p>The following details apply to projects Launched and Managed using the BlockBits Platform</p>
+<h1 id="creating-a-new-crowd-funding-project">Creating a new Crowd Funding Project</h1>
+<h2 id="requirements-before-you-start-campaign-creation">Requirements before you start campaign creation:</h2>
+<ul>
+<li>Project name and description</li>
+<li>A WhitePaper detailing the inner workings of your project</li>
+<li>A project split up into Project Development Milestones for easier management.</li>
+<li>A minimum viable product ( optional but risky without one )</li>
+<li>You have enough <strong>ETH</strong> to cover the <a href="../bbt_changes/#platform-listing-requirements">BlockBits - Listing Requirements</a> and understand the <strong>Project Specifications</strong>.</li>
+</ul>
+<h2 id="using-the-creation-wizard">Using the Creation Wizard:</h2>
+<ul>
+<li>Define your project's name, description, WhitePaper, media, and more.</li>
+<li>Select your Project Type <code>( Investment or Donation )</code></li>
+<li>Define Project Development Milestones <code>( optional )</code></li>
+<li>Choose at least one Funding Method<ul>
+<li>Direct Funding<ul>
+<li>Minimum Entry Amount is disabled</li>
+</ul>
+</li>
+<li>Milestone Funding - Requires at least 1 Project Development Milestone<ul>
+<li>Minimum Entry Amount set to 1 <strong>ETH</strong> by default</li>
+<li><a href="#">Emergency Fund</a> is enabled and can be disabled</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Create at least one Funding Phase<ul>
+<li>Internal <code>( entry available only to BBT Token Holders and offers a Funding Discount - Fixed Program if other phases are created )</code> <code>( optional )</code></li>
+<li>Pre-ICO <code>( usually the phase where you attract investors from the outside )</code> <code>( optional )</code></li>
+<li>ICO <code>( main funding phase )</code></li>
+</ul>
+</li>
+<li>For each created Funding Phase select a Discount Program Type <code>(optional)</code><ul>
+<li>Type 1 - Fixed</li>
+<li>Type 2 - Progressively Lower</li>
+</ul>
+</li>
+<li>For each created <a href="#">Funding Phase</a> select a <a href="#">Token Stake Calculation And Distribution Algorithm</a><ul>
+<li><a href="#">Type 1 - Market decides token value</a></li>
+<li><a href="#">Type 2 - Sell a fixed amount of tokens for a fixed price</a></li>
+<li><a href="#">Type 3 - Sell a variable amount of tokens for a fixed price</a> </li>
+</ul>
+</li>
+<li>Select a <a href="#">Revenue Distribution Method</a> <code>(optional)</code><ul>
+<li>Type 1 - Token Buyback</li>
+<li>Type 2 - Dividends Payment</li>
+</ul>
+</li>
+<li>Review and set remaining optional Project Bylaws</li>
+</ul>
+<h2 id="reviewing-a-crowd-funding-project">Reviewing a Crowd Funding Project</h2>
+<ul>
+<li>Review Platform Fees <ul>
+<li><a href="#">Dynamic Platform Base Fee</a> breakout </li>
+</ul>
+</li>
+<li>Preview Crowd Funding Project Page and share with others.</li>
+<li>Make updates on anything you want before Launching</li>
+</ul>
+<h2 id="launching-the-crowd-funding-project">Launching the Crowd Funding Project</h2>
+<ul>
+<li>
+<p>You may use the <a href="#">Current Version BlockBits Platform Sandbox</a> to test everything without consequences to your <strong>Ethereum wallet</strong> if you so desire.</p>
+</li>
+<li>
+<p>Again, make sure you have enough <strong>ETH</strong> to cover the <a href="../bbt_changes/#platform-listing-requirements">BlockBits - Listing Requirements</a> and understand the <a href="#">Project Specifications</a></p>
+</li>
+<li>
+<p>Once you are 100% satisfied with your Project Page and Settings you need to use the "Generate Smart Contract" option in the Project Launch Dashboard.</p>
+</li>
+<li>
+<p>This will output the source code of all contracts you need to deploy.</p>
+</li>
+<li>
+<p>At this stage you can opt to have a 3rd party programmer look at them and validate the things the contract does are 
+the ones stated in the Creation Wizard.</p>
+</li>
+<li>
+<p>If you are satisfied and want to continue, start the <a href="">Crowd Funding Project - Deployment Procedure</a>.</p>
+</li>
+<li>
+<p><strong>Make sure to follow the instructions to the letter, and if you have issues, use the support forum for help.</strong></p>
+</li>
+</ul>
+<h2 id="crowd-funding-lifecycle">Crowd Funding Lifecycle</h2>
+<h1 id="funding-successful">Funding Successful</h1>
+<p>Based on selected <a href="..//project_funding/#token-stake-calculation-and-distribution-algorithm">Token Stake Calculation And Distribution Algorithm</a> tokens and ETH will be distributed.</p>
+<h1 id="funding-failed">Funding Failed</h1>
+<p>Funding Failed CashBack procedure is activated.</p>
+<h1 id="crowd-funding-project-end-of-life">Crowd Funding Project End of life</h1>
+<p>Just like BlockBits, the child project has the ability to use Code Upgrades in order to Evolve.</p>
+<h1 id="crowd-funding-project-deployment-procedure">Crowd Funding Project - Deployment Procedure</h1>
+<ul>
+<li>
+<p>Make sure you are using a Web3 compatible browser like Mist, or have the MetaMask addon for Chrome / Firefox / Opera 
+installed and your wallet linked and unlocked.</p>
+</li>
+<li>
+<p>This wallet needs to hold enough <strong>ETH</strong> to cover <a href="../bbt_changes/#platform-listing-requirements">BlockBits - Listing Requirements</a> plus gas requirements for 
+contract deployment. Cost will be provided by the Creation Wizard.</p>
+</li>
+<li>
+<p>Deploy all provided contracts into the BlockChain by using the assigned "Deploy Contract" Button.</p>
+<ul>
+<li>This sends transactions to the BlockBits Deployer and Validator in order to clone each asset required, and setup your settings in the new project instance. </li>
+</ul>
+</li>
+<li>
+<p>Each deployment will trigger a Web3 Request in your browser, that you need to APPROVE.</p>
+</li>
+<li>
+<p>If approved by you the Main ApplicationEntity Contract's address is known and can be used to deploy the Dependency 
+Contracts</p>
+</li>
+<li>
+<p>Once you deploy all Contracts, go to https://etherscan.io/verifyContract and using the new contract addresses and 
+provided source code, and create validations for each.</p>
+</li>
+<li>
+<p>After EtherScan Validation Step is complete, go back to the BlockBits Platform and trigger a Contract Validation.</p>
+</li>
+<li>
+<p>If the Contract Validation is successful, you can now get your Crowd Funding Project listed on BlockBits by 
+initiating a Listing Request.</p>
+</li>
+<li>
+<p>Click on the "Initiate Listing" button in the My Crowd Funding Projects List.</p>
+</li>
+<li>
+<p>This will trigger a Web3 Request in your browser, that you need to APPROVE.</p>
+</li>
+<li>
+<p>This is where you send the <a href="../bbt_changes/#platform-listing-requirements">BlockBits - Listing Requirements</a> fee to the BlockBits ListingContract in order to appear in the BlockBits Platform.</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project_specs/" class="btn btn-neutral float-right" title="Project - Specifications">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bbt_extras/" class="btn btn-neutral" title="BlockBits - Extras"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../bbt_extras/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../project_specs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

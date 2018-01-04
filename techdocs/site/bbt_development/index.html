@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>BlockBits - Development - BlockBits Technical Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "BlockBits - Development";
+    var mkdocs_page_input_path = "bbt_development.md";
+    var mkdocs_page_url = "/bbt_development/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BlockBits Technical Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_intro/">Technical Documentation Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_useful_links/">BlockBits - Useful Links</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_roadmap/">BlockBits - Roadmap</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">BlockBits - Development</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#public-testing-sandboxes">Public Testing Sandboxes</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#current-version-blockbits-platform-sandbox">Current Version BlockBits Platform Sandbox</a></li>
+        
+            <li><a class="toctree-l3" href="#beta-version-blockbits-platform-sandbox">Beta Version BlockBits Platform Sandbox</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#deployment-strategy">Deployment Strategy</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#chapter-1-project-internal">Chapter 1 - Project internal</a></li>
+        
+            <li><a class="toctree-l3" href="#chapter-2-deployment">Chapter 2 - Deployment</a></li>
+        
+            <li><a class="toctree-l3" href="#chapter-3-contract-migration">Chapter 3 - Contract Migration</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_changes/">BlockBits - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_gateway/">BlockBits - GatewayInterface</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_bounty/">BlockBits - Bounty Programs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_revenuedistribution/">BlockBits - Revenue Distribution</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_tokens/">BlockBits - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_notifications/">BlockBits - Notifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bbt_extras/">BlockBits - Extras</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../child_changes/">Launching Through BlockBits</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_specs/">Project - Specifications</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_bylaws/">Project - Bylaws</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_funding/">Project - Funding</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_cashback/">Project - CashBack</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_proposals/">Project - Proposals</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_risk/">Project - Risk Indicators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tools/">Project - Tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_tokens/">Project - Tokens</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_states/">Project - States</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_storage/">Project - Storage</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../examples/">Examples</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../project_under_consideration/">Features Under Consideration</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BlockBits Technical Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>BlockBits - Development</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="public-testing-sandboxes">Public Testing Sandboxes</h1>
+<p><code>To be implemented</code></p>
+<p>In order to facilitate easier testing and error reporting by our users we provide the following public testing environments.</p>
+<p>If you need <strong>ETH</strong> in the Sandbox, you can request some in the "Project Launch Dashboard".
+If you want to copy your project from Live, to current.sandbox, use the "Migrate from Live" functionality.</p>
+<p>Deployed Contract Validation will be ignored on SandBoxes as Etherscan Contract Verification only works on MainNET at 
+the time of writing.</p>
+<p><code>@TODO: come back and check if validation can now be done on testnet blockchains</code></p>
+<h2 id="current-version-blockbits-platform-sandbox">Current Version BlockBits Platform Sandbox</h2>
+<p>Will host a public test access copy of the current BlockBits Platform.</p>
+<blockquote>
+<p>URL: <a href="http://current.sandbox.blockbits.io/">current.sandbox.blockbits.io</a></p>
+</blockquote>
+<p>Useful when you don't have ETH, but would like to test things out with no consequences.</p>
+<h2 id="beta-version-blockbits-platform-sandbox">Beta Version BlockBits Platform Sandbox</h2>
+<p>Will host public test access to code upgrades to the BlockBits Platform and it's Smart Contracts.</p>
+<blockquote>
+<p>URL: <a href="http://beta.sandbox.blockbits.io/">beta.sandbox.blockbits.io</a></p>
+</blockquote>
+<p>Useful when you want to test next release candidate.</p>
+<h1 id="deployment-strategy">Deployment Strategy</h1>
+<p>Whenever contract code upgrade is required we need to deploy a new version and migrate old contracts' libraries and 
+modules that hold data to the new one.</p>
+<p>In order to facilitate this, we've implemented a Proxy GatewayInterface Contract that serves as a <strong>proxy</strong> to finding 
+the actual Application Entity contract to be used in the web3 application.</p>
+<p>The gateway.blockbits.eth ENS name will point to this "Proxy GatewayInterface Contract".</p>
+<p>Since we are updating a decentralized application, and we want our token holders to agree upon each move we make, we 
+need their vote to proceed.</p>
+<pre><code class="bluebg">COMMENT: Let's say we have a new proposal initiated by shareholders and they want our Application to start buying BBT Tokens from the market and burn them instead of donating our profits to open source projects.
+Since this is a fundamental change of the Application Entity, we do the following:
+</code></pre>
+
+<h2 id="chapter-1-project-internal">Chapter 1 - Project internal</h2>
+<ul>
+<li>1.1 - Implement new code changes that are required ( smart contract / application / api / etc )</li>
+<li>1.2 - Publish source code and invite BBT Token holders to participate in testing if they wish to</li>
+<li>1.3 - Test the functionality in house and on testnet, make sure it does what's required on public test website</li>
+<li>1.4 - Enlist 3rd Party to do a Code Audit</li>
+<li>1.5 - If audit returns bad things, go back to step 1</li>
+<li>1.6 - Generate change report</li>
+</ul>
+<p><strong>Change report includes the following:</strong> </p>
+<pre><code>- Proposed change
+- Previous voting results
+- New to old contract source code diff 
+- New contract source code
+- New contract deployment address
+- EtherScan.io contract validation url
+- Automatic test results report
+- 3rd Party Audit Report
+</code></pre>
+
+<h2 id="chapter-2-deployment">Chapter 2 - Deployment</h2>
+<ul>
+<li>2.1 - Deploy contract to MainNET and add new assets and settings. ( new ApplicationEntity constructed with "Maintenance mode" active -&gt; only accepts transactions from GatewayInterface )  </li>
+<li>2.2 - Verify and link contract source code at etherscan.io</li>
+<li>2.3 - Announce a meeting using the News Contract</li>
+<li>2.4 - Link new Application, as a result a Proposal will be created and be available for voting.</li>
+<li>2.5 - Meeting: provide new contract verification link, show the changes that have been made and why they are required</li>
+<li>2.6 - After meeting end, a new voting cycle is started, and for the next <a href="#">Project Bylaws - Proposal Voting Duration</a> ( 7 ) days Project Investors decide if the update will be implemented into the main Application Entity.</li>
+<li>2.7 - Based on outcome the application proceeds automatically with upgrading to the new contract ( Chapter 3 ) or just ignoring it.</li>
+</ul>
+<h2 id="chapter-3-contract-migration">Chapter 3 - Contract Migration</h2>
+<ul>
+<li>Current Application Entity calls the gateway to accept the proposal.</li>
+<li>Gateway Interface:<ul>
+<li>asks current application entity to set the new contract address as an owner in all dependencies</li>
+<li>locks current ( old ) application</li>
+<li>updates itself to point to the new Application Entity.</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../bbt_changes/" class="btn btn-neutral float-right" title="BlockBits - Specifications">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bbt_roadmap/" class="btn btn-neutral" title="BlockBits - Roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../bbt_roadmap/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../bbt_changes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

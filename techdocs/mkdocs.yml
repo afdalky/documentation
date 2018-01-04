@@ -1,0 +1,31 @@
+site_name: BlockBits Technical Documentation
+pages:
+    - Home: index.md
+    - Technical Documentation Home: bbt_intro.md
+    - BlockBits - Useful Links: bbt_useful_links.md
+    - BlockBits - Roadmap: bbt_roadmap.md
+    - BlockBits - Development: bbt_development.md
+    - BlockBits - Specifications: bbt_changes.md
+    - BlockBits - GatewayInterface: bbt_gateway.md
+    - BlockBits - Bounty Programs: bbt_bounty.md
+    - BlockBits - Revenue Distribution: bbt_revenuedistribution.md
+    - BlockBits - Tokens: bbt_tokens.md
+    - BlockBits - Notifications: bbt_notifications.md
+    - BlockBits - Extras: bbt_extras.md
+    - Launching Through BlockBits: child_changes.md
+    - Project - Specifications: project_specs.md
+    - Project - Bylaws: project_bylaws.md
+    - Project - Funding: project_funding.md
+    - Project - CashBack: project_cashback.md
+    - Project - Proposals: project_proposals.md
+    - Project - Risk Indicators: project_risk.md
+    - Project - Tools: project_tools.md
+    - Project - Tokens: project_tokens.md
+    - Project - States: project_states.md
+    - Project - Storage: project_storage.md
+
+    - Examples: examples.md
+    - Features Under Consideration: project_under_consideration.md
+theme: readthedocs
+extra_css: [extra.css]
+dev_addr: 0.0.0.0:8000
