@@ -1,5 +1,5 @@
 # Advertising Bounty Program
-- 1% of total Platform Tokens will be available to the Advertising Bounty Program.
+- 3% of total Platform Tokens will be available to the Advertising Bounty Program.
 - Anyone with an Ethereum wallet address can join the bounty program by visiting our Bounty Portal from the Landing Page and creating an account.
 - They need to sign up an account and link an Ethereum wallet address to it.
 - In order to participate and send urls for any bounty claim they need to be logged into the platform.

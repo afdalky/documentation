@@ -4,11 +4,11 @@
 | Type | ERC20 | Token contract can be found in GatewayInterface -> ApplicationEntity -> TokenManagerEntity -> **TokenEntity** |
 | Symbol | **BBX** |   |
 | Decimals | **18** |   |
-| Total Supply | **5000000** |   |
-| ICO Supply | **2475000** |   |
-| ICO Bounty Supply | **50000** |   |
-| Total Circulating Supply | **2525000** |   |
-| Project Owner Supply | **2475000** | **Locked until project reaches [Phase 4 - Development Completed](./bbt_roadmap/#phase-4-development-completed)** |
+| Total Supply | **500,000,000** |   |
+| ICO Supply | **57%** |   |
+| ICO Bounty Supply | **3%** |   |
+| Total Circulating Supply | **60%** |   |
+| Project Owner Supply | **40%** | **Locked until project reaches [Phase 4 - Development Completed](./bbt_roadmap/#phase-4-development-completed)** |
 | Supply is FIXED | **TRUE** | This means no new tokens can ever be created |
 
 ```@TODO: add token contract address to token.blockbits.eth resolver```
