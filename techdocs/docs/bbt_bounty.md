@@ -1,47 +1,43 @@
-# Advertising Bounty Program
-- 3% of total Platform Tokens will be available to the Advertising Bounty Program.
-- Anyone with an Ethereum wallet address can join the bounty program by visiting our Bounty Portal from the Landing Page and creating an account.
-- They need to sign up an account and link an Ethereum wallet address to it.
-- In order to participate and send urls for any bounty claim they need to be logged into the platform.
+# Advertising Bounty Program Details
+## 1. General
+- 3% (15 000 000 BBX) of all BlockBits Platform Tokens are allocated to the Bounty Program .
+- Anyone with an Ethereum wallet address can visit the [BlockBits Bounty Platform](https://bounty.blockbits.io/)  and sign up to join the bounty program.
+- All you need to do is sign up for an account and link an Ethereum Wallet Address to it, then create original content and use the urls provided in the channels section to earn BPES - Points.
+- In order to waive gas costs for bounty participants, we are going to be indexing, and validating all requests, and once funding is finalised as successful, the resulting balances will be allocated by our Bounty Contract.
 
-## Bounty Program Entry
-- Represents a valid entry submitted by a **Bounty Portal Account** as a bounty stake claim.
-- One Entry Stake equals the Item Score assigned for said [Bounty Entry Type](#).
-
-## Entry Rules
-- Any entry needs to be original.
-- Adding an entry that already exists, will initiate a "Validation Process" to determine you are the rightful owner.
-- Trolling and spamming will not be rewarded.
-
-## Bounty Program Entry Stake 
-- in short BPES
+## 2. Bounty Program Entry Stake ( BPES )
+- Represents a valid entry submitted by a BlockBits Platform Account as a bounty stake claim. One Entry Stake equals the Item Score assigned for said Bounty Entry Type.
 - 1 BPES represents 100 divided by Total Bounty Program Entry Stakes in the system at the end of all Funding Phases.
 
-## Bounty Entry Type - Item Scores
-### BitcoinTalk
-- Forum post 1 BPES
-- Official signature 10 BPES
-### Other relevant media
-- Facebook like 1 BPES
-- Facebook share 1 BPES
-- Follow on twitter 1 BPES
-- Retweet on twitter 1 BPES
-- Generic blog post 5 BPES
-- Steem.it article 10 BPES
-- Video creation on youtube / vimeo / etc 10 BPES
 
-## Bounty Distribution Example:
+## 3. Earning BPES
+- There are 2 main ways you can use to earn Points.
+- A) Create and publish content related to BlockBits.
+    - example: Create a youtube video, or an article on Steem, then submit it in the My Content section.
+- B) Drive traffic to urls posted in the Channels section by posting your urls and key along your crafted media.
+    - example: Write a good reply to someone on BitcoinTalk and point them to an url you chose from the Channels section.
 
-    Entry Scoring:
-        POST = 1
-        SIGNATURE = 5
-        VIDEO = 10
-        BLOG = 5
-        FACEBOOK_LIKE = 1
-        FACEBOOK_SHARE = 2
-        TWITTER_FOLLOW = 1
-        TWITTER_REPOST = 1
-        STEEMIT_ARTICLE = 10
+
+## 4. Entry rules
+- All entries **need to be original**. Trolling and spamming will not be rewarded.
+- If we find it useful, it will be **published** into the Channels section, and you will be awarded **10%** of all points earned by bounty hunters that distribute it.
+- All entries are **validated by humans** and abusing or stealing content from others will get your account suspended.
+
+
+## 5. Bounty Entry Type - Item Scores
+
+|Name|Points|Times|
+|:--- | :---: | :---: |
+|Bounty Portal Registration|10 BPES|Once|
+Bounty Portal Daily Login|1 BPES|Every 24h|
+|Original Article|100 BPES|Once per Item|
+|Original Youtube Video|100 BPES|Once per Item|
+|Join the Telegram Channel|10 BPES|Once|
+|Idle in the Telegram Channel|1 BPES|Every 24h|
+|Referred Unique Visitors|1 BPES|For each unique visit|
+|Referred User - Points|10%|Of their balance|
+
+## 6. Bounty Distribution Example:
 
     Entries:
         1 - address: 0x0001, url: 'http://bitcointalk.com', stake: 1, type: POST
